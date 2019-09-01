@@ -1,0 +1,10 @@
+$slate: #2b3040;
+$grey: #4a4a4a;
+$light-grey: #efefef;
+$zing-red: #c7001c;
+$gradient: linear-gradient(to right, $slate 10%, $grey 60%);
+
+$alpha-white: adjust-color(white, $alpha: -0.6);
+
+$text-primary: adjust-color(white, $alpha: -0.05);
+$text-secondary: adjust-color(black, $alpha: -0.25);

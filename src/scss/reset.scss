@@ -1,0 +1,36 @@
+@import "variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "CeraPro-Regular";
+}
+
+h1 {
+  font-family: "CeraPro-Medium";
+  margin-bottom: 1em;
+  font-size: 2.5em;
+}
+
+h2 {
+  font-family: "CeraPro-Medium";
+  margin-bottom: 0.2em;
+  font-size: 2em;
+}
+
+a {
+  color: $text-primary;
+  text-decoration: none;
+
+  &:visited,
+  &:hover,
+  &:active,
+  &:focus {
+    color: $text-primary;
+  }
+
+  &.active {
+    border-bottom: 2px solid $zing-red;
+  }
+}
