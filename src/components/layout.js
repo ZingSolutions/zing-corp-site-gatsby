@@ -1,5 +1,5 @@
 import React from "react"
-import Menu from "./menu"
+import Header from "./header"
 import Footer from "./footer"
 
 import "./layout.scss"
@@ -12,13 +12,9 @@ export default class Layout extends React.Component {
   render() {
     return (
       <div>
-        <header>
-          <Menu />
-        </header>
+        <Header />
         <main>{this.props.children}</main>
-        <footer>
-          <Footer />
-        </footer>
+        <Footer />
       </div>
     )
   }

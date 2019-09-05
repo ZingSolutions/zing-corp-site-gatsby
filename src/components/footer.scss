@@ -1,0 +1,80 @@
+@import "../scss/variables.scss";
+
+footer {
+  margin-top: -140px;
+  background-image: $gradient;
+  height: 630px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 2em;
+
+  .newsletter {
+    background: white;
+    border: $light-grey 1px solid;
+    border-radius: 5px;
+    color: $text-secondary;
+    z-index: 1;
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 200px;
+    margin-bottom: 2em;
+    padding: 1em;
+  }
+
+  .logo {
+    margin-bottom: 1.5em;
+    img {
+      width: 200px;
+    }
+  }
+
+  .links {
+    margin-bottom: 1.5em;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    a {
+      min-width: 40%;
+    }
+  }
+
+  .social {
+    margin-bottom: 1.5em;
+
+    a {
+      margin: 0 0.5em;
+      cursor: pointer;
+    }
+  }
+
+  .cr {
+    font-size: 0.9em;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  footer {
+    .newsletter {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      text-align: initial;
+    }
+
+    .links {
+      width: 100%;
+      max-width: 600px;
+      a {
+        min-width: initial;
+      }
+    }
+  }
+}

@@ -5,5 +5,16 @@
  */
 
 module.exports = {
-  plugins: [`gatsby-plugin-sass`],
+  plugins: [
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Zing`,
+        short_name: `Zing`,
+        start_url: `/`,
+        icon: `static/images/Favicon-PNG.png`,
+      },
+    },
+  ],
 }

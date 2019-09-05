@@ -1,15 +1,13 @@
 import React from "react"
 import Layout from "../components/layout"
 
-export default class Index extends React.Component {
-  constructor(props) {
-    super(props)
-  }
+import "./index.scss"
 
+export default class Index extends React.Component {
   render() {
     return (
       <Layout>
-        {/* <section className="section-hero" id="home">
+        <section className="section-hero">
           <div className="content-container">
             <div className="col-1">
               <h1>Discovering Real Value Through Twilio</h1>
@@ -65,7 +63,7 @@ export default class Index extends React.Component {
                 <div className="image">
                   <img src="images/integration.png" alt="Integration" />
                 </div>
-                <div className="text">
+                <div className="card">
                   <h3 className="title">Twilio Integration</h3>
                   <hr />
                   <p>
@@ -78,7 +76,7 @@ export default class Index extends React.Component {
                 </div>
               </div>
               <div className="row">
-                <div className="text">
+                <div className="card">
                   <h3 className="title">Enterprise Solutions</h3>
                   <hr />
                   <p>
@@ -101,7 +99,7 @@ export default class Index extends React.Component {
                 <div className="image">
                   <img src="images/services.png" alt="Services" />
                 </div>
-                <div className="text">
+                <div className="card">
                   <h3 className="title">Managed Services</h3>
                   <hr />
                   <p>
@@ -116,20 +114,6 @@ export default class Index extends React.Component {
             </div>
           </div>
         </section>
-        <section className="section-coming-soon" id="coming-soon">
-          <div className="content-container">
-            <div className="col-1">
-              <h2>Like what you see?</h2>
-            </div>
-            <div className="col-2">
-              <h2>We are currently re-designing our site</h2>
-              <p>But you can still get in touch with us</p>
-              <a className="call-to-action red" href="/contact-us">
-                Contact Us
-              </a>
-            </div>
-          </div>
-        </section> */}
       </Layout>
     )
   }

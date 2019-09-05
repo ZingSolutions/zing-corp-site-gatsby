@@ -20,6 +20,10 @@
   }
 }
 
+header {
+  background-image: $gradient;
+}
+
 .menu-header {
   padding: 1em 2em;
   display: flex;
@@ -76,6 +80,19 @@
     }
   }
 
+  .static-menu {
+    display: none;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 1em;
+
+    li {
+      margin-left: 1em;
+      font-size: 1em;
+    }
+  }
+
   img {
     height: 4em;
   }
@@ -108,7 +125,7 @@
     }
 
     .static-menu {
-      display: block;
+      display: flex;
     }
 
     i.material-icons.md-24 {

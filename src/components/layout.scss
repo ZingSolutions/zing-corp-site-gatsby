@@ -4,46 +4,4 @@
 
 body {
   color: $text-primary;
-
-  header {
-    background-image: $gradient;
-  }
-
-  footer {
-    background-image: $gradient;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    padding-bottom: 2em;
-  }
-}
-
-.call-to-action {
-  display: inline-block;
-  background: $slate;
-  border: 1px solid $alpha-white;
-  padding: 0.5em 2em;
-  border-radius: 2em;
-  text-decoration: none;
-  cursor: pointer;
-  color: $text-primary;
-  position: relative;
-  z-index: 1;
-
-  &:hover {
-    background: adjust-color($slate, $lightness: 20%);
-  }
-
-  &:visited,
-  &:hover,
-  &:active,
-  &:focus {
-    color: $text-primary;
-  }
-
-  &.red {
-    background-color: $zing-red;
-  }
 }
