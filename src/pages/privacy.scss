@@ -1,0 +1,39 @@
+@import "../scss/base";
+
+hr {
+    height: 2px;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    background: $zing-red;
+    border: none;
+}
+  
+.section-policy-text {
+    padding-top: 3em;
+    .content-container {
+        .col-1 {
+            .sqs-block {
+                .sqs-block-content {
+                    a {
+                        span {
+                            text-decoration: underline;
+                        }
+                    }
+                    p {
+                        white-space: pre-wrap;
+                    }
+                }
+            }
+        }
+        .sqs-block {
+            overflow-x: auto;
+        }
+        a {
+            color: $text-secondary;
+        }
+    }
+}
+
+.section-hero {
+    height: 100px;
+}
