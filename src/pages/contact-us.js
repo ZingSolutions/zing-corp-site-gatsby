@@ -3,7 +3,26 @@ import Layout from "../components/layout"
 
 import "./contact-us.scss"
 
-export default class Index extends React.Component {
+export default class ContactUs extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      FirstName:"",
+      LastName:"",
+      Email:"",
+      Subject:"",
+      Message:""
+    }
+    this.handleForm = this.handleForm.bind(this);
+  }
+
+  handleForm(event) {
+    this.setState({
+        [event.target.name]:event.target.value
+      });
+  }
+
   render() {
     return (
       <Layout>
@@ -34,39 +53,44 @@ export default class Index extends React.Component {
               <h3>HP14 3WN</h3>
             </div>
             <div className="col-2">
-              <form id="contact-us-form">
+              <form id="contact-us-form" onChange={this.handleForm}>
                 <div className="row">
                   <input
-                    name="first-name"
+                    name="FirstName"
                     type="text"
                     placeholder="Enter First Name"
+                    value={this.state.FirstName}
                     required
                   />
                   <input
-                    name="last-name"
+                    name="LastName"
                     type="text"
                     placeholder="Enter Last Name"
+                    value={this.state.LastName}
                     required
                   />
                 </div>
                 <div className="row">
                   <input
-                    name="email"
+                    name="Email"
                     type="email"
                     placeholder="Enter Email"
+                    value={this.state.Email}
                     required
                   />
                   <input
-                    name="subject"
+                    name="Subject"
                     type="text"
                     placeholder="Enter Subject"
+                    value={this.state.Subject}
                     required
                   />
                 </div>
                 <div className="row">
                   <textarea
-                    name="message"
+                    name="Message"
                     placeholder="Enter Message"
+                    value={this.state.Message}
                     required
                   ></textarea>
                 </div>
