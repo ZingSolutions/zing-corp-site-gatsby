@@ -1,1 +1,29 @@
 @import "../scss/base";
+
+hr {
+    height: 2px;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    background: $zing-red;
+    border: none;
+  }
+  
+  .section-cookie-text {
+    padding-top: 3em;
+    .content-container {
+      ul {
+        list-style: none;
+      }
+      a {
+        color: $text-secondary;
+      }
+    }
+  }
+  
+  body {
+    main {
+        section.section-hero {
+            height: 500px;
+        }
+    }
+ }
