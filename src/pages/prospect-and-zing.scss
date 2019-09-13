@@ -1,5 +1,16 @@
 @import "../scss/variables.scss";
 
+.sms {
+  padding-top: 2em;
+}
+
 .sms .content-container {
   flex-direction: column;
+  padding-bottom: 4em;
+}
+
+.sms .content-body-path {
+  .p-end {
+    padding-bottom: 1em;
+  }
 }
