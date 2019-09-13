@@ -1,0 +1,27 @@
+@import "../scss/base.scss";
+@import "../scss/variables.scss";
+
+blockquote {
+    background-image: url(/images/quotes1.png), url(/images/quotes1.png);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 10%, 10%;
+}
+
+.content-container {
+    .col-5 {
+        .p-cent {
+            text-align: center;
+        }
+        h1 {
+            color: $grey;
+            margin: 0;
+            font-size: 7em;
+        }
+        h2 {
+            margin-bottom: 1em;
+        }
+    }
+    .exdiv {
+        margin-top: 1em;
+    }
+}
