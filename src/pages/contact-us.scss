@@ -1,1 +1,10 @@
 @import "../scss/base";
+
+input {
+  border: 1px solid $light-grey;
+  border-radius: 2px;
+  line-height: 2em;
+  padding: 0 1em;
+  margin-bottom: 1em;
+  width: 100%;
+}

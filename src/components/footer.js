@@ -16,7 +16,7 @@ export default class Footer extends React.Component {
           <div className="col-2">
             <form>
               <input type="text" placeholder="Enter Your Email" />
-              <button type="submit">Subscribe</button>
+              <button className="call-to-action red" type="submit">Subscribe</button>
             </form>
           </div>
         </div>

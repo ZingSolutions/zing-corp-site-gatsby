@@ -34,10 +34,10 @@ export default class ProspectAndZing extends React.Component {
             <div className="content-body-path">
               <div className="row">
                 <div className="linker">
-                  <img src="images/linker-left.png" alt="Linker Left" />
+                  <img src="/images/linker-left.png" alt="Linker Left" />
                 </div>
                 <div className="image">
-                  <img src="images/integration.png" alt="Integration" />
+                  <img src="/images/integration.png" alt="Integration" />
                 </div>
                 <div className="card">
                   <p>
@@ -49,10 +49,10 @@ export default class ProspectAndZing extends React.Component {
               </div>
               <div className="row">
                 <div className="linker">
-                  <img src="images/linker-left.png" alt="Linker Left" />
+                  <img src="/images/linker-left.png" alt="Linker Left" />
                 </div>
                 <div className="image">
-                  <img src="images/integration.png" alt="Integration" />
+                  <img src="/images/integration.png" alt="Integration" />
                 </div>
                 <div className="card">
                   <p>
@@ -67,10 +67,10 @@ export default class ProspectAndZing extends React.Component {
               </div>
               <div className="row">
                 <div className="linker">
-                  <img src="images/linker-left.png" alt="Linker Left" />
+                  <img src="/images/linker-left.png" alt="Linker Left" />
                 </div>
                 <div className="image">
-                  <img src="images/integration.png" alt="Integration" />
+                  <img src="/images/integration.png" alt="Integration" />
                 </div>
                 <div className="card">
                   <p>
