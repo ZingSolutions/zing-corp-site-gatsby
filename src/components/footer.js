@@ -11,7 +11,7 @@ export default class Footer extends React.Component {
         <div className="newsletter">
           <div className="col-1">
             <h2>Sign Up to Our Newsletter</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Want to hear more? Sign up to our newsletter here!</p>
           </div>
           <div className="col-2">
             <form>
