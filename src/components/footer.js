@@ -37,21 +37,21 @@ export default class Footer extends React.Component {
         <div className="social">
           <a href="https://www.linkedin.com/company/zing-dev/" target="_blank">
             <img
-              src="images/linkedin.png"
+              src="/images/linkedin.png"
               alt="Go To Zing Linkedin"
               title="LinkedIn"
             />
           </a>
           <a href="https://twitter.com/zingdevs" target="_blank">
             <img
-              src="images/twitter.png"
+              src="/images/twitter.png"
               alt="Go To Zing Twitter"
               title="Twitter"
             />
           </a>
           <a href="https://github.com/ZingSolutions" target="_blank">
             <img
-              src="images/GitHub.png"
+              src="/images/GitHub.png"
               alt="Go To Zing GitHub"
               title="GitHub"
             />
@@ -61,7 +61,7 @@ export default class Footer extends React.Component {
             target="_blank"
           >
             <img
-              src="images/youtube.png"
+              src="/images/youtube.png"
               alt="Go To Zing YouTube"
               title="YouTube"
             />

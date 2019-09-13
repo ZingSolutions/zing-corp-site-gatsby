@@ -13,6 +13,7 @@ hr {
     .content-container {
         .col-1 {
             .sqs-block {
+                padding-bottom: 3em;
                 .sqs-block-content {
                     a {
                         span {
@@ -34,6 +35,10 @@ hr {
     }
 }
 
-.section-hero {
-    height: 100px;
+body {
+    main {        
+        section.section-hero {
+            height: 500px;
+        }
+    }
 }
