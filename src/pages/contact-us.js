@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
-
+import { load } from "recaptcha-v3"
 import "./contact-us.scss"
 
 export default class ContactUs extends React.Component {
@@ -23,9 +23,37 @@ export default class ContactUs extends React.Component {
       });
   }
 
+  async handleSubmit(event) {
+    event.preventDefault();
+    const recaptcha = await load("6LcZlbUUAAAAAB0XnbgU8DjrBuVbvN92XL7a8ygU");
+    const token = await recaptcha.execute("ContactUsForm");
+
+    const postData = {
+      Contact: {
+        FirstName: this.state.FirstName,
+        LastName: this.state.LastName,
+        Email: this.state.Email,
+        Subject: this.state.Subject,
+        Message: this.state.Message
+      },
+      Token: token
+    };
+
+    fetch("http://localhost:5000/contacts", {
+      method: "POST",
+      body: JSON.stringify(postData),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    }).then(res => console.log(res));
+
+  }
+
   render() {
     return (
       <Layout>
+
+    <script src="https://www.google.com/recaptcha/api.js?render=6LcZlbUUAAAAAB0XnbgU8DjrBuVbvN92XL7a8ygU"></script>
         <section className="section-contact-us" id="contact-us">
         <div className="content-container">
           <div className="col-1">
@@ -53,7 +81,7 @@ export default class ContactUs extends React.Component {
               <h3>HP14 3WN</h3>
             </div>
             <div className="col-2">
-              <form id="contact-us-form" onChange={this.handleForm}>
+              <form id="contact-us-form" onChange={this.handleForm} onSubmit={this.handleSubmit}>
                 <div className="row">
                   <input
                     name="FirstName"
