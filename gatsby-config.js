@@ -16,5 +16,6 @@ module.exports = {
         icon: `static/images/Favicon-PNG.png`,
       },
     },
+    'gatsby-plugin-recaptcha',
   ],
 }
