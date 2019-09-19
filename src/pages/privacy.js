@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 
 import "./privacy.scss"
 
-export default class Index extends React.Component {
+export default class Privacy extends React.Component {
   render() {
     return (
       <Layout>
