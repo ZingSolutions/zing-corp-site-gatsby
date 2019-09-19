@@ -51,34 +51,30 @@ export default class Header extends React.Component {
               </i>
             </li>
             <li>
-              <Link to="/contact-us/">Services</Link>
+              <Link to="/contact-us/">Services</Link> {/* TO DO */}
             </li>
             <li>
-              <Link to="/contact-us/">Zing & Twilio</Link>
+              <Link to="/contact-us/">Zing & Twilio</Link> {/* TO DO */}
             </li>
             <li>
-              <Link to="/contact-us/">Case Studies</Link>
+              <Link to="/case-studies/">Case Studies</Link>
             </li>
             <li>
-              <Link to="/contact-us/" className="call-to-action red">
-                Contact Us
-              </Link>
+              <Link to="/contact-us/" className="call-to-action red">Contact Us</Link>
             </li>
           </ul>
           <ul className="static-menu">
             <li>
-              <Link to="/contact-us/">Services</Link>
+              <Link to="/contact-us/">Services</Link> {/* TO DO */}
             </li>
             <li>
-              <Link to="/contact-us/">Zing & Twilio</Link>
+              <Link to="/contact-us/">Zing & Twilio</Link> {/* TO DO */}
             </li>
             <li>
-              <Link to="/contact-us/">Case Studies</Link>
+              <Link to="/case-studies/">Case Studies</Link>
             </li>
             <li>
-              <Link to="/contact-us/" className="call-to-action red">
-                Contact Us
-              </Link>
+              <Link to="/contact-us/" className="call-to-action red">Contact Us</Link>
             </li>
           </ul>
           <div
