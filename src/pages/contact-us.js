@@ -2,6 +2,10 @@ import React from "react"
 import Layout from "../components/layout"
 import { load } from "recaptcha-v3"
 import "./contact-us.scss"
+import { toast } from "react-toastify"
+import 'react-toastify/dist/ReactToastify.css'
+
+toast.configure();
 
 export default class ContactUs extends React.Component {
 
@@ -12,7 +16,8 @@ export default class ContactUs extends React.Component {
       LastName: "",
       Email: "",
       Subject: "",
-      Message: ""
+      Message: "",
+      DisabledStatus: false,
     }
     this.handleForm = this.handleForm.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -40,14 +45,24 @@ export default class ContactUs extends React.Component {
       Token: token
     };
 
-    fetch("http://localhost:5000/contacts", {
-      method: "POST",
-      body: JSON.stringify(postData),
-      headers: {
-        "Content-Type": "application/json"
+    try {
+      var res = await fetch("http://localhost:5000/contacts", {
+        method: "POST",
+        body: JSON.stringify(postData),
+        headers: {
+          "Content-Type": "application/json"
+        }
+      });
+      if (res.status !== 200) {
+        toast.error("Error, submission failed", { autoClose: 8000 })
+      } else {
+        toast.success("Form submission accepted, speak to you soon!", { autoClose: 8000 })
+        //close form
       }
-    }).then(res => console.log(res));
-
+    } catch {
+      toast.error("Error, could not connect. Check your connection.", { autoClose: 8000 })
+      this.setState({ DisabledStatus: true });
+    }
   }
 
   render() {
@@ -62,7 +77,7 @@ export default class ContactUs extends React.Component {
               </div>
             </div>
           </section>
-          <section className="section-contact-form" id="submitted" style={{backgroundColor: "#efefef"}}>
+          <section className="section-contact-form" id="submitted" style={{ backgroundColor: "#efefef" }}>
             <div className="content-container">
               <h3 className="contact-form-title">Leave a message and we'll get back to you ASAP.</h3>
               <div className="contact-card">
@@ -83,15 +98,17 @@ export default class ContactUs extends React.Component {
                         name="FirstName"
                         type="text"
                         placeholder="Enter First Name"
-                        value={this.state.FirstName}
+                        defaultValue={this.state.FirstName}
                         required
+                        onChange={this.handleForm}
                       />
                       <input
                         name="LastName"
                         type="text"
                         placeholder="Enter Last Name"
-                        value={this.state.LastName}
+                        defaultValue={this.state.LastName}
                         required
+                        onChange={this.handleForm}
                       />
                     </div>
                     <div className="row">
@@ -99,25 +116,28 @@ export default class ContactUs extends React.Component {
                         name="Email"
                         type="email"
                         placeholder="Enter Email"
-                        value={this.state.Email}
+                        defaultValue={this.state.Email}
                         required
+                        onChange={this.handleForm}
                       />
                       <input
                         name="Subject"
                         type="text"
                         placeholder="Enter Subject"
-                        value={this.state.Subject}
+                        defaultValue={this.state.Subject}
                         required
+                        onChange={this.handleForm}
                       />
                       <textarea
                         name="Message"
                         placeholder="Enter Message"
-                        value={this.state.Message}
+                        defaultValue={this.state.Message}
                         required
-                      ></textarea>
+                        onChange={this.handleForm}
+                      />
                     </div>
                     <div className="row">
-                      <button className="contact-submit" type="submit">
+                      <button className="contact-submit" type="submit" disabled={this.state.disabledStatus} hidden={this.state.disabledStatus}>
                         Submit now
                   </button>
                     </div>
