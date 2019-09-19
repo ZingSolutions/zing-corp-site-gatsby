@@ -38,7 +38,25 @@ blockquote::after {
     }
 }
 
+.study-image-right {
+    margin-left: 2%;
+}
+
 .content-container {
+    .content-header {
+        .title-red {
+            color: $zing-red;
+            line-height: 1.3em;
+            font-size: 2em;
+            font-family: "CeraPro-Medium";
+          }
+
+          .title {
+            font-family: "CeraPro-Medium";
+            line-height: 1.3em;
+            text-align: center;
+          }
+    }
     .col-5 {
         .study-btm {
             margin-bottom: 35px;

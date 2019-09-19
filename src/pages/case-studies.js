@@ -11,14 +11,15 @@ export default class CaseStudies extends React.Component {
           <section className="section-hero" id="home">
             <div className="content-container">
               <div className="col-1">
-                <img src="https://via.placeholder.com/1000x250" />
+                <h1>Case Studies</h1>
+                <p>What some of our other customers have to say</p>
               </div>
             </div>
           </section>
           <section className="section-about-us" id="zing-and-twilio">
             <div className="content-container">
               <div className="col-5">
-                <blockquote className="blockquote"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum odit, cumque, quae porro deleniti animi delectus explicabo unde magnam, omnis cum id. Esse optio, ducimus neque iure aliquid voluptatem! Iusto dignissimos eum mollitia beatae dolorum, a veniam delectus possimus? Dolores.</p></blockquote>
+                <blockquote className="blockquote"><p>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum odit, cumque, quae porro deleniti animi delectus explicabo unde magnam, omnis cum id. Esse optio, ducimus neque iure aliquid voluptatem! Iusto dignissimos eum mollitia beatae dolorum, a veniam delectus possimus? Dolores." - Placeholder Text</p></blockquote>
                 <p className="p-cent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque maiores unde illum tempora non corrupti eum tempore possimus, autem consectetur velit quod error minima sint, perspiciatis dolores quidem, nesciunt sed. Corporis, quod ab. Ut impedit corporis, dolores culpa cupiditate, obcaecati aliquam id officia quibusdam, iusto mollitia cum quis voluptatem. Quasi!</p>
                 <p className="p-cent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque maiores unde illum tempora non corrupti eum tempore possimus, autem consectetur velit quod error minima sint, perspiciatis dolores quidem, nesciunt sed. Corporis, quod ab. Ut impedit corporis, dolores culpa cupiditate, obcaecati aliquam id officia quibusdam, iusto mollitia cum quis voluptatem. Quasi!</p>
               </div>
@@ -32,7 +33,7 @@ export default class CaseStudies extends React.Component {
                 <p className="study-btm">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo error ipsum cum iste numquam aliquam quod. Est, aliquam? Porro magni minima assumenda architecto vel, laboriosam temporibus excepturi libero culpa placeat vero ab veniam obcaecati quod quam mollitia voluptatum! Necessitatibus consequatur eos quas eius similique impedit voluptatibus officiis odio aliquam eaque porro modi unde quaerat nemo magni temporibus accusamus facilis fuga fugiat, officia ducimus autem. Nulla aliquam earum in enim quisquam consequatur magni natus doloribus omnis reprehenderit. Quaerat pariatur veniam sequi fugiat sit? Repellendus odit, sunt mollitia autem quas aut nisi laudantium est velit, cupiditate esse quasi asperiores atque ut animi.</p>
               </div>
               <div className="col-1">
-                <img src="https://via.placeholder.com/300x300" />
+                <img className="study-image-right" src="https://via.placeholder.com/300x300" />
               </div>
             </div>
           </section>
@@ -54,6 +55,7 @@ export default class CaseStudies extends React.Component {
                 <h4 className="title-red">A project for CET</h4>
                 <h3 className="title">Porttitor dignissim elit at fermentum.</h3>
                 <h3 className="title">Fusce iaculis eget quam id pharetra.</h3>
+                <hr />
               </div>
               <div className="exdiv">
                 <div className="column">
