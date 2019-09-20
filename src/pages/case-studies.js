@@ -52,10 +52,10 @@ export default class CaseStudies extends React.Component {
           <section className="section-what-we-do" id="what-we-do">
             <div className="content-container">
               <div className="content-header">
-                <h4 className="title-red">A project for CET</h4>
+                <h4 className="title-red">A title for this bit</h4>
                 <h3 className="title">Porttitor dignissim elit at fermentum.</h3>
                 <h3 className="title">Fusce iaculis eget quam id pharetra.</h3>
-                <hr />
+                <hr className="adjusted-hr" />
               </div>
               <div className="exdiv">
                 <div className="column">
@@ -108,6 +108,14 @@ export default class CaseStudies extends React.Component {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </section>
+          <section className="section-photo">
+            <div className="content-container">
+              <div className="content-header">
+                <h1>Look at this cool photo bit</h1>
+                <p>I don't have lorem ipsum in my clipboard so you get this now</p>
               </div>
             </div>
           </section>

@@ -58,10 +58,11 @@ export default class ContactUs extends React.Component {
       } else {
         toast.success("Form submission accepted, speak to you soon!", { autoClose: 8000 })
         //close form
+        this.setState({ DisabledStatus: true });
       }
     } catch {
       toast.error("Error, could not connect. Check your connection.", { autoClose: 8000 })
-      this.setState({ DisabledStatus: true });
+      this.setState({ DisabledStatus: true }); //REMOVE BEFORE COMMIT
     }
   }
 
@@ -79,7 +80,10 @@ export default class ContactUs extends React.Component {
           </section>
           <section className="section-contact-form" id="submitted" style={{ backgroundColor: "#efefef" }}>
             <div className="content-container">
-              <h3 className="contact-form-title">Leave a message and we'll get back to you ASAP.</h3>
+              <div className="contact-form-header">
+                <h3 className="contact-form-title">Leave a message and we'll get back to you ASAP.</h3>
+                <p>Pardon our dust, our site is undergoing a rework, but you can still get in touch by filling out the form below!</p>
+              </div>
               <div className="contact-card">
                 <div className="col-1">
                   <h4>Phone</h4>
@@ -92,7 +96,7 @@ export default class ContactUs extends React.Component {
                   <h3>HP14 3WN</h3>
                 </div>
                 <div className="col-2">
-                  <form id="contact-us-form" onChange={this.handleForm} onSubmit={this.handleSubmit}>
+                  <form id="contact-us-form" onChange={this.handleForm} onSubmit={this.handleSubmit} hidden={this.state.DisabledStatus}>
                     <div className="row">
                       <input
                         name="FirstName"

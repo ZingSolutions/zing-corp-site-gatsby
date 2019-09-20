@@ -16,5 +16,19 @@ module.exports = {
         icon: `static/images/Favicon-PNG.png`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-137434995-1",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-hubspot",
+      options: {
+          trackingCode: "5721076",
+          respectDNT: true,
+          productionOnly: false,
+      },
+    },
   ],
 }

@@ -54,7 +54,7 @@ export default function HTML(props) {
                 "message": "We use cookies simply to track visits to our website. We do not store any personal details. Learn more, including about available controls:",
                 "dismiss": "Got it!",
                 "link": "Cookies Policy",
-                "href": "https://www.zing.dev/cookie-policy"
+                "href": "./cookies/"
               }
             });`,
           }}

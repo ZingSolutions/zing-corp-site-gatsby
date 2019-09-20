@@ -24,8 +24,15 @@ body {
   text-align: center;
   background-color: #efefef;
 
-  .contact-form-title {
-    margin-top: 1em;
+  .contact-form-header {
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    .contact-form-title {
+      margin-bottom: 0.5em;
+    }
+    p {
+      line-height: 1.3em;
+    }
   }
 
   .content-container {
