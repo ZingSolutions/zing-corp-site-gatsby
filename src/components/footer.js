@@ -10,8 +10,8 @@ export default class Footer extends React.Component {
       <footer>
         <div className="newsletter">
           <div className="col-1">
-            <h2>Sign Up to Our Newsletter</h2>
-            <p>Want to hear more? Sign up to our newsletter here!</p>
+            <h2>Let's do something amazing</h2>
+            <p>Drop your email here and we'll get back ASAP</p>
           </div>
           <div className="col-2">
             <form>

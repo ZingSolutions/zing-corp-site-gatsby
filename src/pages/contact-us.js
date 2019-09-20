@@ -21,49 +21,67 @@ export default class ContactUs extends React.Component {
     }
     this.handleForm = this.handleForm.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    // this.validateEmail = this.validateEmail.bind(this);
+    this.emailRef = React.createRef();
   }
 
   handleForm(event) {
+    // this.emailRef.current.setCustomValidity("Email must be of format x@y.z");
     this.setState({
       [event.target.name]: event.target.value
     });
   }
 
+  // validateEmail() {
+  //   console.log("CALLED");
+  //   if (/^[a-zA-Z0-9]+@+[a-zA-Z0-9]+.+[A-z]/.test(this.state.Email)) {
+  //     console.log("SUCCEEEDED");
+  //     return true;
+  //   } else {
+  //     console.log("FAILED");
+  //     return false;
+  //   }
+  // }
+
   async handleSubmit(event) {
     event.preventDefault();
-    const recaptcha = await load("6LcZlbUUAAAAAB0XnbgU8DjrBuVbvN92XL7a8ygU");
-    const token = await recaptcha.execute("ContactUsForm");
+    // console.log("SUBMISSION");
+    // if (this.validateEmail()) {
+      const recaptcha = await load("6LcZlbUUAAAAAB0XnbgU8DjrBuVbvN92XL7a8ygU");
+      const token = await recaptcha.execute("ContactUsForm");
 
-    const postData = {
-      Contact: {
-        FirstName: this.state.FirstName,
-        LastName: this.state.LastName,
-        Email: this.state.Email,
-        Subject: this.state.Subject,
-        Message: this.state.Message
-      },
-      Token: token
-    };
+      const postData = {
+        Contact: {
+          FirstName: this.state.FirstName,
+          LastName: this.state.LastName,
+          Email: this.state.Email,
+          Subject: this.state.Subject,
+          Message: this.state.Message
+        },
+        Token: token
+      };
 
-    try {
-      var res = await fetch("http://localhost:5000/contacts", {
-        method: "POST",
-        body: JSON.stringify(postData),
-        headers: {
-          "Content-Type": "application/json"
+      try {
+        var res = await fetch("http://localhost:5000/contacts", {
+          method: "POST",
+          body: JSON.stringify(postData),
+          headers: {
+            "Content-Type": "application/json"
+          }
+        });
+        if (res.status !== 200) {
+          toast.error("Error, submission failed", { autoClose: 8000 })
+        } else {
+          toast.success("Form submission accepted, speak to you soon!", { autoClose: 8000 })
+          //close form
+          this.setState({ DisabledStatus: true });
         }
-      });
-      if (res.status !== 200) {
-        toast.error("Error, submission failed", { autoClose: 8000 })
-      } else {
-        toast.success("Form submission accepted, speak to you soon!", { autoClose: 8000 })
-        //close form
-        this.setState({ DisabledStatus: true });
+      } catch {
+        toast.error("Error, could not connect. Check your connection.", { autoClose: 8000 })
       }
-    } catch {
-      toast.error("Error, could not connect. Check your connection.", { autoClose: 8000 })
-      this.setState({ DisabledStatus: true }); //REMOVE BEFORE COMMIT
-    }
+    // } else {
+      
+    // }
   }
 
   render() {
@@ -117,11 +135,14 @@ export default class ContactUs extends React.Component {
                     </div>
                     <div className="row">
                       <input
+                        id="Email"
+                        ref={this.emailRef}
                         name="Email"
                         type="email"
                         placeholder="Enter Email"
                         defaultValue={this.state.Email}
                         required
+                        // pattern="^[a-zA-Z0-9]+@+[a-zA-Z0-9]+.+[A-z]"
                         onChange={this.handleForm}
                       />
                       <input
