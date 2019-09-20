@@ -110,7 +110,6 @@ export default class ProspectAndZing extends React.Component {
                 </div>
                 <div className="row">
                 <div className="linker">
-                  <img src="/images/linker-left.png" alt="Linker Left" />
                 </div>
                 <div className="card">
                   <h3 className="title">SMS Marketing</h3>
