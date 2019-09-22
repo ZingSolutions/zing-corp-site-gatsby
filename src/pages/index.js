@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
+import { Link } from "gatsby"
 
 import "./index.scss"
 
@@ -15,13 +16,13 @@ export default class Index extends React.Component {
                 We develop bespoke enterprise software solutions around Twilio's
                 cloud communications platform for messaging, voice and video.
               </p>
-              <a href="/contact-us" className="call-to-action">
+              <Link to="/contact-us/" className="call-to-action">
                 Get Connected
-              </a>
+              </Link>
             </div>
             <div className="col-2">
               <img
-                src="/images/hero-image.png"
+                src="/images/Splash.png"
                 alt="Dashboards on mobile and laptop"
               />
             </div>
@@ -41,9 +42,9 @@ export default class Index extends React.Component {
                 for the Wholesale, Distribution and Manufacturing sectors.
               </p>
               <p>There are currently over 20 Zingers and we're growing fast</p>
-              <a href="/contact-us" className="call-to-action red">
+              <Link to="/contact-us/" className="call-to-action red">
                 Learn More
-              </a>
+              </Link>
             </div>
           </div>
         </section>

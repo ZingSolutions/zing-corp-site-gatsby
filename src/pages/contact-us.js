@@ -3,14 +3,13 @@ import Layout from "../components/layout"
 import { load } from "recaptcha-v3"
 import "./contact-us.scss"
 import { toast } from "react-toastify"
-import 'react-toastify/dist/ReactToastify.css'
+import "react-toastify/dist/ReactToastify.css"
 
-toast.configure();
+toast.configure()
 
 export default class ContactUs extends React.Component {
-
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       FirstName: "",
       LastName: "",
@@ -19,75 +18,65 @@ export default class ContactUs extends React.Component {
       Message: "",
       DisabledStatus: false,
     }
-    this.handleForm = this.handleForm.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-    // this.validateEmail = this.validateEmail.bind(this);
-    this.emailRef = React.createRef();
+    this.handleForm = this.handleForm.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.emailRef = React.createRef()
   }
 
   handleForm(event) {
-    // this.emailRef.current.setCustomValidity("Email must be of format x@y.z");
     this.setState({
-      [event.target.name]: event.target.value
-    });
+      [event.target.name]: event.target.value,
+    })
   }
 
-  // validateEmail() {
-  //   console.log("CALLED");
-  //   if (/^[a-zA-Z0-9]+@+[a-zA-Z0-9]+.+[A-z]/.test(this.state.Email)) {
-  //     console.log("SUCCEEEDED");
-  //     return true;
-  //   } else {
-  //     console.log("FAILED");
-  //     return false;
-  //   }
-  // }
-
   async handleSubmit(event) {
-    event.preventDefault();
-    // console.log("SUBMISSION");
-    // if (this.validateEmail()) {
-      const recaptcha = await load("6LcZlbUUAAAAAB0XnbgU8DjrBuVbvN92XL7a8ygU");
-      const token = await recaptcha.execute("ContactUsForm");
+    event.preventDefault()
+    const recaptcha = await load("6LcZlbUUAAAAAB0XnbgU8DjrBuVbvN92XL7a8ygU")
+    const token = await recaptcha.execute("ContactUsForm")
 
-      const postData = {
-        Contact: {
-          FirstName: this.state.FirstName,
-          LastName: this.state.LastName,
-          Email: this.state.Email,
-          Subject: this.state.Subject,
-          Message: this.state.Message
+    const postData = {
+      Contact: {
+        FirstName: this.state.FirstName,
+        LastName: this.state.LastName,
+        Email: this.state.Email,
+      },
+      Message: {
+        Subject: this.state.Subject,
+        Message: this.state.Message,
+      },
+      Token: token,
+    }
+
+    try {
+      const url =
+        "https://corp-site-functions.azurewebsites.net/api/PostContact" // "/api/PostContact"
+      var res = await fetch(url, {
+        method: "POST",
+        body: JSON.stringify(postData),
+        headers: {
+          "Content-Type": "application/json",
         },
-        Token: token
-      };
-
-      try {
-        var res = await fetch("http://localhost:5000/contacts", {
-          method: "POST",
-          body: JSON.stringify(postData),
-          headers: {
-            "Content-Type": "application/json"
-          }
-        });
-        if (res.status !== 200) {
-          toast.error("Error, submission failed", { autoClose: 8000 })
-        } else {
-          toast.success("Form submission accepted, speak to you soon!", { autoClose: 8000 })
-          //close form
-          this.setState({ DisabledStatus: true });
-        }
-      } catch {
-        toast.error("Error, could not connect. Check your connection.", { autoClose: 8000 })
+      })
+      if (res.status !== 200) {
+        toast.error("Error, submission failed", { autoClose: 8000 })
+      } else {
+        toast.success("Form submission accepted, speak to you soon!", {
+          autoClose: 8000,
+        })
+        //close form
+        this.setState({ DisabledStatus: true })
       }
-    // } else {
-      
-    // }
+    } catch {
+      toast.error("Error, could not connect. Check your connection.", {
+        autoClose: 8000,
+      })
+    }
   }
 
   render() {
     return (
       <Layout>
-        <main>
+        <main className="contact-us">
           <section className="section-hero" id="privacy">
             <div className="content-container">
               <div className="col-1">
@@ -96,11 +85,20 @@ export default class ContactUs extends React.Component {
               </div>
             </div>
           </section>
-          <section className="section-contact-form" id="submitted" style={{ backgroundColor: "#efefef" }}>
+          <section
+            className="section-contact-form"
+            id="submitted"
+            style={{ backgroundColor: "#efefef" }}
+          >
             <div className="content-container">
               <div className="contact-form-header">
-                <h3 className="contact-form-title">Leave a message and we'll get back to you ASAP.</h3>
-                <p>Pardon our dust, our site is undergoing a rework, but you can still get in touch by filling out the form below!</p>
+                <h3 className="contact-form-title">
+                  Leave a message and we'll get back to you ASAP.
+                </h3>
+                <p>
+                  Pardon our dust, our site is undergoing a rework, but you can
+                  still get in touch by filling out the form below!
+                </p>
               </div>
               <div className="contact-card">
                 <div className="col-1">
@@ -114,7 +112,11 @@ export default class ContactUs extends React.Component {
                   <h3>HP14 3WN</h3>
                 </div>
                 <div className="col-2">
-                  <form id="contact-us-form" onChange={this.handleForm} onSubmit={this.handleSubmit} hidden={this.state.DisabledStatus}>
+                  <form
+                    id="contact-us-form"
+                    onSubmit={this.handleSubmit}
+                    hidden={this.state.DisabledStatus}
+                  >
                     <div className="row">
                       <input
                         name="FirstName"
@@ -142,7 +144,6 @@ export default class ContactUs extends React.Component {
                         placeholder="Enter Email"
                         defaultValue={this.state.Email}
                         required
-                        // pattern="^[a-zA-Z0-9]+@+[a-zA-Z0-9]+.+[A-z]"
                         onChange={this.handleForm}
                       />
                       <input
@@ -162,15 +163,24 @@ export default class ContactUs extends React.Component {
                       />
                     </div>
                     <div className="row">
-                      <button className="contact-submit" type="submit" disabled={this.state.disabledStatus} hidden={this.state.disabledStatus}>
+                      <button
+                        className="contact-submit"
+                        type="submit"
+                        disabled={this.state.disabledStatus}
+                        hidden={this.state.disabledStatus}
+                      >
                         Submit now
-                  </button>
+                      </button>
                     </div>
                   </form>
-                  <div className="thanks" >
-                    <h4>Thanks for contacting us!</h4>
-                    <h4>We'll get back to you ASAP</h4>
-                  </div>
+                  {this.state.DisabledStatus ? (
+                    <div className="thanks">
+                      <h4>Thanks for contacting us!</h4>
+                      <h4>We'll get back to you ASAP</h4>
+                    </div>
+                  ) : (
+                    ""
+                  )}
                 </div>
               </div>
             </div>

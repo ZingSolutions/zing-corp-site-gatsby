@@ -20,14 +20,15 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-137434995-1",
+        respectDNT: true,
       },
     },
     {
       resolve: "gatsby-plugin-hubspot",
       options: {
-          trackingCode: "5721076",
-          respectDNT: true,
-          productionOnly: false,
+        trackingCode: "5721076",
+        respectDNT: true,
+        productionOnly: true,
       },
     },
   ],

@@ -1,133 +1,136 @@
 @import "../scss/base";
 
-input {
-  border: 1px solid $light-grey;
-  border-radius: 2px;
-  line-height: 2em;
-  padding: 0 1em;
-  margin-bottom: 1em;
-  width: 100%;
-}
-
-body {
-  main {
-    section {
-      .section-contact-form {
-        background-color: #FF0000;
-      }
-    }
-  }
-}
-
-.section-contact-form {
-  margin-top: 300px;
-  text-align: center;
-  background-color: #efefef;
-
-  .contact-form-header {
-    margin-top: 1.5em;
+.contact-us {
+  input {
+    border: 1px solid $light-grey;
+    border-radius: 2px;
+    line-height: 2em;
+    padding: 0 1em;
     margin-bottom: 1em;
-    .contact-form-title {
-      margin-bottom: 0.5em;
-    }
-    p {
-      line-height: 1.3em;
+    width: 100%;
+  }
+
+  .section-hero {
+    height: 430px;
+
+    .content-container {
+      align-items: flex-start;
     }
   }
 
-  .content-container {
-    flex-direction: column;
-    justify-content: flex-end;
+  .section-contact-form {
+    text-align: center;
+    background-color: #efefef;
+    padding-bottom: 2em;
 
-    h3 {
-      margin-bottom: 2em;
+    .contact-form-header {
+      margin-top: 1.5em;
+      margin-bottom: 1em;
+      .contact-form-title {
+        margin-bottom: 0.5em;
+      }
+      p {
+        line-height: 1.3em;
+      }
     }
 
-    .contact-card {
-      position: relative;
-      background-color: white;
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      border-radius: 3px;
+    .content-container {
+      flex-direction: column;
+      justify-content: flex-end;
 
-      .col-1 {
-        padding: 1em;
-        text-align: left;
-        min-width: 50%;
-        h4 {
-          margin-top: 1em;
-          color: $zing-red;
-        }
-        h3 {
-          font-size: 1em;
-          margin-bottom: 0;
-        }
+      h3 {
+        margin-bottom: 2em;
       }
 
-      .col-2 {
-        max-width: 50%;
-        padding: 1em;
-        .row {
-          display: flex;
-          flex-direction: row;
-          justify-content: flex-start;
-          flex-wrap: wrap;
-          input {
-            border: 1px solid $light-grey;
-            border-radius: 2px;
-            line-height: 2em;
-            padding: 0 1em;
-            margin-bottom: 1em;
-            width: 100%;
-          }
-          textarea {
-            border: 1px solid $light-grey;
-            border-radius: 2px;
-            line-height: 2em;
-            padding: 0 1em;
-            margin-bottom: 1em;
-            width: 100%;
-          }
-          textarea {
-            height: 100px;
-            resize: none;
-            line-height: 1em;
-            padding: 1em;
-          }
-          button {
-            background-color: $slate;
-            border: none;
-            color: $text-primary;
-            padding: 1em 2em;
-            border-radius: 2em;
-            cursor: pointer;
-          }
-        }
+      .contact-card {
+        position: relative;
+        background-color: white;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 3px;
 
-        .thanks {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          height: 100%;
-          h4:nth-child(1) {
+        .col-1 {
+          padding: 1em;
+          text-align: left;
+          h4 {
+            margin-top: 1em;
             color: $zing-red;
           }
+          h3 {
+            font-size: 1em;
+            margin-bottom: 0;
+          }
+        }
+
+        .col-2 {
+          padding: 1em;
+          .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            input {
+              border: 1px solid $light-grey;
+              border-radius: 2px;
+              line-height: 2em;
+              padding: 0 1em;
+              margin-bottom: 1em;
+              width: 100%;
+            }
+            textarea {
+              border: 1px solid $light-grey;
+              border-radius: 2px;
+              line-height: 2em;
+              padding: 0 1em;
+              margin-bottom: 1em;
+              width: 100%;
+            }
+            textarea {
+              height: 100px;
+              resize: none;
+              line-height: 1em;
+              padding: 1em;
+            }
+            button {
+              background-color: $slate;
+              border: none;
+              color: $text-primary;
+              padding: 1em 2em;
+              border-radius: 2em;
+              cursor: pointer;
+            }
+          }
+
+          .thanks {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            h4:nth-child(1) {
+              color: $zing-red;
+            }
+          }
+        }
+
+        &:before {
+          content: "";
+          background-color: #c7001c;
+          width: 40px;
+          height: 40px;
+          position: absolute;
+          top: -10px;
+          left: -10px;
+          z-index: -1;
         }
       }
-
-      &:before {
-        content: "";
-        background-color: #c7001c;
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        top: -10px;
-        left: -10px;
-        z-index: -1;
-      }
     }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .contact-us .section-contact-form .content-container .contact-card {
+    flex-direction: row;
   }
 }
