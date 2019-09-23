@@ -22,7 +22,7 @@ export default class Index extends React.Component {
             </div>
             <div className="col-2">
               <img
-                src="/images/Splash.png"
+                src="/images/hero-image.png"
                 alt="Dashboards on mobile and laptop"
               />
             </div>

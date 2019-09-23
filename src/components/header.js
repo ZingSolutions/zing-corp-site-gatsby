@@ -48,9 +48,9 @@ export default class Header extends React.Component {
           <div>
             <Link to="/contact-us/">
               <i className="material-icons md-24">email</i>
-              <Link to="/contact-us/" className="call-to-action red">
-                Contact Us
-              </Link>
+            </Link>
+            <Link to="/contact-us/" className="call-to-action red">
+              Contact Us
             </Link>
           </div>
         </div>

@@ -5,6 +5,7 @@ import "./contact-us.scss"
 import { toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 
+var recaptcha = null
 toast.configure()
 
 export default class ContactUs extends React.Component {
@@ -21,6 +22,10 @@ export default class ContactUs extends React.Component {
     this.handleForm = this.handleForm.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.emailRef = React.createRef()
+
+    load("6LcZlbUUAAAAAB0XnbgU8DjrBuVbvN92XL7a8ygU").then(
+      instance => (recaptcha = instance)
+    )
   }
 
   handleForm(event) {
@@ -31,7 +36,6 @@ export default class ContactUs extends React.Component {
 
   async handleSubmit(event) {
     event.preventDefault()
-    const recaptcha = await load("6LcZlbUUAAAAAB0XnbgU8DjrBuVbvN92XL7a8ygU")
     const token = await recaptcha.execute("ContactUsForm")
 
     const postData = {
@@ -58,16 +62,19 @@ export default class ContactUs extends React.Component {
         },
       })
       if (res.status !== 200) {
-        toast.error("Error, submission failed", { autoClose: 8000 })
+        toast.error(
+          "Oops, looks like we're having some difficulties. Please try again in a minute.",
+          { autoClose: 8000 }
+        )
       } else {
-        toast.success("Form submission accepted, speak to you soon!", {
+        toast.success("Thanks, we'll speak to you soon!", {
           autoClose: 8000,
         })
         //close form
         this.setState({ DisabledStatus: true })
       }
     } catch {
-      toast.error("Error, could not connect. Check your connection.", {
+      toast.error("Error, could not connect. Please check your connection.", {
         autoClose: 8000,
       })
     }
@@ -81,7 +88,7 @@ export default class ContactUs extends React.Component {
             <div className="content-container">
               <div className="col-1">
                 <h1>Contact Us</h1>
-                <p>Let's do something amazing together.</p>
+                <p>Let's start a conversation today.</p>
               </div>
             </div>
           </section>
@@ -92,12 +99,10 @@ export default class ContactUs extends React.Component {
           >
             <div className="content-container">
               <div className="contact-form-header">
-                <h3 className="contact-form-title">
-                  Leave a message and we'll get back to you ASAP.
-                </h3>
+                <h3 className="contact-form-title">Want to get in touch?</h3>
                 <p>
-                  Pardon our dust, our site is undergoing a rework, but you can
-                  still get in touch by filling out the form below!
+                  We’d love to hear from you, leave your details below and we’ll
+                  jump straight on it.
                 </p>
               </div>
               <div className="contact-card">
