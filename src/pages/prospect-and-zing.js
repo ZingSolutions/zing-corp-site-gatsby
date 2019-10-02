@@ -18,7 +18,7 @@ export default class ProspectAndZing extends React.Component {
             </div>
             <div className="col-2">
               <img
-                src="/images/hero-image.png"
+                src="/images/Splash.png"
                 alt="Dashboards on mobile and laptop"
               />
             </div>
@@ -32,7 +32,7 @@ export default class ProspectAndZing extends React.Component {
               <h3 className="title">Direct From Prospect CRM</h3>
               <hr />
             </div>
-            <div className="content-body-path">
+            <div className="content-body-path ps-and-zing">
               <p>
                 Utilising SMS as a direct communication channel will provide you
                 with the opportunity to deliver messages straight into the hands
@@ -55,7 +55,7 @@ export default class ProspectAndZing extends React.Component {
               <div className="row">
                 <div className="card">
                   <h3 className="title">Order Confirmations</h3>
-                  <hr />
+                  {/* <hr /> */}
                   <p>
                     Allow your customers the freedom to send their order
                     confirmation receipts straight to their phones. Once an
@@ -66,7 +66,12 @@ export default class ProspectAndZing extends React.Component {
                   </p>
                 </div>
                 <div className="image">
-                  <img src="/images/integration.png" alt="Integration" />
+                  <img
+                    src="/images/ps-orders.png"
+                    alt="Integration"
+                    width="308px"
+                    height="200px"
+                  />
                 </div>
                 <div className="linker">
                   <img src="/images/linker-right.png" alt="Linker Right" />
@@ -76,9 +81,17 @@ export default class ProspectAndZing extends React.Component {
                 <div className="linker">
                   <img src="/images/linker-left.png" alt="Linker Left" />
                 </div>
+                <div className="image">
+                  <img
+                    src="/images/ps-aware.png"
+                    alt="Integration"
+                    width="308px"
+                    height="200px"
+                  />
+                </div>
                 <div className="card">
                   <h3 className="title">Stock Level Alerts</h3>
-                  <hr />
+                  {/* <hr /> */}
                   <p>
                     Notify your purchasing team when stock items are running
                     low. Through setting up alerts, you can respond quickly to
@@ -86,14 +99,11 @@ export default class ProspectAndZing extends React.Component {
                     supply available.
                   </p>
                 </div>
-                <div className="image">
-                  <img src="/images/integration.png" alt="Integration" />
-                </div>
               </div>
               <div className="row">
                 <div className="card">
                   <h3 className="title">Back-in-Stock Alerts</h3>
-                  <hr />
+                  {/* <hr /> */}
                   <p>
                     Have your customers tried purchasing from you when you are
                     out of stock? For your customers there is nothing more
@@ -104,7 +114,12 @@ export default class ProspectAndZing extends React.Component {
                   </p>
                 </div>
                 <div className="image">
-                  <img src="/images/integration.png" alt="Integration" />
+                  <img
+                    src="/images/ps-alert.png"
+                    alt="Integration"
+                    width="308px"
+                    height="200px"
+                  />
                 </div>
                 <div className="linker">
                   <img src="/images/linker-right.png" alt="Linker Right" />
@@ -112,17 +127,22 @@ export default class ProspectAndZing extends React.Component {
               </div>
               <div className="row">
                 <div className="linker"></div>
+                <div className="image">
+                  <img
+                    src="/images/ps-sms.png"
+                    alt="Integration"
+                    width="308px"
+                    height="200px"
+                  />
+                </div>
                 <div className="card">
                   <h3 className="title">SMS Marketing</h3>
-                  <hr />
+                  {/* <hr /> */}
                   <p>
                     Communicate directly with your customers, right in the palm
                     of their hand. SMS marketing will allow you to deliver your
                     brand message to your customers where they are.
                   </p>
-                </div>
-                <div className="image">
-                  <img src="/images/integration.png" alt="Integration" />
                 </div>
               </div>
             </div>

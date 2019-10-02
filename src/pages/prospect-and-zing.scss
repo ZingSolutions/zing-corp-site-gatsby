@@ -14,3 +14,10 @@
     padding-bottom: 1em;
   }
 }
+
+.ps-and-zing .row {
+  max-height: 250px;
+  .card {
+    max-height: 200px;
+  }
+}
