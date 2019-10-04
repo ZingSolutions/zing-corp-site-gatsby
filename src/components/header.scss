@@ -22,114 +22,51 @@
 
 header {
   background-image: $gradient;
-}
-
-.menu-header {
-  padding: 1em 2em;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  .nav-menu-blockout {
-    position: fixed;
-    left: 0;
-    top: 0;
-    background: adjust-color($light-grey, $alpha: -0.6);
-    width: 100vw;
-    height: 100vh;
-    z-index: 2;
-
-    display: none;
-    flex-direction: column;
-
-    &.shown {
-      display: block;
-    }
-  }
-
-  .nav-menu {
-    animation-duration: 400ms;
-    position: fixed;
-    top: 0;
-    right: 0;
-    list-style: none;
-    background: $gradient;
-    height: 100vh;
-    width: 300px;
-    font-size: 1.5em;
-    padding: 2em 0.5em;
-    z-index: 3;
-    transform: translateX(100%);
-
-    li {
-      margin-left: 1em;
-      margin-bottom: 1em;
-      &:nth-child(1) {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-    }
-    &.show-nav {
-      animation-name: slidein;
-      transform: translateX(0%);
-    }
-
-    &.hide-nav {
-      animation-name: slideout;
-    }
-  }
-
-  .static-menu {
-    display: none;
-    list-style: none;
+  .header {
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-left: 1em;
+    padding: 1em 2em;
 
-    li {
-      margin-left: 1em;
-      font-size: 1em;
+    img {
+      height: 4em;
     }
-  }
 
-  img {
-    height: 4em;
-  }
+    i {
+      font-size: 2em;
+      color: $zing-red;
+    }
 
-  i {
-    font-size: 2em;
+    .call-to-action {
+      display: none;
+    }
   }
 }
 
 @media only screen and (min-width: 600px) {
-  .menu-header {
-    width: 80%;
-    margin: 0 auto;
-    padding: 1em 0;
-    max-width: 1024px;
+  header {
+    .header {
+      width: 80%;
+      margin: 0 auto;
+      padding: 1em 0;
+      max-width: 1024px;
+
+      .call-to-action {
+        display: initial;
+      }
+
+      i {
+        display: none;
+      }
+    }
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  .menu-header {
-    width: 70%;
-
-    padding: 1em 0;
-    .nav-menu-blockout {
-      display: none;
-    }
-
-    .nav-menu {
-      display: none;
-    }
-
-    .static-menu {
-      display: flex;
-    }
-
-    i.material-icons.md-24 {
-      display: none;
+  header {
+    .header {
+      width: 70%;
     }
   }
 }

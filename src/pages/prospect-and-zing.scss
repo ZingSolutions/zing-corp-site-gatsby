@@ -14,3 +14,12 @@
     padding-bottom: 1em;
   }
 }
+
+@media only screen and (min-width: 600px) {
+  .ps-and-zing .row {
+    max-height: 250px;
+    .card {
+      max-height: 200px;
+    }
+  }
+}

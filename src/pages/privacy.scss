@@ -1,44 +1,36 @@
 @import "../scss/base";
 
 hr {
-    height: 2px;
-    margin-top: 1em;
-    margin-bottom: 2em;
-    background: $zing-red;
-    border: none;
-}
-  
-.section-policy-text {
-    padding-top: 3em;
-    .content-container {
-        .col-1 {
-            .sqs-block {
-                padding-bottom: 3em;
-                .sqs-block-content {
-                    a {
-                        span {
-                            text-decoration: underline;
-                        }
-                    }
-                    p {
-                        white-space: pre-wrap;
-                    }
-                }
-            }
-        }
-        .sqs-block {
-            overflow-x: auto;
-        }
-        a {
-            color: $text-secondary;
-        }
-    }
+  height: 2px;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  background: $zing-red;
+  border: none;
 }
 
-body {
-    main {        
-        section.section-hero {
-            height: 500px;
+.section-policy-text {
+  padding-top: 3em;
+  .content-container {
+    .col-1 {
+      .sqs-block {
+        padding-bottom: 3em;
+        .sqs-block-content {
+          a {
+            span {
+              text-decoration: underline;
+            }
+          }
+          p {
+            white-space: pre-wrap;
+          }
         }
+      }
     }
+    .sqs-block {
+      overflow-x: auto;
+    }
+    a {
+      color: $text-secondary;
+    }
+  }
 }

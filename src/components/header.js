@@ -41,53 +41,18 @@ export default class Header extends React.Component {
   render() {
     return (
       <header>
-        <div className="menu-header">
-          <ZingLogo />
-          <ul className={this.getMenuClassList()}>
-            <li>
-              Where To?
-              <i className="material-icons md-24" onClick={this.toggleMenu}>
-                clear
-              </i>
-            </li>
-            <li>
-              <Link to="/contact-us/">Services</Link>
-            </li>
-            <li>
-              <Link to="/contact-us/">Zing & Twilio</Link>
-            </li>
-            <li>
-              <Link to="/contact-us/">Case Studies</Link>
-            </li>
-            <li>
-              <Link to="/contact-us/" className="call-to-action red">
-                Contact Us
-              </Link>
-            </li>
-          </ul>
-          <ul className="static-menu">
-            <li>
-              <Link to="/contact-us/">Services</Link>
-            </li>
-            <li>
-              <Link to="/contact-us/">Zing & Twilio</Link>
-            </li>
-            <li>
-              <Link to="/contact-us/">Case Studies</Link>
-            </li>
-            <li>
-              <Link to="/contact-us/" className="call-to-action red">
-                Contact Us
-              </Link>
-            </li>
-          </ul>
-          <div
-            className={this.getBlockOutClassList()}
-            onClick={this.toggleMenu}
-          ></div>
-          <i className="material-icons md-24" onClick={this.toggleMenu}>
-            menu
-          </i>
+        <div className="header">
+          <div>
+            <ZingLogo />
+          </div>
+          <div>
+            <Link to="/contact-us/">
+              <i className="material-icons md-24">email</i>
+            </Link>
+            <Link to="/contact-us/" className="call-to-action red">
+              Contact Us
+            </Link>
+          </div>
         </div>
       </header>
     )
