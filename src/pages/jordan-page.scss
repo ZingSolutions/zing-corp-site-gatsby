@@ -2,3 +2,29 @@
 
 body main section.jordan-hero {height: 300px;} 
 
+    .ps-and-zing .row {
+      max-height: 250px;
+      .card {
+        max-height: 200px;
+      }
+    }
+
+.container-row {
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top:20px;
+    padding-bottom:20px;
+    display: flex;
+    background-color: red;
+    }
+
+    .row-column{
+      width: 50%;
+      max-height:100%;
+      padding: 20px;
+      margin: 20px;
+      box-sizing: border-box;
+      background-color: blue;
+    }
