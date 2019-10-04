@@ -1,9 +1,10 @@
 import React from "react"
 import Layout from "../components/layout"
+import { OutboundLink } from "gatsby-plugin-google-analytics";
 
 import "./privacy.scss"
 
-export default class Index extends React.Component {
+export default class Privacy extends React.Component {
   render() {
     return (
       <Layout>
@@ -68,7 +69,7 @@ export default class Index extends React.Component {
     &nbsp;<br />
     <strong>2.Providing your personal data to others</strong>&nbsp;<br />
     &nbsp;<br />
-    2.1 <strong>Our partner service providers.</strong> We may share your data to our partners who manage and support us such as Microsoft. More information is available at <a href="https://www.prospectsoft.com/policy/448/Third-Party-Policy" target="_blank"><span>https://www.prospectsoft.com/policy/448/Third-Party-Policy</span></a>. We may also share your data with other companies within our group of companies. &nbsp;<br />
+    2.1 <strong>Our partner service providers.</strong> We may share your data to our partners who manage and support us such as Microsoft. More information is available at <OutboundLink href="https://www.prospectsoft.com/policy/448/Third-Party-Policy" target="_blank"><span>https://www.prospectsoft.com/policy/448/Third-Party-Policy</span></OutboundLink>. We may also share your data with other companies within our group of companies. &nbsp;<br />
     &nbsp;<br />
     We use third party service providers to help us operate our business and our web site and administer activities on our behalf, such as sending out newsletters, emails or surveys. We may share your information with these third parties for those limited purposes.&nbsp;<br />
     &nbsp;<br />
@@ -153,7 +154,7 @@ export default class Index extends React.Component {
     (d) by email, using the email address published on our website from time to time.&nbsp;<br />
     &nbsp;<br />
     <strong>8. Data protection officer</strong>&nbsp;<br />
-    Our data protection officer's contact details are: Tanya Warnford-Davis, who can be contacted via email: <a href="mailto:gdpr-officer@prospectsoft.com" target="_blank"><span >gdpr-officer@prospectsoft.com</span></a>, or telephone: +44 (0) 1494 486300.&nbsp;  </p></div></div>
+    Our data protection officer's contact details are: Tanya Warnford-Davis, who can be contacted via email: <OutboundLink href="mailto:gdpr-officer@prospectsoft.com" target="_blank"><span >gdpr-officer@prospectsoft.com</span></OutboundLink>, or telephone: +44 (0) 1494 486300.&nbsp;  </p></div></div>
             </div>
             </div>
         </section>

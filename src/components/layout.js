@@ -5,10 +5,6 @@ import Footer from "./footer"
 import "./layout.scss"
 
 export default class Layout extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-
   render() {
     return (
       <div>
