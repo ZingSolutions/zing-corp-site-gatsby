@@ -69,11 +69,77 @@ export default class JordanPage extends React.Component {
                 <a href="#" class="call-to-action">Click Here</a>
               </div>
             </div>
-
           </div>
 
+        </section>
+        //** section added to ensure white background */
+        <section></section>
+        <section>
+          <div className="content-container">
+            <div class="flex-row">
+              <div class="row-card">
+                <img
+                  src="/images/question.jpg"
+                  alt="Question"
+                  width="100%"
+                />
+                <div class="card-container">
+                  Content in here</div>
+              </div>
+              <div class="row-card">
+                <img
+                  src="/images/question.jpg"
+                  alt="Question"
+                  width="100%"
+                />
+                <div class="card-container">
+                  Content in here</div>
+              </div><div class="row-card">
+                <img
+                  src="/images/question.jpg"
+                  alt="Question"
+                  width="100%"
+                />
+                <div class="card-container">
+                  Content in here</div>
+              </div>
+            </div>
+          </div>
+          <div className="content-container">
+            <div class="flex-row">
+              <div class="row-card">
+                <img
+                  src="/images/question.jpg"
+                  alt="Question"
+                  width="100%"
+                />
+                <div class="card-container">
+                  Content in here</div>
+              </div>
+              <div class="row-card">
+                <img
+                  src="/images/question.jpg"
+                  alt="Question"
+                  width="100%"
+                />
+                <div class="card-container">
+                  Content in here</div>
+              </div><div class="row-card">
+                <img
+                  src="/images/question.jpg"
+                  alt="Question"
+                  width="100%"
+                />
+                <div class="card-container">
+                  Content in here</div>
+              </div>
+            </div>
+          </div>
         </section>
       </Layout>
     )
   }
 }
+
+
+
