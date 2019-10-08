@@ -2,16 +2,29 @@
 
 .sms {
   padding-top: 2em;
-}
-
-.sms .content-container {
-  flex-direction: column;
-  padding-bottom: 4em;
-}
-
-.sms .content-body-path {
-  .p-end {
+  .content-container {
+    flex-direction: column;
+    padding-bottom: 4em;
+  }
+  .content-body-path .p-end {
     padding-bottom: 1em;
+  }
+}
+
+.section-hero .content-container .col-1 p {
+  margin-bottom: 2em;
+}
+
+.lets-chat {
+  padding-top: 5em;
+  .content-container div {
+    width: 100%;
+    #reactHubspotForm0 {
+      width: 100%;
+      iframe {
+        width: 100%;
+      }
+    }
   }
 }
 

@@ -59,7 +59,7 @@ export default function HTML(props) {
             });`,
           }}
         ></script>
-      </body>
+           </body>
     </html>
   )
 }
