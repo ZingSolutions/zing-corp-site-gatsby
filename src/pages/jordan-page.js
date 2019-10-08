@@ -21,7 +21,7 @@ export default class JordanPage extends React.Component {
                 <img
                   src="/images/question.jpg"
                   alt="Question"
-                  width="308px"
+                  max-width="308px"
                   height="200px"
                 />
               </div>
@@ -46,7 +46,7 @@ export default class JordanPage extends React.Component {
                 <img class="right-column-img"
                   src="/images/question.jpg"
                   alt="Question"
-                  width="308px"
+                  max-width="308px"
                   height="200px"
                 />
               </div>
@@ -58,7 +58,7 @@ export default class JordanPage extends React.Component {
                 <img
                   src="/images/question.jpg"
                   alt="Question"
-                  width="308px"
+                  max-width="308px"
                   height="200px"
                 />
               </div>
@@ -79,26 +79,29 @@ export default class JordanPage extends React.Component {
             <div class="flex-row">
               <div class="row-card">
                 <img
-                  src="/images/question.jpg"
-                  alt="Question"
-                  width="100%"
+                   src="/images/productivity.jpg"
+                   alt="Productivity"
+                   height="70%"
+                   width="70%"
                 />
                 <div class="card-container">
                   Content in here</div>
               </div>
               <div class="row-card">
                 <img
-                  src="/images/question.jpg"
-                  alt="Question"
-                  width="100%"
+                   src="/images/productivity.jpg"
+                   alt="Productivity"
+                   height="70%"
+                   width="70%"
                 />
                 <div class="card-container">
                   Content in here</div>
               </div><div class="row-card">
                 <img
-                  src="/images/question.jpg"
-                  alt="Question"
-                  width="100%"
+                  src="/images/productivity.jpg"
+                  alt="Productivity"
+                  height="70%"
+                   width="70%"
                 />
                 <div class="card-container">
                   Content in here</div>
@@ -109,8 +112,8 @@ export default class JordanPage extends React.Component {
             <div class="flex-row">
               <div class="row-card">
                 <img
-                  src="/images/question.jpg"
-                  alt="Question"
+                   src="/images/productivity.jpg"
+                   alt="Productivity"
                   width="100%"
                 />
                 <div class="card-container">
@@ -118,16 +121,16 @@ export default class JordanPage extends React.Component {
               </div>
               <div class="row-card">
                 <img
-                  src="/images/question.jpg"
-                  alt="Question"
+                   src="/images/productivity.jpg"
+                   alt="Productivity"
                   width="100%"
                 />
                 <div class="card-container">
                   Content in here</div>
               </div><div class="row-card">
                 <img
-                  src="/images/question.jpg"
-                  alt="Question"
+                   src="/images/productivity.jpg"
+                   alt="Productivity"
                   width="100%"
                 />
                 <div class="card-container">
