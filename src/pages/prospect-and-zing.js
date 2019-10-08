@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
+import HubspotForm from "react-hubspot-form"
 import { Link } from "gatsby"
 
 import "./prospect-and-zing.scss"
@@ -12,7 +13,10 @@ export default class ProspectAndZing extends React.Component {
           <div className="content-container">
             <div className="col-1">
               <h1>Prospect CRM & Zing</h1>
-              <Link to="/contact-us/" className="call-to-action">
+              <p>
+              Utilising SMS as a direct communication channel will provide you with the opportunity to deliver messages straight into the hands of your customers.
+              </p>
+              <Link to="/contact-us/" className="call-to-action red">
                 Get Yourself Connected
               </Link>
             </div>
@@ -24,7 +28,15 @@ export default class ProspectAndZing extends React.Component {
             </div>
           </div>
         </section>
-        <section className="lets-chat"></section>
+        <section className="lets-chat">
+          <div className="content-container">
+        <HubspotForm
+        portalId="5721076"
+        formId="3cbb5e36-d3ba-4a2e-818a-81dd7ea76eea"
+        loading={<div>Loading...</div>}
+        />
+          </div>
+        </section>
         <section className="sms">
           <div className="content-container">
             <div className="content-header">
@@ -33,11 +45,6 @@ export default class ProspectAndZing extends React.Component {
               <hr />
             </div>
             <div className="content-body-path ps-and-zing">
-              <p>
-                Utilising SMS as a direct communication channel will provide you
-                with the opportunity to deliver messages straight into the hands
-                of your customers.
-              </p>
               <p>
                 With SMS being accessible for both internal and external
                 recipients, now is the time to improve communication across your
