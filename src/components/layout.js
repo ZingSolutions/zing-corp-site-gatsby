@@ -7,7 +7,7 @@ import "./layout.scss"
 export default class Layout extends React.Component {
   render() {
     return (
-      <div>
+      <div className={this.props.className}>
         <Header />
         <main>{this.props.children}</main>
         <Footer />
