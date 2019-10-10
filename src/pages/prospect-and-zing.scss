@@ -11,12 +11,8 @@
   }
 }
 
-.hbspt-form 
->>>
-
-input[type=submit] {
-  width:300px;
-  height:50px;
+.prospect-and-zing .contact-us-links {
+  display: none;
 }
 
 .section-hero .content-container .col-1 p {
@@ -30,15 +26,11 @@ input[type=submit] {
     #reactHubspotForm0 {
       width: 100%;
       iframe {
-        width: 100%;    
-      
+        width: 100%;
       }
     }
   }
 }
-
-
-
 
 @media only screen and (min-width: 600px) {
   .ps-and-zing .row {

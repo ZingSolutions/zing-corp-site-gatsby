@@ -45,7 +45,7 @@ export default class Header extends React.Component {
           <div>
             <ZingLogo />
           </div>
-          <div>
+          <div className="contact-us-links">
             <Link to="/contact-us/">
               <i className="material-icons md-24">email</i>
             </Link>

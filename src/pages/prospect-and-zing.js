@@ -1,20 +1,29 @@
 import React from "react"
 import Layout from "../components/layout"
 import HubspotForm from "react-hubspot-form"
-import { Link } from "gatsby"
 
 import "./prospect-and-zing.scss"
 
 export default class ProspectAndZing extends React.Component {
+  componentDidMount() {
+    if (window.location.hash) {
+      if (document.querySelector(window.location.hash)) {
+        document.querySelector(window.location.hash).scrollIntoView()
+      }
+    }
+  }
+
   render() {
     return (
-      <Layout>
+      <Layout className="prospect-and-zing">
         <section className="section-hero">
           <div className="content-container">
             <div className="col-1">
               <h1>Prospect CRM & Zing</h1>
               <p>
-              Utilising SMS as a direct communication channel will provide you with the opportunity to deliver messages straight into the hands of your customers.
+                Utilising SMS as a direct communication channel will provide you
+                with the opportunity to deliver messages straight into the hands
+                of your customers.
               </p>
               <a href="#moredetails" className="call-to-action red">
                 Find Out More
@@ -30,12 +39,14 @@ export default class ProspectAndZing extends React.Component {
         </section>
         <section className="lets-chat">
           <div className="content-container">
-        <HubspotForm
-        portalId="5721076"
-        formId="3cbb5e36-d3ba-4a2e-818a-81dd7ea76eea"
-        onReady={(form) => console.log(form.querySelector("input[type=submit]"))}
-        loading={<div>Loading...</div>}
-        />
+            <HubspotForm
+              portalId="5721076"
+              formId="3cbb5e36-d3ba-4a2e-818a-81dd7ea76eea"
+              onReady={form =>
+                console.log(form.querySelector("input[type=submit]"))
+              }
+              loading={<div>Loading...</div>}
+            />
           </div>
         </section>
         <section className="sms">
