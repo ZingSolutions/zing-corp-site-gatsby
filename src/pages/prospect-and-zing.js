@@ -16,9 +16,9 @@ export default class ProspectAndZing extends React.Component {
               <p>
               Utilising SMS as a direct communication channel will provide you with the opportunity to deliver messages straight into the hands of your customers.
               </p>
-              <Link to="/contact-us/" className="call-to-action red">
-                Get Yourself Connected
-              </Link>
+              <a href="#moredetails" className="call-to-action red">
+                Find Out More
+              </a>
             </div>
             <div className="col-2">
               <img
@@ -33,13 +33,14 @@ export default class ProspectAndZing extends React.Component {
         <HubspotForm
         portalId="5721076"
         formId="3cbb5e36-d3ba-4a2e-818a-81dd7ea76eea"
+        onReady={(form) => console.log(form.querySelector("input[type=submit]"))}
         loading={<div>Loading...</div>}
         />
           </div>
         </section>
         <section className="sms">
           <div className="content-container">
-            <div className="content-header">
+            <div className="content-header" id="moredetails">
               <h2 className="title-red">Automated SMS</h2>
               <h3 className="title">Direct From Prospect CRM</h3>
               <hr />
