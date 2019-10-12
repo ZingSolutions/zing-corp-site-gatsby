@@ -1,13 +1,13 @@
 import React from "react"
 import Layout from "../components/layout"
 
-import "./jordan-page.scss"
+import "./partner-page.scss"
 
-export default class JordanPage extends React.Component {
+export default class PartnerPage extends React.Component {
   render() {
     return (
       <Layout>
-        <section className="section-hero jordan-hero" id="privacy">
+        <section className="section-hero partner-hero" id="privacy">
           <div className="content-container">
             <div className="col-1">
               <h1>Zing Resources</h1>
@@ -26,10 +26,10 @@ export default class JordanPage extends React.Component {
                 />
               </div>
               <div className="row-column">
-                <h4>Resources</h4><br></br>
-                <h3>Lorum Ipsum blah blah blah</h3><br></br>
-                <p>Here is some more filler text.  This should look nice hopefully.</p>
-                <a href="#" class="call-to-action">Click Here</a>
+                <h4>About Us</h4><br></br>
+                <h3>Who are Zing?</h3><br></br>
+                <p>Zing is a UK based Twilio Gold Consulting Partner. We have recently fully aligned ourselves to build all solutions around the Twilio portfolio and see this as central to our ambitious growth plans.</p>
+                <a href="#" class="call-to-action">Find Out More</a>
               </div>
             </div>
 
@@ -37,8 +37,8 @@ export default class JordanPage extends React.Component {
           <div className="content-container">
             <div className="container-row">
               <div className="row-column">
-                <h4>Resources</h4><br></br>
-                <h3>Lorum Ipsum blah blah blah</h3><br></br>
+                <h4>About Us</h4><br></br>
+                <h3>How do we differentiate?</h3><br></br>
                 <p>Here is some more filler text.  This should look nice hopefully.</p>
                 <a href="#" class="call-to-action">Click Here</a>
               </div>
@@ -63,8 +63,8 @@ export default class JordanPage extends React.Component {
                 />
               </div>
               <div className="row-column">
-                <h4>Resources</h4><br></br>
-                <h3>Lorum Ipsum blah blah blah</h3><br></br>
+                <h4>Services</h4><br></br>
+                <h3>What services do we offer?</h3><br></br>
                 <p>Here is some more filler text.  This should look nice hopefully.</p>
                 <a href="#" class="call-to-action">Click Here</a>
               </div>
@@ -85,7 +85,7 @@ export default class JordanPage extends React.Component {
                    width="70%"
                 />
                 <div class="card-container">
-                  Content in here</div>
+                  Logos</div>
               </div>
               <div class="row-card">
                 <img

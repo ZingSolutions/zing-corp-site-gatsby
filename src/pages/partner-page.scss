@@ -1,0 +1,67 @@
+@import "../scss/base.scss";
+
+body main section.partner-hero {
+  height: 300px;
+}
+
+.ps-and-zing .row {
+  max-height: 250px;
+  .card {
+    max-height: 200px;
+  }
+}
+
+.content-container .container-row {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  .image-row-column {
+    width: 50%;
+    max-height: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    box-sizing: border-box;
+    padding-left: 10px;
+  }
+  .row-column {
+    width: 50%;
+    max-height: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    box-sizing: border-box;
+    padding-left: 10px;
+  }
+}
+
+.right-column-img {
+  display: flex;
+  float: right;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.row-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  flex: auto;
+  margin: 20px;
+}
+
+.row-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-container {
+  padding: 2px 16px;
+}
+
+.section {
+  background-color: #ffffff;
+}
