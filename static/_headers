@@ -1,2 +1,5 @@
 /fonts/*.woff*
   Access-Control-Allow-Origin: *
+
+/images/EmailLogo.png
+  Access-Control-Allow-Origin: *
