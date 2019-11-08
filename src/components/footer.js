@@ -84,7 +84,7 @@ export default class Footer extends React.Component {
       <footer>
         <div className="newsletter">
           <div className="col-1">
-            <h2>Start a conversation with us</h2>
+            <h2>Sign up to Our Newsletter</h2>
             <p>Enter your email address and we'll get in touch</p>
           </div>
           <div className="col-2">
@@ -101,7 +101,7 @@ export default class Footer extends React.Component {
                   onChange={this.handleForm}
                 />
                 <button className="call-to-action red" type="submit">
-                  Contact Me
+                  Subscribe
                 </button>
               </form>
             ) : (
@@ -118,6 +118,9 @@ export default class Footer extends React.Component {
         <div className="links">
           <Link to="/privacy/">Privacy Policy</Link>
           <Link to="/cookies/">Cookies</Link>
+          <Link to="/services/">Our Services</Link>
+          <Link to="/about/">About Us</Link>
+          <Link to="/case-study/">Case studies</Link>
           <OutboundLink
             href="https://drive.google.com/uc?id=1EM1ffKnxVpQni3xdjZzmVqmLeNXg7ntL"
             target="_blank"

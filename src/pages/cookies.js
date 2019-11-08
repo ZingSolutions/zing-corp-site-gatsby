@@ -7,24 +7,24 @@ export default class Cookies extends React.Component {
   render() {
     return (
       <Layout>
-        <section class="section-hero" id="privacy">
-            <div class="content-container">
-            <div class="col-1">
+        <section className="section-hero" id="privacy">
+            <div className="content-container">
+            <div className="col-1">
                 <h1>Cookie Policy</h1>
             </div>
             </div>
         </section>
-        <section class="section-cookie-text">
-            <div class="content-container">
-            <div class="col-1">
+        <section className="section-cookie-text">
+            <div className="content-container">
+            <div className="col-1">
                 <h2>Cookie Policy</h2>
                 <hr />
                 <div
-                class="sqs-block html-block sqs-block-html"
+                className="sqs-block html-block sqs-block-html"
                 data-block-type="2"
                 id="block-yui_3_17_2_1_1554279208051_19446"
                 >
-                <div class="sqs-block-content">
+                <div className="sqs-block-content">
                     <p>
                         Our cookie policy outlines the essential, analytical and
                         marketing cookies we use to enhance your website experience
