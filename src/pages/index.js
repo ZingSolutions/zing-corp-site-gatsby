@@ -8,7 +8,7 @@ import constants from "../data/constants"
 
 export default class Index extends React.Component {
   render() {
-    const services = [constants.services];
+    const services = [...constants.services];
     return (
       <Layout>
         <section className="section-hero">
