@@ -116,35 +116,24 @@ export default class Footer extends React.Component {
           <ZingLogo />
         </div>
         <div className="links">
-          <Link to="/privacy/">Privacy Policy</Link>
-          <Link to="/cookies/">Cookies</Link>
-
-          {/* // temp link start */}
-
-          <Link to="/services/">Our Services</Link>
-          <Link to="/about/">About Us</Link>
-          <Link to="/case-study/">Case studies</Link>
-
-          {/* // temp link end */}
+          <Link to="/terms/">Terms & Conditions</Link> <span>|</span>
+          <Link to="/services/">Resources</Link> <span>|</span>
+          <Link to="/privacy/">Privacy Policy</Link> <span>|</span>
+          <Link to="/cookies/">Cookies</Link> <span>|</span>
+          <Link to="/careers/">Careers </Link>
 
 
-          <OutboundLink
-            href="https://drive.google.com/uc?id=1EM1ffKnxVpQni3xdjZzmVqmLeNXg7ntL"
-            target="_blank"
-          >
-            Brand Guidelines
-          </OutboundLink>
-          <Link to="/contact-us/">Contact Us</Link>
+
         </div>
         <div className="social">
           <OutboundLink
-            href="https://www.linkedin.com/company/zing-dev/"
+            href="#"
             target="_blank"
           >
             <img
-              src="/images/linkedin.png"
-              alt="Go To Zing Linkedin"
-              title="LinkedIn"
+              src="/images/facebook.png"
+              alt="Go To Zing Facebook"
+              title="Facebook"
             />
           </OutboundLink>
           <OutboundLink href="https://twitter.com/zingdevs" target="_blank">
@@ -154,11 +143,14 @@ export default class Footer extends React.Component {
               title="Twitter"
             />
           </OutboundLink>
-          <OutboundLink href="https://github.com/ZingSolutions" target="_blank">
+          <OutboundLink
+            href="https://www.linkedin.com/company/zing-dev/"
+            target="_blank"
+          >
             <img
-              src="/images/GitHub.png"
-              alt="Go To Zing GitHub"
-              title="GitHub"
+              src="/images/linkedin.png"
+              alt="Go To Zing Linkedin"
+              title="LinkedIn"
             />
           </OutboundLink>
           <OutboundLink
@@ -171,8 +163,17 @@ export default class Footer extends React.Component {
               title="YouTube"
             />
           </OutboundLink>
+
+          <OutboundLink href="https://github.com/ZingSolutions" target="_blank">
+            <img
+              src="/images/instagram.png"
+              alt="Go To Zing Instagram"
+              title="Instagram"
+            />
+          </OutboundLink>
+
         </div>
-        <div className="cr">&copy; ProspectSoft Limited 2019</div>
+        <div className="cr">&copy; ProspectSoft Ltd 2019</div>
       </footer>
     )
   }
