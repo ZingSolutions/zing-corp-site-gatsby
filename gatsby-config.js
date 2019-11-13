@@ -32,4 +32,5 @@ module.exports = {
       },
     },
   ],
+  // pathPrefix: `/team12/team5/zing`,
 }

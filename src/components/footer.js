@@ -127,7 +127,7 @@ export default class Footer extends React.Component {
         </div>
         <div className="social">
           <OutboundLink
-            href="#"
+            href="https://www.facebook.com/zing.development/"
             target="_blank"
           >
             <img
@@ -164,7 +164,7 @@ export default class Footer extends React.Component {
             />
           </OutboundLink>
 
-          <OutboundLink href="https://github.com/ZingSolutions" target="_blank">
+          <OutboundLink href="https://www.instagram.com/zing_dev/" target="_blank">
             <img
               src="/images/instagram.png"
               alt="Go To Zing Instagram"

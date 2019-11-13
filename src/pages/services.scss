@@ -1,0 +1,124 @@
+@import "../scss/base";
+@import "../scss/break-points";
+
+.btn-default {
+  background:$zing-red;
+  min-height: 3.0625rem;
+  padding:0 1rem; 
+  font-size: 1.125rem;
+  font-family: "CeraPro-Medium";
+  display:block;
+  max-width: 10.8125rem;
+  line-height:3.0625rem;
+  border-radius:10rem;
+  text-align: center;
+  margin: 0 auto;
+  transition: all .2s ease-in-out;
+
+  @include bp(sm-max) {
+    font-size: 1rem;
+    min-height: 2.7rem;
+    line-height: 2.7rem;
+
+  }
+
+}
+.line-break{
+  flex-wrap: wrap !important;
+}
+
+.gray-bg {background-color: $light-grey !important;}
+.white-bg {background-color: $white !important;}
+
+
+.section-how-we-do-it{
+  padding: 4rem 0 5.5rem;
+  @include bp(sm-max) {
+    padding: 1rem 0 8rem;
+  }
+  ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-top: 3rem;
+    @include bp(sm-max) {
+      margin-top: 1rem;
+    }
+    li{
+      text-align: center;
+      width: 33.33%;
+      padding:4rem 2.2rem 3.5rem 2.2rem;
+      transition: all .2s ease-in-out;
+      cursor: pointer;
+      position: relative;
+      @include bp(lg-max) {
+        width:auto;
+        padding: 2rem 2.2rem 2rem 2.2rem;
+      }
+      @include bp(xxs-max) {
+        padding: 2rem 1rem 2rem 1rem;
+      }
+
+      h3{
+        color: $slate;
+        font-size: 1.625rem;
+        font-family: "CeraPro-Medium";
+        margin: 0 auto 1.6rem;
+        line-height:2.25rem;
+        @include bp(lg-max) {
+          margin-bottom: 1rem;
+        }
+
+        @include bp(sm-max) {
+          font-size: 1.35rem;
+          line-height:1.7rem;
+        }
+
+      }
+      p{
+        color: $grey;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        @include bp(lg-max) {
+          margin-bottom: 1.5em !important;
+        }
+        @include bp(sm-max) {
+          font-size: 1rem;
+          line-height: 1.6rem;
+        }
+
+      }
+      &:hover{
+        box-shadow: 0 0.3125rem 4.375rem rgba(56,90,203,0.1);
+        background: $white;
+        @include bp(sm-max) {
+          box-shadow: none;
+        }
+        .btn-default {
+          opacity:1;
+        }
+      }
+
+      .btn-default {
+        opacity: 0;
+        position: absolute;
+        bottom: -1.2rem;
+        width: 10.8125rem;
+        margin: 0 auto;
+        left: 0;
+        right:0;
+        @include bp(lg-max) {
+          opacity: 1;
+          position: static;
+          
+        }
+
+        @include bp(sm-max) {
+          width: 8.8125rem;
+        }
+
+      }
+    }
+  }
+
+}
