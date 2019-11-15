@@ -3,38 +3,90 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 
-export default class Services extends React.Component {
+import constants from './../data/constants';
+import "./case-study.scss"
+
+
+export default class caseStudy extends React.Component {
     render() {
+        const caseStudies = [...constants.caseStudies];
+
+        let caseStudiesComponent = null;
+        if (caseStudies.length > 0) {
+            caseStudiesComponent = (
+                <section className="section-casestudy-listing white-bg">
+                    <div className="content-container">
+                        <ul>
+                            {caseStudies.map((caseStudy, key) => {
+                                const { images: { image, logo }, studyInfo: { title, description } } = caseStudy;
+                                return (
+                                    <li key={key}>
+                                        <div className="study-img">
+                                            <img src={image} alt="" />
+                                            <i><img src={logo} alt="" /></i>
+                                        </div>
+                                        <div className="casestudy-info">
+                                            <h4>{title}</h4>
+                                            <p>{description} </p>
+                                        </div>
+                                    </li>
+                                );
+                            })}
+                        </ul>
+                    </div>
+                </section>
+            );
+        }
         return (
             <Layout>
                 <main>
-                    <section className="section-hero" id="about">
+                    <section className="section-hero inner-banner-outer" id="about">
                         <div className="content-container">
-                            <div className="col-1">
+                            <div className="inner-banner case-study-banner">
                                 <h3>Here at Zing, the proof is in</h3>
                                 <h1>the pudding</h1>
                                 <h5>Pudding aside, we've created some pretty cool stuff.</h5>
                             </div>
                         </div>
                     </section>
-                    {/* <section className="section-about-us" id="zing-and-twilio">
+
+                    <section className="section-global-enterprises" id="global-enterprises">
                         <div className="content-container">
-                            <div className="col-1">
-                                <h2>Zing & Twilio</h2>
-                                <p>Together we can make your ideas a reality.</p>
+                            <div className="new-content-header">
+                                <i>
+                                    <img
+                                        src="/images/logo-icon.png"
+                                        alt=""
+                                    />
+                                </i>
+
+                                <h2>Explore what 150,000+ of your peers, <br /> from startups to global enterprises, have built with Twilio. </h2>
+                                <p>Zing is part of the Sputnik Group of Companies, formed after the MBO of ProspectSoft, by Andrew Ardron and backed by Maven Private Equity in 2017.</p>
+                                <p>ProspectSoft, is the leading provider of SaaS CRM systems designed for the Wholesale,
+            Distribution and Manufacturing sectors. </p>
                             </div>
-                            <div className="col-2">
-                                <h2>OUR MISSION</h2>
-                                <p>
-                                    To Help Our Customers Discover True Value Through Twilio's Cloud Communications Platform
-                                </p>
-                                <p>There are currently over 20 Zingers and we're growing fast</p>
-                                <Link to="/contact-us/" className="call-to-action red">
-                                    Read more
-                                 </Link>
+
+                        </div>
+                    </section>
+
+                    {caseStudiesComponent}
+
+                    <section className="section-casestudy-info">
+
+                        <div className="content-container">
+                            <div className="casestudy-outer">
+                                <h2>
+                                    Aliquam cursus, metus
+                                    dignissim blandit venenatis,
+                                    neque nibh vehicula ante,
+            </h2>
+                                <p>Morbi egestas, leo eget elementum mattis, felis leo ultrices odio, vel ornare ante est vitae quam. Cras sem lectus, auctor ut arcu id, porttitor dapibus turpis.a</p>
+
                             </div>
                         </div>
-                    </section> */}
+                    </section>
+
+
                 </main>
             </Layout>
         )

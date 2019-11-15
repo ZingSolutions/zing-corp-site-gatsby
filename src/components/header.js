@@ -53,6 +53,38 @@ export default class Header extends React.Component {
   }
 
 
+  mouseenterFunc=(event)=> {
+    return ;
+
+    const target = document.querySelector(".target");
+    const links = document.querySelectorAll("nav a");
+    if (!event.target.parentNode.classList.contains("active")) {
+      for (let i = 0; i < links.length; i++) {
+        if (links[i].parentNode.classList.contains("active")) {
+          links[i].parentNode.classList.remove("active");
+        }
+        links[i].style.opacity = "0.25";
+      }
+
+      event.target.parentNode.classList.add("active");
+      event.target.style.opacity = "1";
+
+      const width = event.target.getBoundingClientRect().width;
+      const height = event.target.getBoundingClientRect().height;
+      const left = event.target.getBoundingClientRect().left;
+      const top = event.target.getBoundingClientRect().top;
+      const color = 'red';
+
+      target.style.width = `${width}px`;
+      target.style.height = `${height}px`;
+      target.style.left = `${left}px`;
+      target.style.top = `${top}px`;
+      target.style.backgroundColor = color;
+      target.style.transform = "none";
+    }
+  }
+
+
   render() {
     const { headerAnimationClass } = this.state;
     return (
@@ -66,12 +98,16 @@ export default class Header extends React.Component {
           </div>
           <nav>
             <ul>
-              <li><Link activeClassName="selected" to="/about/">About Us</Link>
+              <li onMouseEnter={this.mouseenterFunc}><Link activeClassName="selected" to="/about/">About Us</Link>
 
               </li>
 
-              <li className="submenu">
-                <a onClick={this.toggleParentClass} href="#">Partners Page</a>
+              <li onMouseEnter={this.mouseenterFunc} className="submenu">
+                <a href="#">Partners Page</a>
+
+                <i onClick={this.toggleParentClass} className="material-icons">
+                  keyboard_arrow_down
+                </i>
 
                 <ul>
                   <li><a href="#">Microsoft</a></li>
@@ -79,19 +115,23 @@ export default class Header extends React.Component {
                   <li><a href="#">Just After Midnight</a></li>
                 </ul>
               </li>
-              <li>
+              <li onMouseEnter={this.mouseenterFunc}>
                 <Link activeClassName="selected" to="/services/">Services</Link>
               </li>
-              <li className="submenu">
-                <a onClick={this.toggleParentClass} href="#">Customer Success Stories</a>
+              <li onMouseEnter={this.mouseenterFunc} className="submenu">
+                <Link activeClassName="selected" to="/case-study/">Customer Success Stories</Link>
+                <i onClick={this.toggleParentClass} className="material-icons">
+                  keyboard_arrow_down
+                </i>
                 <ul>
                   <li><a href="#">CET</a></li>
-                  <li><a href="#">Integrations Page</a></li>
+                  {/* <li><a href="#">Integrations Page</a></li> */}
                 </ul>
               </li>
               <li><a href="#">Blog</a></li>
 
             </ul>
+            {/* <span className="target"></span> */}
           </nav>
 
 

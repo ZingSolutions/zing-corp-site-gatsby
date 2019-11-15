@@ -54,38 +54,38 @@ blockquote::after {
             font-size: 2em;
             font-family: "CeraPro-Medium";
             margin-top: 0.6em;
-          }
+        }
 
-          .title {
+        .title {
             font-family: "CeraPro-Medium";
             line-height: 1.3em;
             text-align: center;
-          }
-          .adjusted-hr {
-              margin-bottom: 1em;
-          }
+        }
+        .adjusted-hr {
+          margin-bottom: 1em;
+      }
+  }
+  .col-5 {
+    .study-btm {
+        margin-bottom: 35px;
     }
-    .col-5 {
-        .study-btm {
-            margin-bottom: 35px;
-        }
-        .p-cent {
-            text-align: center;
-        }
-        h1 {
-            color: $grey;
-            margin: 0;
-            font-size: 7em;
-        }
-        h2 {
-            margin-bottom: 1em;
-        }
+    .p-cent {
+        text-align: center;
     }
-    .exdiv {
-        justify-content: center;
-        margin-top: 1em;
-        display: inline-flex
+    h1 {
+        color: $grey;
+        margin: 0;
+        font-size: 7em;
     }
+    h2 {
+        margin-bottom: 1em;
+    }
+}
+.exdiv {
+    justify-content: center;
+    margin-top: 1em;
+    display: inline-flex
+}
 }
 .section-photo {
     background-image: url("https://via.placeholder.com/1000");

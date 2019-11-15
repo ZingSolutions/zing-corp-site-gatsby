@@ -5,7 +5,16 @@ $zing-red: #c7001c;
 $slate-grey:#61646c;
 $black:#000000;
 $white:#ffffff;
+$black-nero:#282828;
+$dim-gray:#676767;
+
+$blue1:#090319 ;
+$black1:#1e1e1f ;
+
+
 $gradient: linear-gradient(to right, $slate 10%, $grey 60%);
+$gradient-light: linear-gradient(to right, $light-grey 0%,$white 75%);
+$gradient-blue:linear-gradient(to right, $black1 0%, $blue1 100%);
 
 $alpha-white: adjust-color(white, $alpha: -0.6);
 

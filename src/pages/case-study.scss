@@ -1,0 +1,217 @@
+@import "../scss/base";
+@import "../scss/break-points";
+
+.case-study-banner {
+  h3 {
+    font-size:2.75rem;
+    line-height: 2.5rem;
+    @include bp(lg-max) {
+      font-size:1.55rem;
+      line-height: 2rem;
+    }
+  }
+}
+
+.section-global-enterprises{
+  background: $gradient-light; 
+  padding: 2rem 0 11rem;
+  @include bp(sm-max) {
+    padding:1rem 0 9rem;
+  }
+  h2{
+    font-size: 2.0625rem;
+    color: $black;
+    font-family: "CeraPro-Regular";
+    line-height: 3.125rem;
+    padding: 2.8rem 0 1.2rem;
+    @include bp(lg-max) {
+     font-size: 1.6rem;
+     line-height: 2.225rem;
+     padding: 1.3rem 0 0rem;
+
+     br {
+      display: none;
+    }
+  }
+}
+
+p{
+  max-width: 46rem;
+  line-height:1.5625rem;
+  margin: 0 auto
+}
+}
+
+.section-casestudy-listing {
+  padding-bottom: 6rem;
+
+  @include bp(lg-max) {
+    padding-bottom: 3rem;
+  }
+  @include bp(sm-max) {
+    padding-bottom: 0rem;
+  }
+
+  ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin:-11rem -0.9375rem 0;
+
+    li{
+
+      padding: 0 0.9375rem;
+      width:33.33%;
+      margin-bottom: 1.875rem;
+      @include bp(mdl-max) {
+       width:50%;
+     }
+
+     @include bp(xs-max) {
+      width:100%;
+    }
+
+    .study-img{
+      position: relative;
+      display: block;
+      border-bottom: 3px solid $zing-red;
+      img{
+        max-width: 100%;
+        display: block;
+        @include bp(xs-max) {
+          width:100%;
+        }
+      }
+      &:after {
+        position:absolute;
+        height:100%;
+        width:100%;
+        content:"";
+        left: 0;
+        top: 0;
+        background:$gradient-blue;
+        opacity: 0.8;
+      }
+      i{
+        position:absolute;
+        display: flex;
+        align-items: center;
+        width:100%;
+        height:100%;
+        z-index: 1;
+        top:0;
+        justify-content: center;
+
+        @include bp(lg-max) {
+          img{
+            max-width: 100px;
+            max-height: 55px;
+            @include bp(xs-max) {
+              width:auto;
+              max-height: inherit;
+            }
+          }
+        }
+      }
+    }
+    .casestudy-info{
+      border:1px solid $light-grey;
+      border-top: 0;
+      padding:1.8rem 2rem 1rem 2rem;
+      background: $white;
+      min-height: 14.0625rem;
+      @include bp(xlg-max) {
+        padding:1rem;
+      }
+
+      @include bp(lg-max) {
+       min-height: 17rem;
+     }
+
+     @include bp(mdl-max) {
+      min-height: 14rem;
+    }
+    @include bp(xs-max) {
+      min-height: inherit;
+    }
+
+  }
+}
+h4 {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-family: "CeraPro-Medium";
+  color: $black-nero;
+  margin-bottom: 1rem;
+  @include bp(sm-max) {
+   margin-bottom: 0.5rem;
+ }
+}
+p{
+  color: $dim-gray;
+  line-height: 1.5625rem;
+  @include bp(sm-max) {
+   margin-bottom: 0.4rem !important;
+ }
+}
+}
+}
+
+
+.section-casestudy-info {
+  &:after {
+    background-image: url("/images/study-botttom-bg.png");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top:-10rem;
+    left:0;
+    width:100%;
+    height:68.125rem;
+    content:"";
+    transform: skewY(6deg);
+  }
+  .content-container {
+    position: relative;
+    z-index: 1;
+  }
+  padding: 10rem 0;
+  background-color: $black !important;
+  overflow: hidden;
+  @include bp(mdl-max) {
+    padding: 5rem 0;
+  }
+  @include bp(sm-max) {
+    padding: 1rem 0 7rem;
+  }
+
+  .casestudy-outer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 44.125rem;
+    margin: 0 auto;
+    text-align: center;
+    h2 {
+      font-size: 3.375rem;
+      line-height: 3.75rem;
+      color:$white;
+      font-family: "CeraPro-Medium";
+      @include bp(sm-max) {
+        font-size: 2rem;
+        line-height: 2.55rem;
+        margin-bottom: 1rem;
+      }
+    }
+    p{
+      font-size: 1.125rem;
+      color:$white;
+      line-height: 1.875rem; 
+      padding: 0 5rem;
+      @include bp(sm-max) {
+        padding: 0 0rem ;
+        font-size: 1rem;
+        line-height: 1.575rem; 
+      }
+    }
+  }
+}
