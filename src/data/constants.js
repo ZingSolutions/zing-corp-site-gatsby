@@ -140,6 +140,98 @@ const constants = {
             }
         },
     ],
+    inteGration: [
+        {
+            images: {
+                image: '/images/prospect-logo.png',
+            }
+        },
+        {
+            images: {
+                image: '/images/xero-logo.png',
+            }
+        },
+        {
+            images: {
+                image: '/images/sage-logo.png',
+            }
+        },
+        {
+            images: {
+                image: '/images/unleashed-logo.png',
+            }
+        },
+        {
+            images: {
+                image: '/images/access-logo.png',
+            }
+        },
+        {
+            images: {
+                image: '/images/cin7-logo.png',
+            }
+        },
+        {
+            images: {
+                image: '/images/tradegecko-logo.png',
+            }
+        },
+        {
+            images: {
+                image: '/images/sap-logo.png',
+            }
+        },
+        {
+            images: {
+                image: '/images/salesforce-logo.png',
+            }
+        },
+    ],
+
+    blogItems: [
+        {
+            category: "All",
+            blogs: [{
+                title: 'The First 50 Days (all)',
+                author: 'Chloe Baybutt',
+                publishTime: '23rd October 2019',
+                image: '/images/blog-lg-img.png',
+                description: 'There is no denying the stress that coincides with the first days,weeks and even months of starting a new job. Micheal Watkins, in his book ‘The First 90 Days’, attempts to execute the paradox behind the first 90 days of being employed in a new workplace. Watkins provides a theory that in the first 90 days of starting a role, the newly employed member of staff is arguably a ‘retractor’ to the organisation. He explains that within this time period it\'s doubtful you are adding value to the business, asking more questions than you are answering and making more mistakes than you are solving. Although, arguably pessimistic, it is inevitable that you will make mistakes, ask a lot of questions and take up time trying to learn.',
+            }],
+        },
+        {
+            category: "Zingers",
+            blogs: [{
+                title: 'The First 50 Days (zingers)',
+                author: 'Chloe Baybutt',
+                publishTime: '23rd October 2019',
+                image: '/images/blog-lg-img.png',
+                description: 'There is no denying the stress that coincides with the first days,weeks and even months of starting a new job. Micheal Watkins, in his book ‘The First 90 Days’, attempts to execute the paradox behind the first 90 days of being employed in a new workplace. Watkins provides a theory that in the first 90 days of starting a role, the newly employed member of staff is arguably a ‘retractor’ to the organisation. He explains that within this time period it\'s doubtful you are adding value to the business, asking more questions than you are answering and making more mistakes than you are solving. Although, arguably pessimistic, it is inevitable that you will make mistakes, ask a lot of questions and take up time trying to learn.',
+            }],
+        },
+        {
+            category: "Industry",
+            blogs: [{
+                title: 'The First 50 Days (industry)',
+                author: 'Chloe Baybutt',
+                publishTime: '23rd October 2019',
+                image: '/images/blog-lg-img.png',
+                description: 'There is no denying the stress that coincides with the first days,weeks and even months of starting a new job. Micheal Watkins, in his book ‘The First 90 Days’, attempts to execute the paradox behind the first 90 days of being employed in a new workplace. Watkins provides a theory that in the first 90 days of starting a role, the newly employed member of staff is arguably a ‘retractor’ to the organisation. He explains that within this time period it\'s doubtful you are adding value to the business, asking more questions than you are answering and making more mistakes than you are solving. Although, arguably pessimistic, it is inevitable that you will make mistakes, ask a lot of questions and take up time trying to learn.',
+            }],
+        },
+        {
+            category: "Events",
+            blogs: [{
+                title: 'The First 50 Days (events)',
+                author: 'Chloe Baybutt',
+                publishTime: '23rd October 2019',
+                image: '/images/blog-lg-img.png',
+                description: 'There is no denying the stress that coincides with the first days,weeks and even months of starting a new job. Micheal Watkins, in his book ‘The First 90 Days’, attempts to execute the paradox behind the first 90 days of being employed in a new workplace. Watkins provides a theory that in the first 90 days of starting a role, the newly employed member of staff is arguably a ‘retractor’ to the organisation. He explains that within this time period it\'s doubtful you are adding value to the business, asking more questions than you are answering and making more mistakes than you are solving. Although, arguably pessimistic, it is inevitable that you will make mistakes, ask a lot of questions and take up time trying to learn.',
+            }],
+
+        },
+    ],
+
     functions: {
         capitalizeTxt: (txt) => txt.charAt(0).toUpperCase() + txt.slice(1),
     }

@@ -31,11 +31,11 @@ nav {
     }
 
     li {
-      margin: 0 1rem;
+      margin: 0 1.7rem;
       border-bottom: 3px solid transparent;
       padding-bottom: 5px;
       @include bp(xlg-max) {
-        margin: 0 0.4rem;
+        margin: 0 1rem;
       }
       a{
         display: block;
@@ -404,7 +404,7 @@ nav {
 .section-our-story {
   padding-bottom: 5rem;
   @include bp(sm-max) { 
-   padding-bottom: 7rem;
+   padding-bottom: 3rem;
  }
  img {max-width: 100%;}
  .content-container {
@@ -415,9 +415,10 @@ nav {
 .ourstory-title {
   display: inline-block;
   margin-bottom: 2.2rem;
-  margin-top: -2.6rem;
+  margin-top: 3rem;
   @include bp(sm-max) {
-   margin-bottom: 1.2rem;
+    margin-top: 1.2rem;
+     margin-bottom: 1.2rem;
  }
 
  hr {

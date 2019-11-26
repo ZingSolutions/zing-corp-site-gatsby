@@ -1,0 +1,63 @@
+@import "../scss/base";
+@import "../scss/break-points";
+
+.ingration-section {
+	.content-container {
+		justify-content: center;
+	}
+	padding: 8rem 0 0;
+	@include bp(md-max) {
+		padding: 3rem 0 0;
+	}
+	@include bp(sm-max) {
+		padding: 1rem 0 4rem;
+	}
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -30px;
+		
+		@include bp(sm-max) {
+			margin: 0 -15px;
+		}
+		li {
+			list-style-type: none;
+			display: flex;
+			padding: 0 30px;
+			flex: 0 0 33.33%;
+			max-width: 33.33%;
+			margin-bottom: 6rem;
+			min-height: 15rem;
+			@include bp(mdl-max) {
+				flex: 0 0 50%;
+				max-width: 50%;
+				margin-bottom: 3rem;
+			}
+
+			@include bp(sm-max) {
+				padding: 0 15px;
+			}
+			@include bp(xs-max) {
+				flex: 0 0 100%;
+				max-width: 100%;
+				margin-bottom: 3rem;
+			}
+			a,
+			button{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: #ffffff;
+				border: none;
+				outline: none;
+				width: 100%;
+				padding: 26px 20px;
+				box-shadow: 0px 7px 35px rgba(59,149,219,0.2);
+				img {
+					max-width: 100%;
+					height: auto;
+				}
+			}
+		}
+	}
+}

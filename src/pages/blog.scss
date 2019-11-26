@@ -1,0 +1,170 @@
+@import "../scss/base";
+@import "../scss/break-points";
+
+.blog-section {
+  padding: 2rem 0 15rem;
+  @include bp(sm-max) { 
+    padding: 2rem 0 8rem;
+  }
+  form {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .content-container {
+    flex-wrap: wrap;
+  }
+}
+.search-wrapper {
+    position: relative;
+    text-align: right;
+    display: inline-block;
+    min-width: 270px;
+  input {
+    height: 2.25rem;
+    border: 1px solid $grey;
+    border-radius: 6px;
+    padding: 0 0.625rem 0 2.1875rem;
+    width: 100%;
+    &:focus {
+      outline: none;
+    }
+  }
+  button {
+    position: absolute;
+    left: 3px;
+    top: 2px;
+    height: 100%;
+    width:  1.875rem;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-radius: 0.75rem;
+    i {
+      color: $dark-grey;
+    }
+  }
+}
+.tabing-wrapper {
+  width: 100%;
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    padding: 2.5rem 0;
+    li {
+      border-bottom: 3px solid transparent;
+      padding-bottom: 5px;
+      text-align: center;
+      &:hover,
+      &.active {
+        border-color: $zing-red;
+      }
+      button, button:focus {
+        color: $dark-grey;
+        font-size: 1.25rem;
+        background: none!important;
+        border: none;
+        padding: 0!important;
+        outline:none;
+        cursor: pointer;
+        @include bp(xs-max) {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  .tabing-content-outer {
+    .tabing-title {
+      margin-bottom: 1rem;
+      h2 {
+        font-family: "CeraPro-Regular";
+        margin-bottom: 0;
+        font-size: 3em;
+        font-weight: 400;
+        color: $dark-grey;
+        @include bp(sm-max) { 
+            font-size: 1.7rem;
+            line-height: 2.2rem;
+        }
+      }
+      p {
+        font-size: 1.2rem;
+        color: $dark-grey;
+        margin-bottom: 0;
+      }
+    }
+    .tabing-description{
+      .left-img {
+        width: 55%;
+        float: left;
+        @include bp(lg-max) {
+          padding-right: 1.875rem;
+        }
+        @include bp(sm-max) {
+          width: 100%;
+          padding-right: 0;
+          padding-bottom: 0.625rem;
+          float: none;
+        }
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+      .right-blog {
+        width: 45%;
+        float: left;
+        padding-left: 1.875rem;
+        @include bp(lg-max) {
+          width: auto;
+          float: none;
+          padding-left: 0;
+        }
+        p {
+          color: $dark-grey;
+          font-size: 1.25rem;
+          margin-bottom: 1.875rem;
+          @include bp(sm-max) {
+              font-size: 1rem;
+              line-height: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.btn-red {
+    background: $zing-red;
+    min-height: 3.0625rem;
+    padding: 0 1rem;
+    font-size: 1rem;
+    font-family: "CeraPro-Regular";
+    display: block;
+    max-width: 10.8125rem;
+    line-height: 3.0625rem;
+    border-radius: 10rem;
+    text-align: center;
+    margin: 0 auto;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    outline: none;
+    border: none;
+    color: $white;
+    min-width: 145px;
+}
+
+
+::-webkit-input-placeholder { 
+  color: $dark-grey;
+}
+
+:-ms-input-placeholder {
+  color: $dark-grey;
+}
+
+::placeholder {
+  color: $dark-grey;
+}

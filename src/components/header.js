@@ -90,9 +90,7 @@ export default class Header extends React.Component {
     return (
       <header className={headerAnimationClass}>
         <div className="header">
-          <div>
-            <ZingLogo />
-          </div>
+          <ZingLogo />
           <div className="menu-wrapper">
             <div className="hamburger-menu" onClick={this.toggleAnimateClass}></div>
           </div>
@@ -103,32 +101,18 @@ export default class Header extends React.Component {
               </li>
 
               <li onMouseEnter={this.mouseenterFunc} className="submenu">
-                <a href="#">Partners Page</a>
-
-                <i onClick={this.toggleParentClass} className="material-icons">
-                  keyboard_arrow_down
-                </i>
-
-                <ul>
-                  <li><a href="#">Microsoft</a></li>
-                  <li><a href="#">Twilio</a></li>
-                  <li><a href="#">Just After Midnight</a></li>
-                </ul>
+                <Link activeClassName="selected" to="">Partners</Link>
               </li>
+
               <li onMouseEnter={this.mouseenterFunc}>
                 <Link activeClassName="selected" to="/services/">Services</Link>
               </li>
               <li onMouseEnter={this.mouseenterFunc} className="submenu">
-                <Link activeClassName="selected" to="/case-study/">Customer Success Stories</Link>
-                <i onClick={this.toggleParentClass} className="material-icons">
-                  keyboard_arrow_down
-                </i>
-                <ul>
-                  <li><a href="#">CET</a></li>
-                  {/* <li><a href="#">Integrations Page</a></li> */}
-                </ul>
+                <Link activeClassName="selected" to="/case-study/">Case Studies</Link>
               </li>
-              <li><a href="#">Blog</a></li>
+              <li>
+                <Link activeClassName="selected" to="/blog/">Blog</Link>
+              </li>
 
             </ul>
             {/* <span className="target"></span> */}
@@ -141,7 +125,7 @@ export default class Header extends React.Component {
             </Link>
             <Link to="/contact-us/" className="call-to-action red">
               Contact Us
-      </Link>
+             </Link>
           </div>
         </div>
       </header>

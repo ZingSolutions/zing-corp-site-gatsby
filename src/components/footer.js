@@ -120,7 +120,7 @@ export default class Footer extends React.Component {
           <Link to="/services/">Resources</Link> <span>|</span>
           <Link to="/privacy/">Privacy Policy</Link> <span>|</span>
           <Link to="/cookies/">Cookies</Link> <span>|</span>
-          <Link to="/careers/">Careers </Link>
+          <Link to="/careers/">Careers</Link>
 
 
 
