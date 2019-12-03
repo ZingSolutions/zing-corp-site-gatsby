@@ -101,7 +101,7 @@ export default class Header extends React.Component {
               </li>
 
               <li onMouseEnter={this.mouseenterFunc} className="submenu">
-                <Link activeClassName="selected" to="">Partners</Link>
+                <Link activeClassName="selected" to="/partner">Partners</Link>
               </li>
 
               <li onMouseEnter={this.mouseenterFunc}>

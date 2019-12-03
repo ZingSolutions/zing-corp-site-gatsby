@@ -6,6 +6,9 @@ import "./services.scss"
 
 export default class Services extends React.Component {
     render() {
+        var styles = {
+            backgroundImage: "url('/images/Services-image.jpg')",
+        };
         const services = [...constants.services]
         const serviceOffers = [...constants.serviceOffers]
         return (
@@ -64,17 +67,17 @@ export default class Services extends React.Component {
                         </section>
                     ) : ''}
 
-                    <section className="section-casestudy-info">
-
-                        <div className="content-container">
-                            <div className="casestudy-outer">
-                                <h2>
-                                    Aliquam cursus, metus
-                                    dignissim blandit venenatis,
-                                    neque nibh vehicula ante,
-            </h2>
-                                <p>Morbi egestas, leo eget elementum mattis, felis leo ultrices odio, vel ornare ante est vitae quam. Cras sem lectus, auctor ut arcu id, porttitor dapibus turpis.a</p>
-
+                    <section className="section-casestudy-info" >
+                        <div className="casestudy-info-content" style={styles}>
+                            <div className="content-container" >
+                                <div className="casestudy-outer">
+                                    <h2>
+                                        Aliquam cursus, metus
+                                        dignissim blandit venenatis,
+                                        neque nibh vehicula ante,
+                                    </h2>
+                                    <p>Morbi egestas, leo eget elementum mattis, felis leo ultrices odio, vel ornare ante est vitae quam. Cras sem lectus, auctor ut arcu id, porttitor dapibus turpis.a</p>
+                                </div>
                             </div>
                         </div>
                     </section>

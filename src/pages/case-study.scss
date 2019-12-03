@@ -159,21 +159,34 @@ p{
 
 
 .section-casestudy-info {
-  &:after {
-    background-image: url("/images/study-botttom-bg.png");
+  padding: 0 !important;;
+  // &:after {
+  //   position: absolute;
+  //   top:-10rem;
+  //   left:0;
+  //   width:100%;
+  //   height:68.125rem;
+  //   content:"";
+    
+  // }
+  .casestudy-info-content{
+    padding: 10rem 0;
     background-size: cover;
     background-position: center;
-    position: absolute;
-    top:-10rem;
-    left:0;
-    width:100%;
-    height:68.125rem;
-    content:"";
     transform: skewY(6deg);
+    margin-top: -120px;
+    margin-bottom: -120px;
+
+    @include bp(mdl-max) {
+      padding: 2rem 1rem 7rem 1rem;
+    }
+
   }
   .content-container {
+    padding: 10rem 0;
     position: relative;
     z-index: 1;
+    transform: skewY(0deg);
   }
   padding: 10rem 0;
   background-color: $black !important;

@@ -58,5 +58,23 @@ exports.onPostBuild = function () {
 
 };
 
+// Implement the Gatsby API “onCreatePage”. This is
+// called after every page is created.
+exports.onCreatePage = async ({ page, actions }) => {
+    const { createPage } = actions
+  
+    if (page.path.match(/^\/blog-detail/)) {
+      page.matchPath = "/blog-detail/:slug"
+  
+      // Update the page.
+    //   createPage({
+    //       path: "/blog-detail/",
+    //       matchPath: "/blog-detail/:slug",
+    //     component: path.resolve(`./src/pages/blog-detail.js`),
+    //   })
+    createPage(page);
+    }
+  }
+
 
 

@@ -1,39 +1,34 @@
-import React from "react"
-import { Link } from "gatsby"
+import React, { lazy, Suspense } from "react"
 import Layout from "../components/layout"
-import "./careers.scss"
-import HubspotForm from "react-hubspot-form"
+import "./blog-detail.scss"
+import { Redirect } from "@reach/router";
+import ThePowerOfSms from "../components/blogs/the-power-of-sms"
+import TheFirst50Days from "../components/blogs/the-first-50-days"
 
-export default class Careers extends React.Component {
+export default class Blogdetail extends React.Component {
 
     render() {
         var styles = {
             backgroundImage: "url('/images/study-botttom-bg.png')",
         };
+        const TagName = this.props.slug;
+        let DynamicComponent = <Redirect to="/" noThrow />
+        if (TagName === 'the-first-50-days') {
+            DynamicComponent = <TheFirst50Days/>;
+        } else if (TagName === 'the-power-of-sms') {
+            DynamicComponent = <ThePowerOfSms/>;
+        }
         return (
             <Layout>
                 <main>
-                    <section className="section-hero inner-banner-outer">
+                    <section className="section-hero inner-banner-outer" id="blog">
                         <div className="content-container">
                             <div className="inner-banner">
-                                <h1>Careers</h1>
+                                <h1>Our Blog</h1>
                             </div>
                         </div>
                     </section>
-
-                    <section className="career-section">
-                        <div className="content-container">
-                            <p className="inner-text">If yor are interested in pursuing a career with Zing, please register your interest below:</p>
-                            <HubspotForm
-                                portalId="5721076"
-                                formId="80508e33-fb34-467f-a778-fb9cd4222c0f"
-                                onReady={form =>
-                                    console.log(form.querySelector("input[type=submit]"))
-                                }
-                                loading={<div>Loading...</div>}
-                            />
-                        </div>
-                    </section>
+                    {DynamicComponent}
                     <section className="section-casestudy-info" >
                         <div className="casestudy-info-content" style={styles}>
                             <div className="content-container" >
@@ -42,13 +37,12 @@ export default class Careers extends React.Component {
                                         Aliquam cursus, metus
                                         dignissim blandit venenatis,
                                         neque nibh vehicula ante,
-                        </h2>
+                                    </h2>
                                     <p>Morbi egestas, leo eget elementum mattis, felis leo ultrices odio, vel ornare ante est vitae quam. Cras sem lectus, auctor ut arcu id, porttitor dapibus turpis.a</p>
                                 </div>
                             </div>
                         </div>
                     </section>
-
                 </main>
             </Layout>
         )

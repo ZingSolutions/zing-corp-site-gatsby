@@ -9,6 +9,9 @@ import "./case-study.scss"
 
 export default class caseStudy extends React.Component {
     render() {
+        var styles = {
+            backgroundImage: "url('/images/Case-study.jpg')",
+        };
         const caseStudies = [...constants.caseStudies];
 
         let caseStudiesComponent = null;
@@ -71,21 +74,20 @@ export default class caseStudy extends React.Component {
 
                     {caseStudiesComponent}
 
-                    <section className="section-casestudy-info">
-
-                        <div className="content-container">
+                    <section className="section-casestudy-info" >
+                    <div className="casestudy-info-content" style={styles}>
+                        <div className="content-container" >
                             <div className="casestudy-outer">
                                 <h2>
                                     Aliquam cursus, metus
                                     dignissim blandit venenatis,
                                     neque nibh vehicula ante,
-            </h2>
+                                </h2>
                                 <p>Morbi egestas, leo eget elementum mattis, felis leo ultrices odio, vel ornare ante est vitae quam. Cras sem lectus, auctor ut arcu id, porttitor dapibus turpis.a</p>
-
                             </div>
                         </div>
+                    </div>
                     </section>
-
 
                 </main>
             </Layout>

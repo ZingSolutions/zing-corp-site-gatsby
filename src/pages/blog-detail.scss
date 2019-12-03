@@ -1,0 +1,60 @@
+@import "../scss/base";
+@import "../scss/break-points";
+
+.blog-details{
+  margin-top: 2rem 0 3rem;
+  .blogd-image{
+    max-width: 70%;
+    margin: auto;
+    margin-bottom: 5rem;
+    @include bp(sm-max) { 
+      max-width: 100%;
+      margin-bottom: 1.5rem;
+    }
+    img{
+      max-width: 100%;
+    }
+  }
+  h2{
+    font-family: "CeraPro-Regular";
+    margin-bottom: 0;
+    font-size: 3em;
+    font-weight: 400;
+    color: $dark-grey;
+    margin: 1.4rem 0 1.5rem ;
+    @include bp(sm-max) { 
+      font-size: 1.7rem;
+      line-height: 2.2rem;
+      margin-bottom: 0.5rem;
+
+    }
+  }
+  .blogci-item-details{
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem -3rem 0;
+    @include bp(sm-max) { 
+      margin: 1.5rem 0 0;
+    }
+    span{
+      font-size: 1.2rem;
+      color: $dark-grey;
+      margin-bottom: 0;
+      @include bp(sm-max) {
+        font-size: 0.9rem;
+      }
+    }
+  }
+  .blog-description{
+    p{
+      color: $dark-grey;
+      font-size: 1.25rem;
+      margin-bottom: 1.875rem;
+      line-height: 1.4rem;
+      @include bp(sm-max) {
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+    }
+  }
+}
