@@ -8,6 +8,13 @@ main section:nth-child(2) {
   margin-top: -200px;
 }
 
+.home-page-content {
+  text-align: center;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+}
+
 @media only screen and (min-width: 600px) {
   body main .section-what-we-do {
     padding-bottom: 1em;
@@ -19,9 +26,13 @@ main section:nth-child(2) {
     padding-bottom: 2em;
   }
 }
-
 @media only screen and (min-width: 1440px) {
   body main .section-what-we-do {
     padding-bottom: 3em;
-  }
+  } 
+}
+
+body main section .content-container .col-2.right-img{
+  position: relative;
+  top: -50px;
 }

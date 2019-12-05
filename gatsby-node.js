@@ -63,8 +63,10 @@ exports.onPostBuild = function () {
 exports.onCreatePage = async ({ page, actions }) => {
     const { createPage } = actions
   
-    if (page.path.match(/^\/blog-detail/)) {
-      page.matchPath = "/blog-detail/:slug"
+    page.matchPath = "/*";
+    if (page.path.match(/^\/blog/)) {
+        console.log(page)
+      page.matchPath = "/blog/*"
   
       // Update the page.
     //   createPage({
@@ -72,8 +74,9 @@ exports.onCreatePage = async ({ page, actions }) => {
     //       matchPath: "/blog-detail/:slug",
     //     component: path.resolve(`./src/pages/blog-detail.js`),
     //   })
-    createPage(page);
+    
     }
+    createPage(page);
   }
 
 

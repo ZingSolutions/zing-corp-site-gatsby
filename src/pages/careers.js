@@ -34,21 +34,6 @@ export default class Careers extends React.Component {
                             />
                         </div>
                     </section>
-                    <section className="section-casestudy-info" >
-                        <div className="casestudy-info-content" style={styles}>
-                            <div className="content-container" >
-                                <div className="casestudy-outer">
-                                    <h2>
-                                        Aliquam cursus, metus
-                                        dignissim blandit venenatis,
-                                        neque nibh vehicula ante,
-                        </h2>
-                                    <p>Morbi egestas, leo eget elementum mattis, felis leo ultrices odio, vel ornare ante est vitae quam. Cras sem lectus, auctor ut arcu id, porttitor dapibus turpis.a</p>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
                 </main>
             </Layout>
         )

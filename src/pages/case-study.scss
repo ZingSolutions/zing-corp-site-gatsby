@@ -201,7 +201,7 @@ p{
   .casestudy-outer {
     display: flex;
     flex-wrap: wrap;
-    width: 44.125rem;
+    width: 46.125rem;
     margin: 0 auto;
     text-align: center;
     h2 {
@@ -219,11 +219,14 @@ p{
       font-size: 1.125rem;
       color:$white;
       line-height: 1.875rem; 
-      padding: 0 5rem;
+      padding: 0 5.5rem;
       @include bp(sm-max) {
         padding: 0 0rem ;
         font-size: 1rem;
         line-height: 1.575rem; 
+      }
+      a {
+        text-decoration: underline !important;
       }
     }
   }

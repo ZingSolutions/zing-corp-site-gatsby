@@ -219,7 +219,7 @@ const constants = {
                         'Overall, it\'s so pleasing to see young developer such a Stefan take opportunities to get so heavily involved in the running of an organisation. It’s fair to say the first 50 days of being employed at Zing, Stefan has had to adapt to certain aspects of the business but is now an important member of such a dynamic team.',
                     ]
                 },
-                
+
             ]
         },
         {
@@ -243,6 +243,100 @@ const constants = {
                 }
             ]
         },
+    ],
+
+    resource: [
+        {
+            images: {
+                image: '/images/solutions.png',
+            },
+            resourceInfo: {
+                title: 'About Us',
+                title1: 'Who are Zing?',
+                description: 'Zing is a UK based Twilio Gold Consulting Partner. We have recently fully aligned ourselves to build all solutions around the Twilio portfolio and see this as central to our ambitious growth plans.',
+                link: '/about/'
+            }
+        },
+        {
+            images: {
+                image: '/images/integration.png',
+            },
+            resourceInfo: {
+                title: 'About Us',
+                title1: 'How do we differentiate?',
+                description: 'Zing is a UK based Twilio Gold Consulting Partner. We have recently fully aligned ourselves to build all solutions around the Twilio portfolio and see this as central to our ambitious growth plans.',
+                link: '/integration/'
+            }
+        },
+        {
+            images: {
+                image: '/images/services.png',
+            },
+            resourceInfo: {
+                title: 'Services',
+                title1: 'What services do we offer?',
+                description: 'Zing is a UK based Twilio Gold Consulting Partner. We have recently fully aligned ourselves to build all solutions around the Twilio portfolio and see this as central to our ambitious growth plans.',
+                link: '/services/'
+            }
+        }
+    ],
+
+    addResource: [
+        {
+            images: {
+                image: '/images/services.png',
+            },
+            addResourceInfo: {
+                title: 'Integrations'
+            },
+            link: '/integration/'
+
+        },
+        {
+            images: {
+                image: '/images/services.png',
+            },
+            addResourceInfo: {
+                title: 'Branding guidelines'
+            },
+            link: 'https://drive.google.com/uc?id=1EM1ffKnxVpQni3xdjZzmVqmLeNXg7ntL',
+        },
+        {
+            images: {
+                image: '/images/services.png',
+            },
+            addResourceInfo: {
+                title: 'Blog'
+            },
+            link: '/blog/'
+        },
+        {
+            images: {
+                image: '/images/services.png',
+            },
+            addResourceInfo: {
+                title: 'Contact us'
+            },
+            link: '/contact-us/'
+        },
+        {
+            images: {
+                image: '/images/services.png',
+            },
+            addResourceInfo: {
+                title: 'Careers'
+            },
+            link: '/careers/'
+        },
+        {
+            images: {
+                image: '/images/services.png',
+            },
+            addResourceInfo: {
+                title: 'Privacy policy'
+            },
+            link: '/privacy/'
+        }
     ],
 
     functions: {

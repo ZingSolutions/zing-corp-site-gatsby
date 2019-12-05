@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import constants from './../data/constants';
 import "./blog.scss"
+import Blogdetail from "./blog-detail";
 
 export default class blog extends React.Component {
 
@@ -21,6 +22,11 @@ export default class blog extends React.Component {
     }
 
     render() {
+        const slug = this.props["*"];
+        if (slug) {
+            return <Blogdetail slug={slug} ></Blogdetail>
+
+        }
         var styles = {
             backgroundImage: "url('/images/Blog-page-image.jpg')",
         };
@@ -30,11 +36,12 @@ export default class blog extends React.Component {
 
         return (
             <Layout>
-                <main>
-                    <section className="section-hero inner-banner-outer" id="blog">
+                <main className="blog">
+                    <section className="section-hero" id="blog">
                         <div className="content-container">
-                            <div className="inner-banner">
+                            <div className="col-1">
                                 <h1>Our Blog</h1>
+                                <p>Check out our blog</p>
                             </div>
                         </div>
                     </section>
@@ -81,7 +88,7 @@ export default class blog extends React.Component {
                                                         <p className="bolgci-description">
                                                             {blogItem.description}
                                                         </p>
-                                                        <Link to={`/blog-detail/${detailsPageLink}`} className="btn-red">Read More</Link>
+                                                        <Link to={`/blog/${detailsPageLink}`} className="btn-red">Read More</Link>
                                                     </div>
                                                 )
                                             })

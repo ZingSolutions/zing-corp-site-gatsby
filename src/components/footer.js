@@ -117,12 +117,10 @@ export default class Footer extends React.Component {
         </div>
         <div className="links">
           <Link to="/terms/">Terms & Conditions</Link> <span>|</span>
-          <Link to="/services/">Resources</Link> <span>|</span>
+          <Link to="/resource/">Resources</Link> <span>|</span>
           <Link to="/privacy/">Privacy Policy</Link> <span>|</span>
           <Link to="/cookies/">Cookies</Link> <span>|</span>
           <Link to="/careers/">Careers</Link>
-
-
 
         </div>
         <div className="social">
@@ -164,11 +162,11 @@ export default class Footer extends React.Component {
             />
           </OutboundLink>
 
-          <OutboundLink href="https://www.instagram.com/zing_dev/" target="_blank">
+          <OutboundLink href="https://github.com/ZingSolutions" target="_blank">
             <img
-              src="/images/instagram.png"
-              alt="Go To Zing Instagram"
-              title="Instagram"
+              src="/images/GitHub.png"
+              alt="Go To Zing GitHub"
+              title="GitHub"
             />
           </OutboundLink>
 

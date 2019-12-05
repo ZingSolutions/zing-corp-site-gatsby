@@ -1,6 +1,16 @@
 @import "../scss/base";
 @import "../scss/break-points";
 
+.blog {
+  .section-hero {
+    height: 430px;
+
+    .content-container {
+      align-items: flex-start;
+    }
+  }
+}
+
 .blog-section {
   padding: 3.5rem 0 5rem;
   @include bp(sm-max) { 

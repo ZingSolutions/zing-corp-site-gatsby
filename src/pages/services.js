@@ -18,8 +18,8 @@ export default class Services extends React.Component {
                     <section className="section-hero inner-banner-outer" id="privacy">
                         <div className="content-container">
                             <div className="inner-banner">
-                                <h1>What we do</h1>
-                                <h5>We do amazing things for our clients</h5>
+                                <h1>Services</h1>
+                                <h5>Engage Zing for your needs</h5>
                             </div>
                         </div>
                     </section>
@@ -57,7 +57,6 @@ export default class Services extends React.Component {
                                                 <h3>{line1}<br />
                                                     {line2}</h3>
                                                 <p>{description}</p>
-                                                <a className="btn-default" href={link}>learn more</a>
                                             </li>
                                         );
                                     })}

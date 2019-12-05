@@ -16,25 +16,22 @@ export default class Services extends React.Component {
                         <div className="content-container">
                             <div className="inner-banner">
                                 <h1>About Us</h1>
-
+                                <h5>A little bit of background about us Zingers</h5>
                             </div>
                         </div>
                     </section>
                     <section className="section-about-us section-our-mission" id="zing-and-twilio">
                         <div className="content-container">
-                            <div className="col-1">
+                            {/* <div className="col-1">
                                 <div className="left-block">
                                     <h2 className="main-title">Zing & Twilio</h2>
                                     <p>Together we can make your ideas a reality.</p>
                                 </div>
-                            </div>
-                            <div className="col-2">
+                            </div> */}
+                            <div className="home-page-content">
                                 <h2 className="subtitle">OUR MISSION</h2>
 
                                 <p>To Help Our Customers Discover True Value Through Twilio’s Cloud Communications Platform</p>
-                                <Link to="/contact-us/" className="readmore-link">
-                                    Read more
-                                </Link>
                             </div>
                         </div>
                     </section>
@@ -64,7 +61,7 @@ export default class Services extends React.Component {
                                     </h3>
                                     <p>Driven to learn. We’re fascinated by the process of discovery and how to unlock value. This is reflected in our continuous investigation into new techniques and</p>
                                 </li>
-                                <li className="active">
+                                <li>
                                     <i><img src="/images/energetic.png" alt="" /></i>
                                     <h3>Energetic
                                     <span></span>
@@ -103,27 +100,27 @@ export default class Services extends React.Component {
                                     <h4>Putting The Zing in AmaZing: it was perfect.</h4>
                                     <p>Zing is part of the Sputnik Group of Companies, formed after the MBO of ProspectSoft, by Andrew Ardron and backed by Maven Private Equity in 2017. </p>
                                     <p>ProspectSoft, is the leading provider of SaaS CRM systems designed for the Wholesale, Distribution and Manufacturing sectors. </p>
-                                    <p>In 2017, Jon Brewer, working as ProspectSoft’s Client Services Director, had the vision to see that by combining the agile development techniques that he’d introduced to the business </p>
+                                    <p>In 2017, Jon Brewer, working as ProspectSoft’s Client Services Director, had the vision to see that by combining the agile development techniques that he’d introduced to the business, with a global communications provider such as Twilio, amazing solutions could be developed.</p>
                                 </div>
                             </div>
-                            <p>In 2017, Jon Brewer, working as ProspectSoft’s Client Services Director, had the vision to see that by combining the agile development techniques that he’d introduced to the business </p>
+                            <p><span>Aha! Moment</span><br />
+Opportunity, Delivery, Shareholder backing: the business was born. But it still didn’t have a name. However, whilst at a Twilio Conference in San Francisco, Jon walked into an after-party and he had it: Zing.</p>
+<p>By mid-2019, with almost 20 Zingers on the team and a strengthening pipeline of new business opportunities, Julian Hucker, the co-founder of Esendex, joined as Business Development Director to help drive the next stage of Zing’s growth.</p>
                         </div>
 
                     </section>
-            <section className="section-casestudy-info" >
-                <div className="casestudy-info-content" style={styles}>
-                    <div className="content-container" >
-                        <div className="casestudy-outer">
-                            <h2>
-                                Aliquam cursus, metus
-                                dignissim blandit venenatis,
-                                neque nibh vehicula ante,
+                    <section className="section-casestudy-info" >
+                        <div className="casestudy-info-content" style={styles}>
+                            <div className="content-container" >
+                                <div className="casestudy-outer">
+                                    <h2>
+                                    Interested in how Zing can integrate Twilio in your business?
                             </h2>
-                            <p>Morbi egestas, leo eget elementum mattis, felis leo ultrices odio, vel ornare ante est vitae quam. Cras sem lectus, auctor ut arcu id, porttitor dapibus turpis.a</p>
+                                    <p><Link to="/contact-us">Contact us</Link> to get in touch with a member of the team.</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </section>
+                    </section>
                 </main>
             </Layout>
         )

@@ -2,29 +2,45 @@
 @import "../scss/break-points";
 
 .partner-page {
-	padding: 3rem 0 4rem;
+	padding: 90px 0;
 	position: relative;
 	@include bp(mdl-max) { 
-		padding: 2rem 0 1rem;
+		padding: 60px 0;
 	}
-	&:after {
-		content: '';
-		position: absolute;
-		background-image: url("/images/values-bg.png");
-		background-color: transparent;
-		background-position: center center;
-		background-repeat: no-repeat;
-		width: 100%;
-		height: 790px;
-		top: 303px;
-		z-index: -1;
-		@include bp(mdl-max) { 
-			height: 690px;
-		}
-		@include bp(sm-max) { 
-			height: 600px;
+	@include bp(sm-max) { 
+		padding: 30px 0;
+	}
+
+	&.ingration-section{
+		ul{
+			li{
+				@include bp(mdl-max) { 
+					min-height: 12rem;
+				}
+				@include bp(sm-max){
+					margin-bottom: 2rem;
+				}
+			}
 		}
 	}
+	// &:after {
+	// 	content: '';
+	// 	position: absolute;
+	// 	background-image: url("/images/values-bg.png");
+	// 	background-color: transparent;
+	// 	background-position: center center;
+	// 	background-repeat: no-repeat;
+	// 	width: 100%;
+	// 	height: 790px;
+	// 	top: 303px;
+	// 	z-index: -1;
+	// 	@include bp(mdl-max) { 
+	// 		height: 690px;
+	// 	}
+	// 	@include bp(sm-max) { 
+	// 		height: 600px;
+	// 	}
+	// }
 	.inner-text {
 		width: 100%;
 		text-align: center;
@@ -38,10 +54,26 @@
 	}
 	ul {
 		margin: 0;
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -25px;
+		@include bp(md-max){
+			margin: 0 -15px;
+		}
 		li {
 			padding: 0;
-			flex: 0 0 100%;
-			max-width: 100%;
+			flex: 0 0 33.33%;
+			max-width: 33.33%;
+			padding: 0 25px;
+			margin-bottom: 0;
+
+			@include bp(md-max){
+				padding: 0 15px;
+			}
+			@include bp(sm-max){
+				flex: 0 0 100%;
+				max-width: 100%;
+			}
 			a,
 			button {
 				border-bottom: 3px solid $zing-red;

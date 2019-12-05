@@ -111,7 +111,7 @@ export default class Header extends React.Component {
                 <Link activeClassName="selected" to="/case-study/">Case Studies</Link>
               </li>
               <li>
-                <Link activeClassName="selected" to="/blog/">Blog</Link>
+                <Link activeClassName="selected" to="/blog">Blog</Link>
               </li>
 
             </ul>

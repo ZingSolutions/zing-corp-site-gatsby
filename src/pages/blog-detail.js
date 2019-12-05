@@ -1,49 +1,75 @@
-import React, { lazy, Suspense } from "react"
+import React from "react"
 import Layout from "../components/layout"
 import "./blog-detail.scss"
 import { Redirect } from "@reach/router";
-import ThePowerOfSms from "../components/blogs/the-power-of-sms"
-import TheFirst50Days from "../components/blogs/the-first-50-days"
+import constants from '../data/constants'
 
 export default class Blogdetail extends React.Component {
-
+    
     render() {
-        var styles = {
-            backgroundImage: "url('/images/study-botttom-bg.png')",
-        };
-        const TagName = this.props.slug;
+        const { slug } = this.props;
         let DynamicComponent = <Redirect to="/" noThrow />
-        if (TagName === 'the-first-50-days') {
-            DynamicComponent = <TheFirst50Days/>;
-        } else if (TagName === 'the-power-of-sms') {
-            DynamicComponent = <ThePowerOfSms/>;
+        const blogDetails = [...constants.blogItems];
+        let getBlogDetail = null;
+        if (blogDetails.length && slug) {
+            getBlogDetail = blogDetails.find(word => {
+                const detailsPageLink = (word.title.toLowerCase()).replace(/ /g, "-");
+                return (detailsPageLink === slug.toLowerCase());
+            });
         }
+
         return (
             <Layout>
-                <main>
-                    <section className="section-hero inner-banner-outer" id="blog">
-                        <div className="content-container">
-                            <div className="inner-banner">
-                                <h1>Our Blog</h1>
-                            </div>
-                        </div>
-                    </section>
-                    {DynamicComponent}
-                    <section className="section-casestudy-info" >
-                        <div className="casestudy-info-content" style={styles}>
-                            <div className="content-container" >
-                                <div className="casestudy-outer">
-                                    <h2>
-                                        Aliquam cursus, metus
-                                        dignissim blandit venenatis,
-                                        neque nibh vehicula ante,
-                                    </h2>
-                                    <p>Morbi egestas, leo eget elementum mattis, felis leo ultrices odio, vel ornare ante est vitae quam. Cras sem lectus, auctor ut arcu id, porttitor dapibus turpis.a</p>
+                {getBlogDetail && Object.keys(getBlogDetail).length ?
+                    <main>
+                        <section className="section-hero inner-banner-outer" id="blog">
+                            <div className="content-container">
+                                <div className="inner-banner">
+                                    <h1>{getBlogDetail.title}</h1>
                                 </div>
                             </div>
-                        </div>
-                    </section>
-                </main>
+                        </section>
+                        <section className="blog-section">
+                            <div className="content-container">
+                                <div className="blog-details">
+                                    <div className="blogd-image">
+                                        <img src={getBlogDetail.image} alt="" />
+                                        <div className="blogci-item-details">
+                                            <span>
+                                                By {getBlogDetail.author}
+                                            </span>
+                                            <span>
+                                                {getBlogDetail.publishTime}
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <h2>{getBlogDetail.title}</h2>
+                                    <div className="blog-description">
+                                        {getBlogDetail.titleDescription && getBlogDetail.titleDescription.length && getBlogDetail.titleDescription.map((blogDesc, index) => {
+                                            return (
+                                                <p key={index}> {blogDesc} </p>
+                                            );
+                                        })}
+
+                                        {getBlogDetail.content && getBlogDetail.content.length && getBlogDetail.content.map((contentDesc, contentIndex) => {
+                                            return (
+                                                <div key={contentIndex}>
+                                                    <h3>{contentDesc.subHeader}</h3>
+                                                    {
+                                                        contentDesc.subDescription.map((contentDescObj, contentDescIndex) => {
+                                                            return <p key={contentDescIndex}>{contentDescObj}</p>
+                                                        })
+                                                    }
+                                                </div>
+                                            )
+                                        })}
+                                    </div>
+
+                                </div>
+                            </div>
+                        </section>
+                    </main>
+                    : DynamicComponent }
             </Layout>
         )
     }
