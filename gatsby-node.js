@@ -68,13 +68,6 @@ exports.onCreatePage = async ({ page, actions }) => {
         console.log(page)
       page.matchPath = "/blog/*"
   
-      // Update the page.
-    //   createPage({
-    //       path: "/blog-detail/",
-    //       matchPath: "/blog-detail/:slug",
-    //     component: path.resolve(`./src/pages/blog-detail.js`),
-    //   })
-    
     }
     createPage(page);
   }

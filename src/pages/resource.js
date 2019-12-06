@@ -111,11 +111,9 @@ export default class resource extends React.Component {
                             <div className="content-container" >
                                 <div className="casestudy-outer">
                                     <h2>
-                                        Aliquam cursus, metus
-                                        dignissim blandit venenatis,
-                                        neque nibh vehicula ante,
+                                        Looking for some information but can't find it?
             </h2>
-                                    <p>Morbi egestas, leo eget elementum mattis, felis leo ultrices odio, vel ornare ante est vitae quam. Cras sem lectus, auctor ut arcu id, porttitor dapibus turpis.a</p>
+                                    <p><Link to="/contact-us" className="link-design">Contact us</Link> to get in touch with a member of the team.</p>
 
                                 </div>
                             </div>

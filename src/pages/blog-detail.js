@@ -1,11 +1,12 @@
 import React from "react"
 import Layout from "../components/layout"
 import "./blog-detail.scss"
+import { Link } from "gatsby"
 import { Redirect } from "@reach/router";
 import constants from '../data/constants'
 
 export default class Blogdetail extends React.Component {
-    
+
     render() {
         const { slug } = this.props;
         let DynamicComponent = <Redirect to="/" noThrow />
@@ -17,6 +18,28 @@ export default class Blogdetail extends React.Component {
                 return (detailsPageLink === slug.toLowerCase());
             });
         }
+
+        // const idx = blogDetails.findIndex(word => {
+        //     const detailsPageLink = (word.title.toLowerCase()).replace(/ /g, "-");
+        //     return (detailsPageLink === slug.toLowerCase());
+        // });
+        // blogDetails.splice(idx, 1);
+        // blogDetails.sort((d1, d2) => new Date(d2.publishDateFormat).getTime() - new Date(d1.publishDateFormat).getTime());
+        // blogDetails.slice(0, 3);
+
+        let maxResult = 1;
+        blogDetails
+            .sort(
+                (d1, d2) =>
+                    new Date(d2.publishDateFormat).getTime() - new Date(d1.publishDateFormat).getTime(),
+            )
+        const updatedBlogDetails = blogDetails.filter((word,index,array) => {
+            console.log(word,index,array);
+            const detailsPageLink = word.title.toLowerCase().replace(/ /g, '-');
+            return detailsPageLink !== slug.toLowerCase() && maxResult > 0 && (maxResult !== 1 ? maxResult -= 1 : true);
+        });
+
+        console.log(updatedBlogDetails);
 
         return (
             <Layout>
@@ -30,7 +53,7 @@ export default class Blogdetail extends React.Component {
                             </div>
                         </section>
                         <section className="blog-section">
-                            <div className="content-container">
+                            <div className="content-container blog-detail-page">
                                 <div className="blog-details">
                                     <div className="blogd-image">
                                         <img src={getBlogDetail.image} alt="" />
@@ -66,10 +89,40 @@ export default class Blogdetail extends React.Component {
                                     </div>
 
                                 </div>
+                                <div className="more-blog-wrapper">
+                                    <div className="tabing-wrapper">
+                                        <h2>More Blogs...</h2>
+                                        <div className="tabing-content-outer">
+                                            <div className="content-wrapper">
+                                                <div className="blog-lists">
+                                                    {updatedBlogDetails && updatedBlogDetails.length ? updatedBlogDetails.map((blogItem, index) => {
+                                                        const detailsPageLink = (blogItem.title.toLowerCase()).replace(/ /g, "-");
+                                                        return (
+                                                            <div key={index} className="blogcontent-item">
+                                                                <div className="blogci-image">
+                                                                    <Link to={`/blog/${detailsPageLink}`}><img src={blogItem.image} alt="" /></Link>
+                                                                    <div className="blogci-item-details">
+                                                                        <span>By {blogItem.author}</span>
+                                                                        <span>{blogItem.publishTime}</span>
+                                                                    </div>
+                                                                </div>
+                                                                <h2>{blogItem.title}</h2>
+                                                                <p className="bolgci-description">
+                                                                    {blogItem.description}
+                                                                </p>
+                                                            </div>
+                                                        )
+                                                    })
+                                                        : null}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </section>
                     </main>
-                    : DynamicComponent }
+                    : DynamicComponent}
             </Layout>
         )
     }

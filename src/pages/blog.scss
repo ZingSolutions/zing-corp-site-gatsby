@@ -13,7 +13,7 @@
 
 .blog-section {
   padding: 3.5rem 0 5rem;
-  @include bp(sm-max) { 
+  @include bp(sm-max) {
     padding: 2rem 0 3rem;
   }
   form {
@@ -30,7 +30,7 @@
   text-align: right;
   display: inline-block;
   min-width: 320px;
-  @include bp(xs-max) { 
+  @include bp(xs-max) {
     width: 100%;
     min-width: 100%;
   }
@@ -49,7 +49,7 @@
     left: 3px;
     top: 2px;
     height: 100%;
-    width:  1.875rem;
+    width: 1.875rem;
     background: transparent;
     outline: none;
     border: none;
@@ -62,21 +62,21 @@
 .tabing-wrapper {
   width: 100%;
   .tabing-content-outer {
-    .blog-lists{
+    .blog-lists {
       display: flex;
       flex-wrap: wrap;
       margin: 1.5rem -2rem 0;
-      @include bp(sm-max) { 
+      @include bp(sm-max) {
         margin: 1.5rem 0rem 0;
       }
-      .blogcontent-item{
+      .blogcontent-item {
         width: 50%;
         padding: 0 2rem;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
         margin-bottom: 2rem;
-        @include bp(sm-max) { 
+        @include bp(sm-max) {
           width: 100%;
           padding: 0 0rem 1rem;
 
@@ -85,8 +85,8 @@
             margin-bottom: 0;
           }
         }
-        .blogci-image{
-          img{
+        .blogci-image {
+          img {
             width: 100%;
             max-width: 100%;
             margin-bottom: 1rem;
@@ -100,10 +100,10 @@
             }
           }
         }
-        .blogci-item-details{
+        .blogci-item-details {
           display: flex;
           justify-content: space-between;
-          span{
+          span {
             font-size: 1.2rem;
             color: $dark-grey;
             margin-bottom: 0;
@@ -112,22 +112,22 @@
             }
           }
         }
-        h2{
+        h2 {
           font-family: "CeraPro-Regular";
           margin-bottom: 0;
           font-size: 2.4em;
           font-weight: 400;
           color: $dark-grey;
-          margin: 1.4rem 0 0.5rem ;
+          margin: 1.4rem 0 0.5rem;
           @include bp(md-max) {
             font-size: 2rem;
           }
-          @include bp(sm-max) { 
+          @include bp(sm-max) {
             font-size: 1.7rem;
             line-height: 2.2rem;
           }
         }
-        .bolgci-description{
+        .bolgci-description {
           color: $dark-grey;
           font-size: 1.25rem;
           margin-bottom: 1.875rem;
@@ -139,7 +139,7 @@
           }
         }
 
-        .btn-red {         
+        .btn-red {
           min-height: 3.0625rem;
           padding: 0 1rem;
           font-size: 1.2rem;
@@ -147,14 +147,14 @@
           display: block;
           max-width: 10.8125rem;
           line-height: 3.0625rem;
-          -webkit-transition: all .2s ease-in-out;
-          transition: all .2s ease-in-out;
+          -webkit-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
           outline: none;
           border: 3px solid $zing-red;
-          background-color: transparent; 
+          background-color: transparent;
           font-weight: 600;
           cursor: pointer;
-          margin-top:auto;
+          margin-top: auto;
           text-align: center;
           @include bp(sm-max) {
             max-width: 7rem;
@@ -164,20 +164,18 @@
             padding: 0;
             border-width: 2px;
           }
-          &:hover{
-            background-color: $zing-red; 
-              color: $white;
+          &:hover {
+            background-color: $zing-red;
+            color: $white;
           }
-            color: $zing-red;
+          color: $zing-red;
         }
       }
     }
   }
 }
 
-
-
-::-webkit-input-placeholder { 
+::-webkit-input-placeholder {
   color: $dark-grey;
 }
 

@@ -22,20 +22,16 @@ export default class Index extends React.Component {
                 Get Connected
               </Link>
             </div>
-            <div className="col-2 right-img">
+            <div className="col-2 home-page-image">
               <img
                 src="/images/Flex-in-computer.png"
-                alt="Dashboards on mobile and laptop"            
+                alt="Dashboards on mobile and laptop"
               />
             </div>
           </div>
         </section>
         <section className="section-about-us" id="zing-and-twilio">
           <div className="content-container">
-            {/* <div className="col-1">
-              <h2>Zing & Twilio</h2>
-              <p>Zing is a Twilio Gold Consulting Partner</p>
-            </div> */}
             <div className="home-page-content">
               <h2>Who We Are</h2>
               <p>

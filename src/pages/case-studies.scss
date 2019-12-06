@@ -2,110 +2,110 @@
 @import "../scss/variables.scss";
 
 blockquote {
-    margin-top: 1.5em;
+  margin-top: 1.5em;
 }
 
 blockquote::after {
-    content: "";
-    background: url(/images/quotemark.svg);
-    background-repeat: no-repeat;
-    background-size: 12%;
-    background-position: right top;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: absolute;
-    z-index: -1;
-    opacity: 0.1;
-    margin-top: 5%;
+  content: "";
+  background: url(/images/quotemark.svg);
+  background-repeat: no-repeat;
+  background-size: 12%;
+  background-position: right top;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: -1;
+  opacity: 0.1;
+  margin-top: 5%;
 }
 
 .row {
-    width: 100%;
-    margin-bottom: 0.8em;
+  width: 100%;
+  margin-bottom: 0.8em;
 }
 
 .column {
-    width: 50%;
-    margin-right: 0.8em;
+  width: 50%;
+  margin-right: 0.8em;
 }
 
 .card {
-    width: 100%;
-    text-align: center;
-    img {
-        height: 100px;
-        width: 100px;
-        align-self: center;
-        margin-bottom: 20px;
-    }
+  width: 100%;
+  text-align: center;
+  img {
+    height: 100px;
+    width: 100px;
+    align-self: center;
+    margin-bottom: 20px;
+  }
 }
 
 .study-image-right {
-    margin-left: 2%;
+  margin-left: 2%;
 }
 
 .content-container {
-    .content-header {
-        .title-red {
-            color: $zing-red;
-            line-height: 1.3em;
-            font-size: 2em;
-            font-family: "CeraPro-Medium";
-            margin-top: 0.6em;
-        }
+  .content-header {
+    .title-red {
+      color: $zing-red;
+      line-height: 1.3em;
+      font-size: 2em;
+      font-family: "CeraPro-Medium";
+      margin-top: 0.6em;
+    }
 
-        .title {
-            font-family: "CeraPro-Medium";
-            line-height: 1.3em;
-            text-align: center;
-        }
-        .adjusted-hr {
-          margin-bottom: 1em;
-      }
+    .title {
+      font-family: "CeraPro-Medium";
+      line-height: 1.3em;
+      text-align: center;
+    }
+    .adjusted-hr {
+      margin-bottom: 1em;
+    }
   }
   .col-5 {
     .study-btm {
-        margin-bottom: 35px;
+      margin-bottom: 35px;
     }
     .p-cent {
-        text-align: center;
+      text-align: center;
     }
     h1 {
-        color: $grey;
-        margin: 0;
-        font-size: 7em;
+      color: $grey;
+      margin: 0;
+      font-size: 7em;
     }
     h2 {
-        margin-bottom: 1em;
+      margin-bottom: 1em;
     }
-}
-.exdiv {
+  }
+  .exdiv {
     justify-content: center;
     margin-top: 1em;
-    display: inline-flex
-}
+    display: inline-flex;
+  }
 }
 .section-photo {
-    background-image: url("https://via.placeholder.com/1000");
-    color: white;
-    text-align: center;
+  background-image: url("https://via.placeholder.com/1000");
+  color: white;
+  text-align: center;
 
-    .content-header {
-        padding-top: 15%;
-        padding-bottom: 15%;
-        width: 100%;
-    }
-    h1 {
-        font-size: 4em;
-        justify-content: center;
-        line-height: 1.3em;
-        width: 100%;
-    }
-    p {
-        font-size: 1.3em;
-        line-height: 1.3em;
-        width: 70%;
-    }
+  .content-header {
+    padding-top: 15%;
+    padding-bottom: 15%;
+    width: 100%;
+  }
+  h1 {
+    font-size: 4em;
+    justify-content: center;
+    line-height: 1.3em;
+    width: 100%;
+  }
+  p {
+    font-size: 1.3em;
+    line-height: 1.3em;
+    width: 70%;
+  }
 }

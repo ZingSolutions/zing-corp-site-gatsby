@@ -37,43 +37,42 @@ header {
     img {
       height: 4em;
       @include bp(xlg-max) {
-       height: 3.2em;
-     }
-     @include bp(sm-max) {
-       height: 3em;
-     }
-   }
-   .selected  {
-    position: relative;
-    &:before {
-      border-bottom: 3px solid $zing-red;
-      position: absolute;
-      top:1.65rem;
-      content:"";
-      left:0;
-      width: 100%;
-  
-      @include bp(lg-max) {
-       display: none;
-     }
-   }
-  }
+        height: 3.2em;
+      }
+      @include bp(sm-max) {
+        height: 3em;
+      }
+    }
+    .selected {
+      position: relative;
+      &:before {
+        border-bottom: 3px solid $zing-red;
+        position: absolute;
+        top: 1.65rem;
+        content: "";
+        left: 0;
+        width: 100%;
 
-   i {
-    font-size: 2em;
-    color: $zing-red;
-    margin: 0.2rem 2rem 0 0;
-  }
+        @include bp(lg-max) {
+          display: none;
+        }
+      }
+    }
 
-  .call-to-action {
-    display: none;
+    i {
+      font-size: 2em;
+      color: $zing-red;
+      margin: 0.2rem 2rem 0 0;
+    }
 
-  }
+    .call-to-action {
+      display: none;
+    }
 
-  a {
-    outline: none;
+    a {
+      outline: none;
+    }
   }
-}
 }
 
 @media only screen and (min-width: 600px) {
@@ -85,7 +84,6 @@ header {
       max-width: 1024px;
       position: relative;
 
-
       .call-to-action {
         display: block;
         width: 8rem;
@@ -94,15 +92,15 @@ header {
         text-align: center;
 
         @include bp(lg-max) {
-         margin-right: 3rem;
-       }
-     }
+          margin-right: 3rem;
+        }
+      }
 
-     i {
-      display: none;
+      i {
+        display: none;
+      }
     }
   }
-}
 }
 
 @media only screen and (min-width: 1024px) {

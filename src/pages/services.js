@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Service from "../components/service"
 import constants from "../data/constants"
@@ -50,7 +51,7 @@ export default class Services extends React.Component {
                                     <hr></hr>
                                 </div>
                                 <ul>
-                                    {serviceOffers.map((offer,index) => {
+                                    {serviceOffers.map((offer, index) => {
                                         const { title: { line1, line2 }, description, link } = offer;
                                         return (
                                             <li key={index}>
@@ -71,11 +72,9 @@ export default class Services extends React.Component {
                             <div className="content-container" >
                                 <div className="casestudy-outer">
                                     <h2>
-                                        Aliquam cursus, metus
-                                        dignissim blandit venenatis,
-                                        neque nibh vehicula ante,
+                                        Interested in how Zing can integrate Twilio in your business?
                                     </h2>
-                                    <p>Morbi egestas, leo eget elementum mattis, felis leo ultrices odio, vel ornare ante est vitae quam. Cras sem lectus, auctor ut arcu id, porttitor dapibus turpis.a</p>
+                                    <p><Link to="/contact-us" className="link-design">Contact us</Link> to get in touch with a member of the team.</p>
                                 </div>
                             </div>
                         </div>

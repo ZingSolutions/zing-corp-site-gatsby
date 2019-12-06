@@ -7,7 +7,7 @@ import "./about.scss"
 export default class Services extends React.Component {
     render() {
         var styles = {
-            backgroundImage: "url('/images/About-us-image.jpg')",
+            backgroundImage: "url('/images/About-us-page.jpg')",
         };
         return (
             <Layout>
@@ -22,12 +22,6 @@ export default class Services extends React.Component {
                     </section>
                     <section className="section-about-us section-our-mission" id="zing-and-twilio">
                         <div className="content-container">
-                            {/* <div className="col-1">
-                                <div className="left-block">
-                                    <h2 className="main-title">Zing & Twilio</h2>
-                                    <p>Together we can make your ideas a reality.</p>
-                                </div>
-                            </div> */}
                             <div className="home-page-content">
                                 <h2 className="subtitle">OUR MISSION</h2>
 
@@ -54,7 +48,7 @@ export default class Services extends React.Component {
 
                             <ul>
                                 <li>
-                                    <i><img src="/images/inquisitive.png" alt="" /></i>
+                                    <i><img src="/images/inquistive-icon.svg" alt="" /></i>
                                     <h3>Inquisitive
                                     <span></span>
 
@@ -62,14 +56,14 @@ export default class Services extends React.Component {
                                     <p>Driven to learn. We’re fascinated by the process of discovery and how to unlock value. This is reflected in our continuous investigation into new techniques and</p>
                                 </li>
                                 <li>
-                                    <i><img src="/images/energetic.png" alt="" /></i>
+                                    <i><img src="/images/energetic-icon.svg" alt="" /></i>
                                     <h3>Energetic
                                     <span></span>
                                     </h3>
                                     <p>It’s in our name: Zing. We’re energetic, enthusiastic and lively and always on the move. We bring this energy to everything that we do and it’s reflected in every aspect of our</p>
                                 </li>
                                 <li>
-                                    <i><img src="/images/relentless.png" alt="" /></i>
+                                    <i><img src="/images/relentless-icon.svg" alt="" /></i>
                                     <h3>Relentless
                                     <span></span>
                                     </h3>
@@ -104,8 +98,8 @@ export default class Services extends React.Component {
                                 </div>
                             </div>
                             <p><span>Aha! Moment</span><br />
-Opportunity, Delivery, Shareholder backing: the business was born. But it still didn’t have a name. However, whilst at a Twilio Conference in San Francisco, Jon walked into an after-party and he had it: Zing.</p>
-<p>By mid-2019, with almost 20 Zingers on the team and a strengthening pipeline of new business opportunities, Julian Hucker, the co-founder of Esendex, joined as Business Development Director to help drive the next stage of Zing’s growth.</p>
+                                Opportunity, Delivery, Shareholder backing: the business was born. But it still didn’t have a name. However, whilst at a Twilio Conference in San Francisco, Jon walked into an after-party and he had it: Zing.</p>
+                            <p>By mid-2019, with almost 20 Zingers on the team and a strengthening pipeline of new business opportunities, Julian Hucker, the co-founder of Esendex, joined as Business Development Director to help drive the next stage of Zing’s growth.</p>
                         </div>
 
                     </section>
@@ -114,9 +108,9 @@ Opportunity, Delivery, Shareholder backing: the business was born. But it still 
                             <div className="content-container" >
                                 <div className="casestudy-outer">
                                     <h2>
-                                    Interested in how Zing can integrate Twilio in your business?
+                                        Interested in how Zing can integrate Twilio in your business?
                             </h2>
-                                    <p><Link to="/contact-us">Contact us</Link> to get in touch with a member of the team.</p>
+                                    <p><Link to="/contact-us" className="link-design">Contact us</Link> to get in touch with a member of the team.</p>
                                 </div>
                             </div>
                         </div>

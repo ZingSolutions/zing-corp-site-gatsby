@@ -56,20 +56,6 @@ export default class blog extends React.Component {
                                 </div>
                             </form>
                             <div className="tabing-wrapper">
-                                {/* <ul>
-                                    <li className="active">
-                                        <a href="">All</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Zingers</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Industry</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Events</a>
-                                    </li>
-                                </ul> */}
                                 <div className="tabing-content-outer">
                                     <div className="content-wrapper">
                                         <div className="blog-lists">
@@ -78,7 +64,7 @@ export default class blog extends React.Component {
                                                 return (
                                                     <div key={index} className="blogcontent-item">
                                                         <div className="blogci-image">
-                                                            <img src={blogItem.image} alt="" />
+                                                            <Link to={`/blog/${detailsPageLink}`}><img src={blogItem.image} alt="" /></Link>
                                                             <div className="blogci-item-details">
                                                                 <span>By {blogItem.author}</span>
                                                                 <span>{blogItem.publishTime}</span>
@@ -104,11 +90,9 @@ export default class blog extends React.Component {
                             <div className="content-container" >
                                 <div className="casestudy-outer">
                                     <h2>
-                                        Aliquam cursus, metus
-                                        dignissim blandit venenatis,
-                                        neque nibh vehicula ante,
+                                        Got an interesting topic to write about?
                                 </h2>
-                                    <p>Morbi egestas, leo eget elementum mattis, felis leo ultrices odio, vel ornare ante est vitae quam. Cras sem lectus, auctor ut arcu id, porttitor dapibus turpis.a</p>
+                                    <p>Zing are interested, get in touch to share your ideas.</p>
                                 </div>
                             </div>
                         </div>

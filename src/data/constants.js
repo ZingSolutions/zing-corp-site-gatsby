@@ -187,7 +187,7 @@ const constants = {
             publishTime: '23rd October 2019',
             publishDateFormat: '2019/10/23',
             image: '/images/blog-lg-img.png',
-            description: 'There is no denying the stressstress that coincides with the first days, weeks and even months of starting a new job. Micheal Watkins, in his book ‘The First 90 Days’, attempts to execute the paradox behind the first 90 days of being employeoyed in a new workplace.',
+            description: 'There is no denying the stress that coincides with the first days, weeks and even months of starting a new job. Micheal Watkins, in his book ‘The First 90 Days’, attempts to execute the paradox behind the first 90 days of being employeoyed in a new workplace.',
             titleDescription: [
                 'There is no denying the stress that coincides with the first days,weeks and even months of starting a new job. Micheal Watkins, in his book ‘The First 90 Days’, attempts to execute the paradox behind the first 90 days of being employed in a new workplace. Watkins provides a theory that in the first 90 days of starting a role, the newly employed member of staff is arguably a ‘retractor’ to the organisation. He explains that within this time period it\'s doubtful you are adding value to the business, asking more questions than you are answering and making more mistakes than you are solving. Although, arguably pessimistic, it is inevitable that you will make mistakes, ask a lot of questions and take up time trying to learn.',
                 'With ‘The First 90 Days’ as fundamental inspiration, we decided to follow the journey of one of our new Zingers, Stefan Crowhurst. Stefan is currently a University student undertaking a Placement year as part of his degree , he joined Zing around 65 days ago but according to our Product Development Manager, “he’s been useful for about 50 out of the 65 days of being employed!” In all seriousness, Stefan’s progress within Zing has been significantly rapid, and less than three months into his new role he’s very much an essential member of the team. Furthermore, we decided to incorporate Watkin’s theory of the First 90 Days to document the first 50 days of Stefan’s journey so far at Zing. The four main features which has shaped Stefans employability journey so far are as follows:',
@@ -251,10 +251,10 @@ const constants = {
                 image: '/images/solutions.png',
             },
             resourceInfo: {
-                title: 'About Us',
+                title: 'Contact Us',
                 title1: 'Who are Zing?',
                 description: 'Zing is a UK based Twilio Gold Consulting Partner. We have recently fully aligned ourselves to build all solutions around the Twilio portfolio and see this as central to our ambitious growth plans.',
-                link: '/about/'
+                link: '/contact-us/'
             }
         },
         {
@@ -262,10 +262,10 @@ const constants = {
                 image: '/images/integration.png',
             },
             resourceInfo: {
-                title: 'About Us',
+                title: 'Contact Us',
                 title1: 'How do we differentiate?',
                 description: 'Zing is a UK based Twilio Gold Consulting Partner. We have recently fully aligned ourselves to build all solutions around the Twilio portfolio and see this as central to our ambitious growth plans.',
-                link: '/integration/'
+                link: '/contact-us/'
             }
         },
         {
@@ -273,10 +273,10 @@ const constants = {
                 image: '/images/services.png',
             },
             resourceInfo: {
-                title: 'Services',
+                title: 'Privacy Policy',
                 title1: 'What services do we offer?',
                 description: 'Zing is a UK based Twilio Gold Consulting Partner. We have recently fully aligned ourselves to build all solutions around the Twilio portfolio and see this as central to our ambitious growth plans.',
-                link: '/services/'
+                link: '/privacy/'
             }
         }
     ],
@@ -284,7 +284,7 @@ const constants = {
     addResource: [
         {
             images: {
-                image: '/images/services.png',
+                image: '/images/Integrations-resource.svg',
             },
             addResourceInfo: {
                 title: 'Integrations'
@@ -294,16 +294,16 @@ const constants = {
         },
         {
             images: {
-                image: '/images/services.png',
+                image: '/images/branding-resource.svg',
             },
             addResourceInfo: {
                 title: 'Branding guidelines'
             },
-            link: 'https://drive.google.com/uc?id=1EM1ffKnxVpQni3xdjZzmVqmLeNXg7ntL',
+            link: '/images/Zing-Brand-Guidelines-v1.1.pdf',
         },
         {
             images: {
-                image: '/images/services.png',
+                image: '/images/Blog-resource.svg',
             },
             addResourceInfo: {
                 title: 'Blog'
@@ -312,7 +312,7 @@ const constants = {
         },
         {
             images: {
-                image: '/images/services.png',
+                image: '/images/Contact-Us-resource.svg',
             },
             addResourceInfo: {
                 title: 'Contact us'
@@ -321,7 +321,7 @@ const constants = {
         },
         {
             images: {
-                image: '/images/services.png',
+                image: '/images/Careers-resource.svg',
             },
             addResourceInfo: {
                 title: 'Careers'
@@ -330,7 +330,7 @@ const constants = {
         },
         {
             images: {
-                image: '/images/services.png',
+                image: '/images/Privacy-Policy-resource.svg',
             },
             addResourceInfo: {
                 title: 'Privacy policy'

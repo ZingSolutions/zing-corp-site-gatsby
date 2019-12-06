@@ -1,8 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
-
 import constants from './../data/constants';
 import "./case-study.scss"
 
@@ -75,18 +72,18 @@ export default class caseStudy extends React.Component {
                     {caseStudiesComponent}
 
                     <section className="section-casestudy-info" >
-                    <div className="casestudy-info-content" style={styles}>
-                        <div className="content-container" >
-                            <div className="casestudy-outer">
-                                <h2>
-                                    Aliquam cursus, metus
-                                    dignissim blandit venenatis,
-                                    neque nibh vehicula ante,
+                        <div className="casestudy-info-content" style={styles}>
+                            <div className="content-container" >
+                                <div className="casestudy-outer">
+                                    <h2>
+                                        Aliquam cursus, metus
+                                        dignissim blandit venenatis,
+                                        neque nibh vehicula ante,
                                 </h2>
-                                <p>Morbi egestas, leo eget elementum mattis, felis leo ultrices odio, vel ornare ante est vitae quam. Cras sem lectus, auctor ut arcu id, porttitor dapibus turpis.a</p>
+                                    <p>Morbi egestas, leo eget elementum mattis, felis leo ultrices odio, vel ornare ante est vitae quam. Cras sem lectus, auctor ut arcu id, porttitor dapibus turpis.a</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     </section>
 
                 </main>

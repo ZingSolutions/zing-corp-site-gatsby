@@ -116,7 +116,6 @@ export default class Footer extends React.Component {
           <ZingLogo />
         </div>
         <div className="links">
-          <Link to="/terms/">Terms & Conditions</Link> <span>|</span>
           <Link to="/resource/">Resources</Link> <span>|</span>
           <Link to="/privacy/">Privacy Policy</Link> <span>|</span>
           <Link to="/cookies/">Cookies</Link> <span>|</span>
@@ -171,6 +170,7 @@ export default class Footer extends React.Component {
           </OutboundLink>
 
         </div>
+        <div className="icon-ref">Icons made by <strong><a href="https://www.flaticon.com/authors/alfredo-hernandez" title="Alfredo Hernandez ">Alfredo Hernandez </a></strong> from <strong><a href="https://www.flaticon.com/" title="Flaticon">Flat icon</a></strong></div>
         <div className="cr">&copy; ProspectSoft Ltd 2019</div>
       </footer>
     )

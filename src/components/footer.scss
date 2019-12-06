@@ -65,7 +65,7 @@ footer {
     flex-wrap: wrap;
     justify-content: space-around;
     @include bp(sm-max) {
-      span{
+      span {
         display: none;
       }
     }
@@ -82,7 +82,6 @@ footer {
         margin: 0.4rem 0.6rem;
         display: block;
       }
-
     }
   }
 
@@ -97,6 +96,10 @@ footer {
 
   .cr {
     font-size: 0.9em;
+  }
+
+  .icon-ref {
+    font-size: 0.6em;
   }
 }
 
