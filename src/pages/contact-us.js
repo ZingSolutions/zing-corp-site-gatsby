@@ -120,7 +120,7 @@ export default class ContactUs extends React.Component {
                   <h3 className="address-title">London</h3>
                   <h3>5 Merchant Square</h3>
                   <h3>London</h3>
-                  <h3>W2 1Ay</h3>
+                  <h3>W2 1AY</h3>
                   <h4>Parking details </h4>
                   <a
                     href="https://www.q-park.co.uk/en-gb/cities/london/church-street/ "

@@ -80,11 +80,11 @@ export default class Header extends React.Component {
                   Services
                 </Link>
               </li>
-              <li className="submenu">
+              {/* <li className="submenu">
                 <Link activeClassName="selected" to="/case-study/">
                   Case Studies
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link activeClassName="selected" to="/blog/">
                   Blog
