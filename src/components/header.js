@@ -23,7 +23,6 @@ export default class Header extends React.Component {
   }
 
   toggleMenu() {
-    console.log(this.state.showMenu)
     this.setState({ showMenu: !this.state.showMenu })
   }
 

@@ -105,11 +105,11 @@ export default class Footer extends React.Component {
                 </button>
               </form>
             ) : (
-                <div className="thanks">
-                  <h4>Thanks for contacting us!</h4>
-                  <h4>We'll get back to you ASAP</h4>
-                </div>
-              )}
+              <div className="thanks">
+                <h4>Thanks for contacting us!</h4>
+                <h4>We'll get back to you ASAP</h4>
+              </div>
+            )}
           </div>
         </div>
         <div className="logo">
@@ -120,7 +120,6 @@ export default class Footer extends React.Component {
           <Link to="/privacy/">Privacy Policy</Link> <span>|</span>
           <Link to="/cookies/">Cookies</Link> <span>|</span>
           <Link to="/careers/">Careers</Link>
-
         </div>
         <div className="social">
           <OutboundLink
@@ -168,9 +167,24 @@ export default class Footer extends React.Component {
               title="GitHub"
             />
           </OutboundLink>
-
         </div>
-        <div className="icon-ref">Icons made by <strong><a href="https://www.flaticon.com/authors/alfredo-hernandez" title="Alfredo Hernandez ">Alfredo Hernandez </a></strong> from <strong><a href="https://www.flaticon.com/" title="Flaticon">Flat icon</a></strong></div>
+        <div className="icon-ref">
+          Icons made by{" "}
+          <strong>
+            <a
+              href="https://www.flaticon.com/authors/alfredo-hernandez"
+              title="Alfredo Hernandez "
+            >
+              Alfredo Hernandez{" "}
+            </a>
+          </strong>{" "}
+          from{" "}
+          <strong>
+            <a href="https://www.flaticon.com/" title="Flaticon">
+              Flat icon
+            </a>
+          </strong>
+        </div>
         <div className="cr">&copy; ProspectSoft Ltd 2019</div>
       </footer>
     )

@@ -122,8 +122,12 @@ export default class ContactUs extends React.Component {
                   <h3>London</h3>
                   <h3>W2 1Ay</h3>
                   <h4>Parking details </h4>
-                  <a href="https://www.q-park.co.uk/en-gb/cities/london/church-street/ " className="linkParking">https://www.q-park.co.uk/en-gb/cities/london/church-street/ </a>
-
+                  <a
+                    href="https://www.q-park.co.uk/en-gb/cities/london/church-street/ "
+                    className="linkParking"
+                  >
+                    https://www.q-park.co.uk/en-gb/cities/london/church-street/{" "}
+                  </a>
                 </div>
                 <div className="col-2">
                   <form
@@ -193,8 +197,8 @@ export default class ContactUs extends React.Component {
                       <h4>We'll get back to you ASAP</h4>
                     </div>
                   ) : (
-                      ""
-                    )}
+                    ""
+                  )}
                 </div>
               </div>
             </div>

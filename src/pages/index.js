@@ -8,7 +8,7 @@ import constants from "../data/constants"
 
 export default class Index extends React.Component {
   render() {
-    const services = [...constants.services];
+    const services = [...constants.services]
     return (
       <Layout>
         <section className="section-hero">
@@ -16,7 +16,9 @@ export default class Index extends React.Component {
             <div className="col-1">
               <h1>An Agile Approach to discovering Twilio Solutions</h1>
               <p>
-                Whether it be developing discrete Twilio Integrations, or industry-disruptive enterprise solutions, Zing provides a range of services to build your cloud communications.
+                Whether it be developing discrete Twilio Integrations, or
+                industry-disruptive enterprise solutions, Zing provides a range
+                of services to build your cloud communications.
               </p>
               <Link to="/contact-us/" className="call-to-action">
                 Get Connected
@@ -56,9 +58,10 @@ export default class Index extends React.Component {
             </div>
             <div className="content-body-path">
               {services.map((service, index) => {
-                const mode = index % 2 === 0 ? 'left' : 'right';
-                return <Service key={index} service={service} mode={mode}></Service>
-
+                const mode = index % 2 === 0 ? "left" : "right"
+                return (
+                  <Service key={index} service={service} mode={mode}></Service>
+                )
               })}
             </div>
           </div>
