@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import constants from "./../data/constants"
+import { Link } from "gatsby"
 import "./integration.scss"
 
 export default class Services extends React.Component {
@@ -54,16 +55,10 @@ export default class Services extends React.Component {
                     Interested in integrating Twilio to your business services?
                   </h2>
                   <p>
-                    if you're unable to see your services in the page above,
-                    have no fear! There's good change we're able to work with
-                    them Contact us to get in touch with a member of the team to
-                    find out more.. &nbsp;
-                    <a
-                      href="http://192.168.10.128:8001/integration/"
-                      className="link-design"
-                    >
+                    <Link to="/contact-us/" className="link-design">
                       Contact Us
-                    </a>
+                    </Link>
+                    to get in touch with a member of the team. &nbsp;
                   </p>
                 </div>
               </div>

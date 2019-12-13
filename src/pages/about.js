@@ -64,6 +64,7 @@ export default class Services extends React.Component {
                     Driven to learn. We’re fascinated by the process of
                     discovery and how to unlock value. This is reflected in our
                     continuous investigation into new techniques and
+                    technologies.
                   </p>
                 </li>
                 <li>
@@ -78,7 +79,7 @@ export default class Services extends React.Component {
                     We’re intellectually restless and continually ready to
                     question the perceived norm. Our customers aren’t just
                     looking for another app. They want a development partner to
-                    help them disrupt and challenge
+                    help them disrupt and challenge their markets.
                   </p>
                 </li>
                 <li>
@@ -93,7 +94,7 @@ export default class Services extends React.Component {
                     It’s in our name: Zing. We’re energetic, enthusiastic and
                     lively and always on the move. We bring this energy to
                     everything that we do and it’s reflected in every aspect of
-                    our
+                    our communications.
                   </p>
                 </li>
               </ul>
