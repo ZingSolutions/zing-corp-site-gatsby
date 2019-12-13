@@ -1,28 +1,32 @@
 import React from "react"
 import Layout from "../components/layout"
+import Service from "../components/service"
 import { Link } from "gatsby"
 
 import "./index.scss"
+import constants from "../data/constants"
 
 export default class Index extends React.Component {
   render() {
+    const services = [...constants.services]
     return (
       <Layout>
         <section className="section-hero">
           <div className="content-container">
             <div className="col-1">
-              <h1>Discovering Real Value Through Twilio</h1>
+              <h1>An Agile Approach to discovering Twilio Solutions</h1>
               <p>
-                We develop bespoke enterprise software solutions around Twilio's
-                cloud communications platform for messaging, voice and video.
+                Whether it be developing discrete Twilio Integrations, or
+                industry-disruptive enterprise solutions, Zing provides a range
+                of services to build your cloud communications.
               </p>
               <Link to="/contact-us/" className="call-to-action">
                 Get Connected
               </Link>
             </div>
-            <div className="col-2">
+            <div className="col-2 home-page-image">
               <img
-                src="/images/hero-image.png"
+                src="/images/Flex-in-computer.png"
                 alt="Dashboards on mobile and laptop"
               />
             </div>
@@ -30,11 +34,7 @@ export default class Index extends React.Component {
         </section>
         <section className="section-about-us" id="zing-and-twilio">
           <div className="content-container">
-            <div className="col-1">
-              <h2>Zing & Twilio</h2>
-              <p>Zing is a Twilio Gold Consulting Partner</p>
-            </div>
-            <div className="col-2">
+            <div className="home-page-content">
               <h2>Who We Are</h2>
               <p>
                 Zing is part of the Sputnik Group of Companies that includes
@@ -42,7 +42,7 @@ export default class Index extends React.Component {
                 for the Wholesale, Distribution and Manufacturing sectors.
               </p>
               <p>There are currently over 20 Zingers and we're growing fast</p>
-              <Link to="/contact-us/" className="call-to-action red">
+              <Link to="/about/" className="call-to-action red">
                 Learn More
               </Link>
             </div>
@@ -57,61 +57,12 @@ export default class Index extends React.Component {
               <hr />
             </div>
             <div className="content-body-path">
-              <div className="row">
-                <div className="linker">
-                  <img src="images/linker-left.png" alt="Linker Left" />
-                </div>
-                <div className="image">
-                  <img src="images/integration.png" alt="Integration" />
-                </div>
-                <div className="card">
-                  <h3 className="title">Twilio Integration</h3>
-                  <hr />
-                  <p>
-                    Discrete projects to integrate customer solutions with one
-                    or more Twilio services. Projects are delivered by our
-                    tactical team with a focus on getting connected as quickly
-                    as possible. Short term assignments often prove to be the
-                    ideal way to evaluate Zing and Twilio's broader offerings.
-                  </p>
-                </div>
-              </div>
-              <div className="row">
-                <div className="card">
-                  <h3 className="title">Enterprise Solutions</h3>
-                  <hr />
-                  <p>
-                    Bespoke and transformative solutions for customers looking
-                    to disrupt and dominate their sector. These solutions
-                    typically run for a minimum of 2 to 3 months and are
-                    delivered by a dedicated team on a per sprint basis, as
-                    described in our RapidValue&trade; methodology.
-                  </p>
-                </div>
-                <div className="image">
-                  <img src="images/solutions.png" alt="Solutions" />
-                </div>
-                <div className="linker">
-                  <img src="images/linker-right.png" alt="Linker Right" />
-                </div>
-              </div>
-              <div className="row">
-                <div className="linker"></div>
-                <div className="image">
-                  <img src="images/services.png" alt="Services" />
-                </div>
-                <div className="card">
-                  <h3 className="title">Managed Services</h3>
-                  <hr />
-                  <p>
-                    An ongoing relationship once our enterprise solutions are
-                    fully embedded within a customer. Development, maintenance
-                    and, where appropriate, support are delivered against agreed
-                    SLAs without losing our focus on Value. New initiatives are
-                    still delivered within our RapidValue&trade; methodology.
-                  </p>
-                </div>
-              </div>
+              {services.map((service, index) => {
+                const mode = index % 2 === 0 ? "left" : "right"
+                return (
+                  <Service key={index} service={service} mode={mode}></Service>
+                )
+              })}
             </div>
           </div>
         </section>

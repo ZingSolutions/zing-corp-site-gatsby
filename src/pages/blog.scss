@@ -1,0 +1,188 @@
+@import "../scss/base";
+@import "../scss/break-points";
+
+.blog {
+  .section-hero {
+    height: 430px;
+
+    .content-container {
+      align-items: flex-start;
+    }
+  }
+}
+
+.blog-section {
+  padding: 3.5rem 0 5rem;
+  @include bp(sm-max) {
+    padding: 2rem 0 3rem;
+  }
+  form {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .content-container {
+    flex-wrap: wrap;
+  }
+}
+.search-wrapper {
+  position: relative;
+  text-align: right;
+  display: inline-block;
+  min-width: 320px;
+  @include bp(xs-max) {
+    width: 100%;
+    min-width: 100%;
+  }
+  input {
+    height: 2.25rem;
+    border: 1px solid $grey;
+    border-radius: 6px;
+    padding: 0 0.625rem 0 2.1875rem;
+    width: 100%;
+    &:focus {
+      outline: none;
+    }
+  }
+  button {
+    position: absolute;
+    left: 3px;
+    top: 2px;
+    height: 100%;
+    width: 1.875rem;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-radius: 0.75rem;
+    i {
+      color: $dark-grey;
+    }
+  }
+}
+.tabing-wrapper {
+  width: 100%;
+  .tabing-content-outer {
+    .blog-lists {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 1.5rem -2rem 0;
+      @include bp(sm-max) {
+        margin: 1.5rem 0rem 0;
+      }
+      .blogcontent-item {
+        width: 50%;
+        padding: 0 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-bottom: 2rem;
+        @include bp(sm-max) {
+          width: 100%;
+          padding: 0 0rem 1rem;
+
+          &:last-child {
+            padding-bottom: 0;
+            margin-bottom: 0;
+          }
+        }
+        .blogci-image {
+          img {
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 1rem;
+            height: 350px;
+            object-fit: cover;
+            @include bp(md-max) {
+              height: 240px;
+            }
+            @include bp(sm-max) {
+              height: auto;
+            }
+          }
+        }
+        .blogci-item-details {
+          display: flex;
+          justify-content: space-between;
+          span {
+            font-size: 1.2rem;
+            color: $dark-grey;
+            margin-bottom: 0;
+            @include bp(md-max) {
+              font-size: 1rem;
+            }
+          }
+        }
+        h2 {
+          font-family: "CeraPro-Regular";
+          margin-bottom: 0;
+          font-size: 2.4em;
+          font-weight: 400;
+          color: $dark-grey;
+          margin: 1.4rem 0 0.5rem;
+          @include bp(md-max) {
+            font-size: 2rem;
+          }
+          @include bp(sm-max) {
+            font-size: 1.7rem;
+            line-height: 2.2rem;
+          }
+        }
+        .bolgci-description {
+          color: $dark-grey;
+          font-size: 1.25rem;
+          margin-bottom: 1.875rem;
+          line-height: 1.4rem;
+          @include bp(sm-max) {
+            font-size: 1rem;
+            line-height: 1.5rem;
+            margin-bottom: 1rem;
+          }
+        }
+
+        .btn-red {
+          min-height: 3.0625rem;
+          padding: 0 1rem;
+          font-size: 1.2rem;
+          font-family: "CeraPro-Regular";
+          display: block;
+          max-width: 10.8125rem;
+          line-height: 3.0625rem;
+          -webkit-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+          outline: none;
+          border: 3px solid $zing-red;
+          background-color: transparent;
+          font-weight: 600;
+          cursor: pointer;
+          margin-top: auto;
+          text-align: center;
+          @include bp(sm-max) {
+            max-width: 7rem;
+            line-height: 2.3rem;
+            font-size: 1rem;
+            min-height: 2.5rem;
+            padding: 0;
+            border-width: 2px;
+          }
+          &:hover {
+            background-color: $zing-red;
+            color: $white;
+          }
+          color: $zing-red;
+        }
+      }
+    }
+  }
+}
+
+::-webkit-input-placeholder {
+  color: $dark-grey;
+}
+
+:-ms-input-placeholder {
+  color: $dark-grey;
+}
+
+::placeholder {
+  color: $dark-grey;
+}

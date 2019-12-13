@@ -1,4 +1,5 @@
 @import "../scss/variables.scss";
+@import "../scss/break-points";
 
 @keyframes slidein {
   from {
@@ -20,6 +21,10 @@
   }
 }
 
+body.openMenu {
+  overflow: hidden;
+}
+
 header {
   background-image: $gradient;
   .header {
@@ -27,19 +32,45 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 1em 2em;
+    padding: 1em 1em;
 
     img {
       height: 4em;
+      @include bp(xlg-max) {
+        height: 3.2em;
+      }
+      @include bp(sm-max) {
+        height: 3em;
+      }
+    }
+    .selected {
+      position: relative;
+      &:before {
+        border-bottom: 3px solid $zing-red;
+        position: absolute;
+        top: 1.65rem;
+        content: "";
+        left: 0;
+        width: 100%;
+
+        @include bp(lg-max) {
+          display: none;
+        }
+      }
     }
 
     i {
       font-size: 2em;
       color: $zing-red;
+      margin: 0.2rem 2rem 0 0;
     }
 
     .call-to-action {
       display: none;
+    }
+
+    a {
+      outline: none;
     }
   }
 }
@@ -51,9 +82,18 @@ header {
       margin: 0 auto;
       padding: 1em 0;
       max-width: 1024px;
+      position: relative;
 
       .call-to-action {
-        display: initial;
+        display: block;
+        width: 8rem;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+
+        @include bp(lg-max) {
+          margin-right: 3rem;
+        }
       }
 
       i {

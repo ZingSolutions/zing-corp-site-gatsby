@@ -76,6 +76,7 @@ body {
                 top: 130px;
                 left: 25px;
                 z-index: -1;
+                display: none;
               }
             }
 
@@ -100,7 +101,7 @@ body {
 
     section .content-container {
       min-height: 30vh;
-      padding: 2em 2em;
+      padding: 2em 1em;
       display: flex;
       position: relative;
       justify-content: space-between;
@@ -110,6 +111,10 @@ body {
       .col-1 {
         min-width: 50%;
         z-index: 1;
+
+        @media only screen and (max-width: 1023px) {
+          min-width: 100%;
+        }
       }
 
       .col-2 {

@@ -1,4 +1,5 @@
 @import "../scss/variables.scss";
+@import "../scss/break-points";
 
 footer {
   margin-top: -140px;
@@ -8,7 +9,7 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  padding: 2em;
+  padding: 2em 1rem;
 
   .newsletter {
     background: white;
@@ -63,9 +64,24 @@ footer {
     text-align: center;
     flex-wrap: wrap;
     justify-content: space-around;
+    @include bp(sm-max) {
+      span {
+        display: none;
+      }
+    }
+
+    @include bp(sm-max) {
+      justify-content: center;
+      display: block;
+    }
 
     a {
       min-width: 40%;
+      @include bp(sm-max) {
+        min-width: auto;
+        margin: 0.4rem 0.6rem;
+        display: block;
+      }
     }
   }
 
@@ -80,6 +96,10 @@ footer {
 
   .cr {
     font-size: 0.9em;
+  }
+
+  .icon-ref {
+    font-size: 0.8em;
   }
 }
 
@@ -98,7 +118,7 @@ footer {
 
     .links {
       width: 100%;
-      max-width: 600px;
+      max-width: 559px;
       a {
         min-width: initial;
       }

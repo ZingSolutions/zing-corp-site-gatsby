@@ -7,10 +7,38 @@
 main section:nth-child(2) {
   margin-top: -200px;
 }
+.home-page-content {
+  text-align: center;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+}
 
-@media only screen and (min-width: 600px) {
+.home-page-image {
+  img {
+    position: relative;
+    top: -42px;
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .home-page-image {
+    img {
+      position: relative;
+      top: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
   body main .section-what-we-do {
-    padding-bottom: 1em;
+    padding-bottom: 7em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  body main .section-what-we-do {
+    padding-bottom: 3em;
   }
 }
 
@@ -19,7 +47,6 @@ main section:nth-child(2) {
     padding-bottom: 2em;
   }
 }
-
 @media only screen and (min-width: 1440px) {
   body main .section-what-we-do {
     padding-bottom: 3em;

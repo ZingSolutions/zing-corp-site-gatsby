@@ -112,9 +112,22 @@ export default class ContactUs extends React.Component {
                   <h4>Email</h4>
                   <h3>conversations@zing.dev</h3>
                   <h4>Address</h4>
+                  <h3 className="address-title">Buckinghamshire</h3>
                   <h3>Beacon House, Ibstone Rd,</h3>
                   <h3>Stokenchurch, High Wycombe,</h3>
                   <h3>HP14 3WN</h3>
+                  <h4 />
+                  <h3 className="address-title">London</h3>
+                  <h3>5 Merchant Square</h3>
+                  <h3>London</h3>
+                  <h3>W2 1AY</h3>
+                  <h4>Parking details </h4>
+                  <a
+                    href="https://www.q-park.co.uk/en-gb/cities/london/church-street/ "
+                    className="linkParking"
+                  >
+                    https://www.q-park.co.uk/en-gb/cities/london/church-street/{" "}
+                  </a>
                 </div>
                 <div className="col-2">
                   <form
