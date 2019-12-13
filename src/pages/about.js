@@ -161,8 +161,8 @@ export default class Services extends React.Component {
                   <p>
                     <Link to="/contact-us" className="link-design">
                       Contact Us
-                    </Link>{" "}
-                    to get in touch with a member of the team.
+                    </Link>
+                    &nbsp;to get in touch with a member of the team.
                   </p>
                 </div>
               </div>
