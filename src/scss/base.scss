@@ -83,11 +83,12 @@ body {
               position: relative;
               display: none;
 
-              img {
+              .gatsby-image-wrapper {
                 position: absolute;
                 top: 130px;
                 left: 25px;
                 z-index: -1;
+                width: 100%;
               }
             }
 
@@ -97,7 +98,7 @@ body {
           }
 
           .row:nth-child(2n) {
-            .linker img {
+            .linker .gatsby-image-wrapper {
               left: -25px;
             }
           }

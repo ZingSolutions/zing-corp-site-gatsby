@@ -64,6 +64,8 @@ export default ({ data }) => {
           <div className="content-body-path">
             {services.map((service, index) => {
               service.image.fluid = images[service.image.image]
+              service.linkerLeft = images["linker-left.png"]
+              service.linkerRight = images["linker-right.png"]
               const mode = index % 2 === 0 ? "left" : "right"
               return (
                 <Service key={index} service={service} mode={mode}></Service>
@@ -87,6 +89,8 @@ export const query = graphql`
             "integration.png"
             "solutions.png"
             "services.png"
+            "linker-left.png"
+            "linker-right.png"
           ]
         }
       }

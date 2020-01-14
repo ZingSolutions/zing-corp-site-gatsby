@@ -1,19 +1,10 @@
 import React from "react"
 import Img from "gatsby-image"
 
-import constants from "../../src/data/constants"
-
 export default ({ service, mode }) => {
-  const {
-    functions: { capitalizeTxt },
-  } = constants
-
   const linker = (
     <div key="linker" className="linker">
-      <img
-        src={`/images/linker-${mode}.png`}
-        alt={`Linker ${capitalizeTxt(mode)}`}
-      />
+      <Img fluid={mode === "left" ? service.linkerLeft : service.linkerRight} />
     </div>
   )
   const image = (

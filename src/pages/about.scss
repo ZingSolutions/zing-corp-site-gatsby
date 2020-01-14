@@ -154,11 +154,18 @@ nav {
 }
 
 .section-about-footer .section-about-content {
-  background-size: cover;
-  background-position: center;
   color: $white;
   text-align: center;
   padding: 5rem 1rem 7rem 1rem;
+
+  .gatsby-image-wrapper {
+    // IMPORTANT HERE BECAUSE GATSBY INCLUDES POSITION RELATIVE ON THE STYLE RULE
+    position: absolute !important;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
 
   @include bp(mdl-max) {
     padding: 5rem 1rem;
