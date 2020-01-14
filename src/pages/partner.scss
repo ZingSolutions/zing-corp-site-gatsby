@@ -59,10 +59,6 @@
       }
       a,
       button {
-        border-bottom: 3px solid $zing-red;
-        border-bottom-left-radius: 6px;
-        border-bottom-right-radius: 6px;
-        border-radius: 6px;
         cursor: pointer;
       }
     }
@@ -74,16 +70,12 @@
   top: 0;
   left: 0;
   z-index: 1050;
-  display: none;
   width: 100%;
   height: 100%;
   overflow: hidden;
   outline: 0;
+  background: adjust-color($dark-grey, $alpha: -0.8);
   transition: opacity 0.15s linear;
-  @include bp(xxss-max) {
-    top: 51%;
-    transform: translateY(-36%);
-  }
   .modal-dialog {
     position: relative;
     pointer-events: none;
@@ -102,7 +94,7 @@
 
     @include bp(sm-max) {
       width: auto;
-      margin: 0.5rem;
+      margin: 3rem 1rem 3rem 1rem;
       max-width: 100%;
       min-height: calc(100% - 1rem);
     }
@@ -127,10 +119,8 @@
     min-height: 450px;
 
     @include bp(sm-max) {
-      min-height: 310px;
-    }
-    @include bp(xxss-max) {
-      min-height: 220px;
+      flex-direction: column;
+      height: 600px;
     }
     .left-blog {
       padding: 20px;
@@ -138,9 +128,12 @@
       align-items: center;
       flex: 0 0 32%;
       max-width: 32%;
+      @include bp(sm-max) {
+        max-width: 100%;
+      }
       img {
         max-width: 100%;
-        height: auto;
+        max-height: 80px;
       }
     }
     .right-blog {
@@ -150,8 +143,10 @@
       flex: 0 0 68%;
       max-width: 68%;
       @include bp(sm-max) {
+        max-width: 100%;
+      }
+      @include bp(sm-max) {
         padding: 32px 10px;
-        max-height: 300px;
         overflow: auto;
       }
       h4 {
@@ -221,28 +216,4 @@
   border-radius: 1.5rem;
   font-size: 1rem;
   line-height: 2.1875rem;
-}
-.microsoft-modal {
-  .microsoft-show & {
-    overflow-x: hidden;
-    overflow-y: auto;
-    display: block;
-    background-color: rgba(0, 0, 0, 0.3);
-  }
-}
-.midnight-modal {
-  .midnight-show & {
-    overflow-x: hidden;
-    overflow-y: auto;
-    display: block;
-    background-color: rgba(0, 0, 0, 0.3);
-  }
-}
-.twilio-modal {
-  .twilio-show & {
-    overflow-x: hidden;
-    overflow-y: auto;
-    display: block;
-    background-color: rgba(0, 0, 0, 0.3);
-  }
 }

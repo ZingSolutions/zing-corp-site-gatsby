@@ -69,13 +69,11 @@ export default class Services extends React.Component {
 
               <ul>
                 <li>
+                  <h3>Inquisitive</h3>
                   <i>
                     <img src="/images/inquistive-icon.svg" alt="" />
                   </i>
-                  <h3>
-                    Inquisitive
-                    <span></span>
-                  </h3>
+                  <span></span>
                   <p>
                     Driven to learn. We’re fascinated by the process of
                     discovery and how to unlock value. This is reflected in our
@@ -84,13 +82,11 @@ export default class Services extends React.Component {
                   </p>
                 </li>
                 <li>
+                  <h3>Relentless</h3>
                   <i>
                     <img src="/images/relentless-icon.svg" alt="" />
                   </i>
-                  <h3>
-                    Relentless
-                    <span></span>
-                  </h3>
+                  <span></span>
                   <p>
                     We’re intellectually restless and continually ready to
                     question the perceived norm. Our customers aren’t just
@@ -99,13 +95,11 @@ export default class Services extends React.Component {
                   </p>
                 </li>
                 <li>
+                  <h3>Energetic</h3>
                   <i>
                     <img src="/images/energetic-icon.svg" alt="" />
                   </i>
-                  <h3>
-                    Energetic
-                    <span></span>
-                  </h3>
+                  <span></span>
                   <p>
                     It’s in our name: Zing. We’re energetic, enthusiastic and
                     lively and always on the move. We bring this energy to
@@ -121,7 +115,6 @@ export default class Services extends React.Component {
             <div className="content-container">
               <div className="ourstory-title">
                 <h2>Our Story</h2>
-                <hr></hr>
               </div>
               <div className="ourstory-img">
                 <img
@@ -190,10 +183,10 @@ export default class Services extends React.Component {
               </div>
             </div>
           </section>
-          <section className="section-casestudy-info">
-            <div className="casestudy-info-content" style={styles}>
+          <section className="section-about-footer">
+            <div className="section-about-content" style={styles}>
               <div className="content-container">
-                <div className="casestudy-outer">
+                <div className="about-outer">
                   <h2>
                     Interested in how Zing can integrate Twilio in your
                     business?

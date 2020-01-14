@@ -47,7 +47,7 @@ nav {
 
       @include bp(lg-max) {
         padding-bottom: 1rem;
-        border: 0 !important;
+        border: 0;
         text-align: center;
         margin: 0rem;
       }
@@ -69,7 +69,7 @@ nav {
 
         li {
           margin: 0.2rem 0;
-          border: 0 !important;
+          border: 0;
 
           @include bp(lg-max) {
             padding: 0.3rem 0;
@@ -102,7 +102,7 @@ nav {
       position: relative;
 
       i {
-        color: $white !important;
+        color: $white;
         font-size: 1.5rem;
         position: absolute;
         top: -0.1rem;
@@ -149,22 +149,36 @@ nav {
 
   p {
     color: $slate-grey;
-    margin-bottom: 1rem !important;
+    margin-bottom: 1rem;
+  }
+}
+
+.section-about-footer .section-about-content {
+  background-size: cover;
+  background-position: center;
+  color: $white;
+  text-align: center;
+  padding: 5rem 1rem 7rem 1rem;
+
+  @include bp(mdl-max) {
+    padding: 5rem 1rem;
+  }
+
+  @include bp(sm-max) {
+    padding: 1rem 1rem 13rem 1rem;
   }
 }
 
 .readmore-link {
-  color: $zing-red !important;
-  font-family: "CeraPro-Medium";
+  color: $zing-red;
   text-decoration: underline;
   &:hover {
-    color: $black !important;
+    color: $black;
   }
 }
 
 .subtitle {
   letter-spacing: 1px;
-  font-family: "CeraPro-Medium";
   color: $zing-red;
   margin: 1rem 0 0.8rem;
   font-weight: 400;
@@ -179,12 +193,12 @@ nav {
 
 .inner-banner-outer {
   @include bp(sm-max) {
-    height: 30rem !important;
+    height: 30rem;
   }
 
   .content-container {
     min-height: 22rem;
-    align-items: center !important;
+    align-items: center;
     @include bp(sm-max) {
       min-height: 15rem;
     }
@@ -290,46 +304,44 @@ nav {
         }
       }
       h3 {
-        padding: 1rem 0 4.5rem;
-        font-family: "CeraPro-Medium";
+        padding: 1rem 0 1rem;
         position: relative;
+        font-weight: 400;
         @include bp(sm-max) {
-          padding-bottom: 3.5rem;
           padding-top: 0.5rem;
         }
+      }
+      span {
+        position: relative;
+        background: $light-grey;
+        width: 1.8rem;
+        height: 1.8rem;
+        border-radius: 3rem;
+        left: -5px;
+        right: 0;
+        margin: 0 auto;
+        z-index: 1;
+        @include bp(sm-max) {
+          display: none;
+        }
 
-        span {
+        &:after {
           position: absolute;
-          background: $light-grey;
-          width: 1.8rem;
-          height: 1.8rem;
-          border-radius: 3rem;
           left: 0;
           right: 0;
           margin: 0 auto;
-          top: 3.5rem;
-          z-index: 1;
-          @include bp(sm-max) {
-            top: 3rem;
-          }
-
-          &:after {
-            position: absolute;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-            content: "";
-            width: 0.5rem;
-            height: 0.5rem;
-            background: $slate;
-            border-radius: 3rem;
-            top: 0.6rem;
-          }
+          content: "";
+          width: 0.5rem;
+          height: 0.5rem;
+          background: $slate;
+          border-radius: 3rem;
+          top: 0.6rem;
         }
       }
 
       p {
         color: $slate;
+        margin-top: 2rem;
       }
 
       i {
@@ -374,6 +386,7 @@ nav {
   }
 
   .ourstory-title {
+    color: $zing-red;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -383,11 +396,6 @@ nav {
     @include bp(sm-max) {
       margin-top: 1.2rem;
       margin-bottom: 1.2rem;
-    }
-
-    hr {
-      width: 6rem;
-      margin-bottom: 0.5rem;
     }
   }
 
@@ -416,11 +424,6 @@ nav {
 
   p {
     color: $slate-grey;
-    margin-bottom: 1.8rem !important;
-
-    @include bp(sm-max) {
-      margin-bottom: 1.2rem !important;
-    }
   }
   a {
     color: $zing-red;
@@ -469,7 +472,7 @@ nav {
   transform: translateY(25px);
   background: transparent;
   transition: all 0ms 300ms;
-  height: 2.1rem !important;
+  height: 2.1rem;
   top: -0.7rem;
 
   &.animate {
@@ -519,7 +522,7 @@ nav {
   }
   .active-subMenu {
     ul {
-      display: block !important;
+      display: block;
     }
     i {
       transform: rotate(-135deg);
