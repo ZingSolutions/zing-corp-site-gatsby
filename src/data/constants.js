@@ -1,7 +1,7 @@
 const constants = {
   services: [
     {
-      image: { image: "/images/integration.png", alt: "Integration" },
+      image: { image: "integration.png", alt: "Integration" },
       card: {
         title: "Twilio Integration",
         description:
@@ -9,7 +9,7 @@ const constants = {
       },
     },
     {
-      image: { image: "/images/solutions.png", alt: "Solutions" },
+      image: { image: "solutions.png", alt: "Solutions" },
       card: {
         title: "Enterprise Solutions",
         description:
@@ -17,7 +17,7 @@ const constants = {
       },
     },
     {
-      image: { image: "/images/services.png", alt: "Services" },
+      image: { image: "services.png", alt: "Services" },
       card: {
         title: "Managed Services",
         description:
@@ -41,7 +41,7 @@ const constants = {
         line2: "Development",
       },
       description:
-        "An Agile approach means we can maintain momentum. Development is completed on a “per sprint” basis to ensure that we are continually delivering customer ....",
+        "We take an agile approach to business: short lead times, high availability and a willingness to take on new challenges.",
       link: "#/",
     },
     {

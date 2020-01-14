@@ -2,6 +2,7 @@ import React from "react"
 import ZingLogo from "./zingLogo"
 import { Link } from "gatsby"
 import "./header.scss"
+import { FaEnvelope } from "react-icons/fa"
 
 export default class Header extends React.Component {
   constructor(props) {
@@ -93,8 +94,8 @@ export default class Header extends React.Component {
             </ul>
           </nav>
           <div className="contact-us-links">
-            <Link to="/contact-us/">
-              <i className="material-icons md-24">email</i>
+            <Link to="/contact-us/" title="Contact Us">
+              <FaEnvelope />
             </Link>
             <Link to="/contact-us/" className="call-to-action red">
               Contact Us

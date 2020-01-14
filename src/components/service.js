@@ -1,13 +1,13 @@
 import React from "react"
+import Img from "gatsby-image"
 
 import constants from "../../src/data/constants"
 
-export default props => {
+export default ({ service, mode }) => {
   const {
     functions: { capitalizeTxt },
   } = constants
 
-  const { service, mode } = props
   const linker = (
     <div key="linker" className="linker">
       <img
@@ -18,7 +18,7 @@ export default props => {
   )
   const image = (
     <div key="image" className="image">
-      <img src={service.image.image} alt={service.image.alt} />
+      <Img fluid={service.image.fluid} />
     </div>
   )
   const card = (

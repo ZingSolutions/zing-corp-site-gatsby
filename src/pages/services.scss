@@ -1,6 +1,10 @@
 @import "../scss/base";
 @import "../scss/break-points";
 
+.image {
+  width: 100%;
+}
+
 .btn-default {
   background: $zing-red;
   min-height: 3.0625rem;
@@ -34,6 +38,11 @@
 }
 .white-bg {
   background-color: $white !important;
+}
+
+.section-what-we-do .content-header {
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 .section-how-we-do-it {

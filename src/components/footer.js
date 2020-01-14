@@ -5,6 +5,13 @@ import { Link } from "gatsby"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
 import { toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
+import {
+  FaFacebook,
+  FaTwitter,
+  FaLinkedin,
+  FaYoutube,
+  FaGithub,
+} from "react-icons/fa"
 
 import "./footer.scss"
 
@@ -126,47 +133,42 @@ export default class Footer extends React.Component {
           <OutboundLink
             href="https://www.facebook.com/zing.development/"
             target="_blank"
+            title="Zing on Facebook"
+            rel="noreferrer"
           >
-            <img
-              src="/images/facebook.png"
-              alt="Go To Zing Facebook"
-              title="Facebook"
-            />
+            <FaFacebook className="icon" />
           </OutboundLink>
-          <OutboundLink href="https://twitter.com/zingdevs" target="_blank">
-            <img
-              src="/images/twitter.png"
-              alt="Go To Zing Twitter"
-              title="Twitter"
-            />
+          <OutboundLink
+            href="https://twitter.com/zingdevs"
+            target="_blank"
+            title="Zing on Twitter"
+            rel="noreferrer"
+          >
+            <FaTwitter className="icon" />
           </OutboundLink>
           <OutboundLink
             href="https://www.linkedin.com/company/zing-dev/"
             target="_blank"
+            title="Zing on LinkedIn"
+            rel="noreferrer"
           >
-            <img
-              src="/images/linkedin.png"
-              alt="Go To Zing Linkedin"
-              title="LinkedIn"
-            />
+            <FaLinkedin className="icon" />
           </OutboundLink>
           <OutboundLink
             href="https://www.youtube.com/channel/UCQaA6jM3zT6WcbXuzjgpAHw"
             target="_blank"
+            title="Zing on Youtube"
+            rel="noreferrer"
           >
-            <img
-              src="/images/youtube.png"
-              alt="Go To Zing YouTube"
-              title="YouTube"
-            />
+            <FaYoutube className="icon" />
           </OutboundLink>
-
-          <OutboundLink href="https://github.com/ZingSolutions" target="_blank">
-            <img
-              src="/images/GitHub.png"
-              alt="Go To Zing GitHub"
-              title="GitHub"
-            />
+          <OutboundLink
+            href="https://github.com/ZingSolutions"
+            target="_blank"
+            title="Zing on Github"
+            rel="noreferrer"
+          >
+            <FaGithub className="icon" />
           </OutboundLink>
         </div>
         {this.props.children}

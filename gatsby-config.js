@@ -1,3 +1,4 @@
+const path = require("path")
 /**
  * Configure your Gatsby site with this file.
  *
@@ -6,7 +7,17 @@
 
 module.exports = {
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `static`, `images`),
+      },
+    },
     `gatsby-plugin-sass`,
+    `gatsby-transformer-sharp`,
+    `gatsby-transformer-json`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -29,6 +40,12 @@ module.exports = {
         trackingCode: "5721076",
         respectDNT: true,
         productionOnly: true,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-P5MF22M",
       },
     },
   ],

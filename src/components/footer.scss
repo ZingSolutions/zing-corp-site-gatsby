@@ -36,6 +36,10 @@ footer {
         flex-direction: column;
         justify-content: center;
 
+        label {
+          display: none;
+        }
+
         input {
           height: 30px;
           border-radius: 1em;
@@ -87,6 +91,13 @@ footer {
 
   .social {
     margin-bottom: 1.5em;
+    display: flex;
+    justify-content: center;
+
+    .icon {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
 
     a {
       margin: 0 0.5em;

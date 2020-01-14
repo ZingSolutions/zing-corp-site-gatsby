@@ -59,10 +59,12 @@ header {
       }
     }
 
-    i {
-      font-size: 2em;
-      color: $zing-red;
-      margin: 0.2rem 2rem 0 0;
+    .contact-us-links {
+      svg {
+        font-size: 2em;
+        color: $zing-red;
+        margin: 0.2rem 2rem 0 0;
+      }
     }
 
     .call-to-action {
@@ -96,8 +98,10 @@ header {
         }
       }
 
-      i {
-        display: none;
+      .contact-us-links {
+        svg {
+          display: none;
+        }
       }
     }
   }

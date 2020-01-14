@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import constants from "./../data/constants"
 import "./blog.scss"
 import Blogdetail from "./blog-detail"
+import { FaSearch } from "react-icons/fa"
 
 export default class blog extends React.Component {
   constructor(props) {
@@ -53,7 +54,7 @@ export default class blog extends React.Component {
               <form>
                 <div className="search-wrapper">
                   <button type="submit">
-                    <i className="material-icons md-24">search</i>
+                    <FaSearch />
                   </button>
                   <input
                     type="text"

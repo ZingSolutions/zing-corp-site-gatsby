@@ -26,9 +26,10 @@ export default class Services extends React.Component {
           <section className="section-what-we-do gray-bg" id="what-we-do">
             <div className="content-container">
               <div className="content-header">
-                <h4 className="title-red">What We Do</h4>
-                <h3 className="title">We Focus on Customer</h3>
-                <h3 className="title">Communications and Workforce Mobility</h3>
+                <h2 className="header-text title-red">What We Do</h2>
+                <p>
+                  We Focus on Customer Communications and Workforce Mobility
+                </p>
               </div>
               <div className="content-body-path">
                 {services.map((service, index) => {
@@ -52,8 +53,8 @@ export default class Services extends React.Component {
             >
               <div className="content-container line-break">
                 <div className="new-content-header">
-                  <h6 className="subtitle">How We Do It</h6>
-                  <h2>What we can offer you</h2>
+                  <h2 className="header-text">How We Do It</h2>
+                  <p>What we can offer you</p>
                 </div>
                 <ul>
                   {serviceOffers.map((offer, index) => {
