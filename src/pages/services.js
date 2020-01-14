@@ -29,7 +29,6 @@ export default class Services extends React.Component {
                 <h4 className="title-red">What We Do</h4>
                 <h3 className="title">We Focus on Customer</h3>
                 <h3 className="title">Communications and Workforce Mobility</h3>
-                <hr />
               </div>
               <div className="content-body-path">
                 {services.map((service, index) => {
@@ -55,14 +54,12 @@ export default class Services extends React.Component {
                 <div className="new-content-header">
                   <h6 className="subtitle">How We Do It</h6>
                   <h2>What we can offer you</h2>
-                  <hr></hr>
                 </div>
                 <ul>
                   {serviceOffers.map((offer, index) => {
                     const {
                       title: { line1, line2 },
                       description,
-                      link,
                     } = offer
                     return (
                       <li key={index}>

@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 
-import constants from "./../data/constants"
 import "./partner.scss"
 
 export default class partner extends React.Component {

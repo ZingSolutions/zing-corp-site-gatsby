@@ -14,15 +14,12 @@ export default class Index extends React.Component {
         <section className="section-hero">
           <div className="content-container">
             <div className="col-1">
-              <h1>An Agile Approach to discovering Twilio Solutions</h1>
+              <h1>An Agile Approach to Discovering Twilio Solutions</h1>
               <p>
-                Whether it be developing discrete Twilio Integrations, or
-                industry-disruptive enterprise solutions, Zing provides a range
-                of services to build your cloud communications.
+                Zing's portfolio of cloud communication services ranges from
+                discrete Twilio Integrations to industry-disruptive enterprise
+                solutions.
               </p>
-              <Link to="/contact-us/" className="call-to-action">
-                Get Connected
-              </Link>
             </div>
             <div className="col-2 home-page-image">
               <img
@@ -37,11 +34,14 @@ export default class Index extends React.Component {
             <div className="home-page-content">
               <h2>Who We Are</h2>
               <p>
-                Zing is part of the Sputnik Group of Companies that includes
-                ProspectSoft, a leading provider of SaaS CRM systems designed
-                for the Wholesale, Distribution and Manufacturing sectors.
+                Zing a Twilio Gold Consulting Partner. We are part of the
+                Sputnik Group of Companies that includes ProspectSoft, a leading
+                provider of SaaS CRM systems.
               </p>
-              <p>There are currently over 20 Zingers and we're growing fast</p>
+              <p>
+                There are now almost 30 Zingers and we're working across the UK,
+                Northern and Southern Europe.
+              </p>
               <Link to="/about/" className="call-to-action red">
                 Learn More
               </Link>

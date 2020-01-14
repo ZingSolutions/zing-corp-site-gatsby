@@ -116,7 +116,6 @@ export default class ContactUs extends React.Component {
                   <h3>Beacon House, Ibstone Rd,</h3>
                   <h3>Stokenchurch, High Wycombe,</h3>
                   <h3>HP14 3WN</h3>
-                  <h4 />
                   <h3 className="address-title">London</h3>
                   <h3>5 Merchant Square</h3>
                   <h3>London</h3>

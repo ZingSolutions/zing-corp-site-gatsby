@@ -24,7 +24,6 @@ export default props => {
   const card = (
     <div key="card" className="card">
       <h3 className="title">{service.card.title}</h3>
-      <hr />
       <p>{service.card.description}</p>
     </div>
   )

@@ -1,5 +1,17 @@
 @import "./variables";
 
+.page-title {
+  font-size: $page-title;
+}
+
+.header-text {
+  font-size: $header-text;
+}
+
+.sub-header-text {
+  font-size: $sub-header-text;
+}
+
 body {
   color: $text-primary;
 
@@ -76,7 +88,6 @@ body {
                 top: 130px;
                 left: 25px;
                 z-index: -1;
-                display: none;
               }
             }
 
@@ -232,6 +243,9 @@ body {
 
     .col-1,
     .col-2 {
+      .linker {
+        display: block;
+      }
       img {
         display: block;
       }

@@ -84,7 +84,7 @@ export default class Footer extends React.Component {
       <footer>
         <div className="newsletter">
           <div className="col-1">
-            <h2>Start a conversation with us</h2>
+            <h2 className="sub-header-text">Start a conversation with us</h2>
             <p>Enter your email address and we'll get in touch</p>
           </div>
           <div className="col-2">
@@ -116,6 +116,7 @@ export default class Footer extends React.Component {
           <ZingLogo />
         </div>
         <div className="links">
+          <Link to="/integration/">Integrations</Link> <span>|</span>
           <Link to="/resource/">Resources</Link> <span>|</span>
           <Link to="/privacy/">Privacy Policy</Link> <span>|</span>
           <Link to="/cookies/">Cookies</Link> <span>|</span>
@@ -168,24 +169,8 @@ export default class Footer extends React.Component {
             />
           </OutboundLink>
         </div>
-        <div className="icon-ref">
-          Icons made by{" "}
-          <strong>
-            <a
-              href="https://www.flaticon.com/authors/alfredo-hernandez"
-              title="Alfredo Hernandez "
-            >
-              Alfredo Hernandez{" "}
-            </a>
-          </strong>{" "}
-          from{" "}
-          <strong>
-            <a href="https://www.flaticon.com/" title="Flaticon">
-              Flat icon
-            </a>
-          </strong>
-        </div>
-        <div className="cr">&copy; ProspectSoft Ltd 2019</div>
+        {this.props.children}
+        <div className="cr">&copy; ZingDev Limited 2020</div>
       </footer>
     )
   }

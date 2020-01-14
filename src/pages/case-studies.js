@@ -75,6 +75,7 @@ export default class CaseStudies extends React.Component {
                 <img
                   className="study-image-right"
                   src="https://via.placeholder.com/300x300"
+                  alt="Placeholder"
                 />
               </div>
             </div>
@@ -82,7 +83,10 @@ export default class CaseStudies extends React.Component {
           <section className="section-about-us" id="zing-and-twilio">
             <div className="content-container">
               <div className="col-1">
-                <img src="https://via.placeholder.com/300x300" />
+                <img
+                  src="https://via.placeholder.com/300x300"
+                  alt="Placeholder"
+                />
               </div>
               <div className="col-5">
                 <h1>SIMPLIFi</h1>
@@ -121,7 +125,10 @@ export default class CaseStudies extends React.Component {
                 <div className="column">
                   <div className="row">
                     <div className="card">
-                      <img src="https://via.placeholder.com/100" />
+                      <img
+                        src="https://via.placeholder.com/100"
+                        alt="Placeholder"
+                      />
                       <h4>Nam nec quam</h4>
                       <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -132,7 +139,10 @@ export default class CaseStudies extends React.Component {
 
                   <div className="row">
                     <div className="card">
-                      <img src="https://via.placeholder.com/100" />
+                      <img
+                        src="https://via.placeholder.com/100"
+                        alt="Placeholder"
+                      />
                       <h4>Nam nec quam</h4>
                       <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -143,7 +153,10 @@ export default class CaseStudies extends React.Component {
 
                   <div className="row">
                     <div className="card">
-                      <img src="https://via.placeholder.com/100" />
+                      <img
+                        src="https://via.placeholder.com/100"
+                        alt="Placeholder"
+                      />
                       <h4>Nam nec quam</h4>
                       <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -156,7 +169,10 @@ export default class CaseStudies extends React.Component {
                 <div className="column">
                   <div className="row">
                     <div className="card">
-                      <img src="https://via.placeholder.com/100" />
+                      <img
+                        src="https://via.placeholder.com/100"
+                        alt="Placeholder"
+                      />
                       <h4>Nam nec quam</h4>
                       <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -167,7 +183,10 @@ export default class CaseStudies extends React.Component {
 
                   <div className="row">
                     <div className="card">
-                      <img src="https://via.placeholder.com/100" />
+                      <img
+                        src="https://via.placeholder.com/100"
+                        alt="Placeholder"
+                      />
                       <h4>Nam nec quam</h4>
                       <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -177,7 +196,10 @@ export default class CaseStudies extends React.Component {
                   </div>
                   <div className="row">
                     <div className="card">
-                      <img src="https://via.placeholder.com/100" />
+                      <img
+                        src="https://via.placeholder.com/100"
+                        alt="Placeholder"
+                      />
                       <h4>Nam nec quam</h4>
                       <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.

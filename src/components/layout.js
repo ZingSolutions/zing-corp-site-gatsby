@@ -10,7 +10,7 @@ export default class Layout extends React.Component {
       <div className={this.props.className}>
         <Header />
         <main>{this.props.children}</main>
-        <Footer />
+        <Footer>{this.props.attributions}</Footer>
       </div>
     )
   }
