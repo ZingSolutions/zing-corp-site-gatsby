@@ -1,8 +1,8 @@
 import React from "react"
 import Layout from "../components/layout"
-import Service from "../components/service"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
+import Service from "../components/service"
 
 import "./index.scss"
 import constants from "../data/constants"

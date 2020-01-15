@@ -1,0 +1,29 @@
+@import "../scss/base.scss";
+
+.section-attribution {
+  padding: 5rem 1rem 13rem 1rem;
+
+  .content-container {
+    justify-content: center;
+  }
+
+  ul {
+    list-style: none;
+    width: 60%;
+
+    li {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  a,
+  a:hover,
+  a:visited,
+  a:active,
+  a:focus {
+    color: $zing-red;
+  }
+}

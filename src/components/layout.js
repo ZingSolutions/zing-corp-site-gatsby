@@ -1,17 +1,23 @@
 import React from "react"
+import { Link } from "gatsby"
 import Header from "./header"
 import Footer from "./footer"
 
 import "./layout.scss"
 
-export default class Layout extends React.Component {
-  render() {
-    return (
-      <div className={this.props.className}>
-        <Header />
-        <main>{this.props.children}</main>
-        <Footer>{this.props.attributions}</Footer>
-      </div>
-    )
-  }
+export default props => {
+  const attributions = props.attributions || []
+
+  return (
+    <div className={props.className}>
+      <Header />
+      <main>{props.children}</main>
+      <Footer>
+        {[
+          ...attributions,
+          <Link to="/third-party/">Third Party Licensing</Link>,
+        ]}
+      </Footer>
+    </div>
+  )
 }

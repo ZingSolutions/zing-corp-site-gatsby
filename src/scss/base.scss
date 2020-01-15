@@ -1,4 +1,5 @@
 @import "./variables";
+@import "./break-points.scss";
 
 .page-title {
   font-size: $page-title;
@@ -169,6 +170,9 @@ body {
         width: 100%;
         content: "";
         background-image: url("/images/world-dot-map.png");
+        @include bp(sm-max) {
+          background-image: url("/images/world-dot-map-mobile.png");
+        }
         background-size: cover;
         background-position: center;
         opacity: 0.3;
